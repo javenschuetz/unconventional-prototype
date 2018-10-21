@@ -16,26 +16,16 @@ using System.Windows.Shapes;
 namespace unconventional
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for nav_bar.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class nav_bar : UserControl
     {
-        public MainWindow()
+        public nav_bar()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
         }
