@@ -20,7 +20,7 @@ namespace unconventional
     /// </summary>
     public partial class NavBar : UserControl
     {
-        #region properties
+        #region debug string definition
 
         private string debug_string = "I am a debug string";
         public string DebugString
@@ -40,6 +40,8 @@ namespace unconventional
         public NavBar()
         {
             InitializeComponent();
+            // surely these can be combined into a single handler, but that would require 
+            // looking up how the 'sender' and 'e' arguments work
             this.NavToEvents.Click += NavToEvents_Click;
             this.NavToSchedule.Click += NavToSchedule_Click;
             this.NavToNews.Click += NavToNews_Click;
@@ -48,6 +50,7 @@ namespace unconventional
             this.NavToSocial.Click += NavToSocial_Click;
         }
 
+        #region click handlers
         private void NavToSocial_Click(object sender, RoutedEventArgs e)
         {
             this.debug_string = "social";
@@ -77,5 +80,7 @@ namespace unconventional
         {
             this.debug_string = "events";
         }
+
+        #endregion
     }
 }

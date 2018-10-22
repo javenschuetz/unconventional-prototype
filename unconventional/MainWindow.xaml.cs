@@ -27,9 +27,13 @@ namespace unconventional
             this.updateDebugLabelBtn.Click += UpdateDebugLabelBtn_Click;
         }
 
+        #region click handlers
+
         private void UpdateDebugLabelBtn_Click(object sender, RoutedEventArgs e)
         {
             this.debugLabel.Content = this.NavBar.DebugString;
         }
+
+        #endregion
     }
 }
