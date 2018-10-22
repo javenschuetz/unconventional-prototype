@@ -5,25 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:unconventional"
         mc:Ignorable="d"
-        Title="Unconventional" Height="800" Width="450">
+        Title="Unconventional" Height="800" Width="465" ResizeMode="NoResize">
+    <!-- Why 465 instead of 450? Good question. Click Start and try to figure it out :p -->
     <Grid>
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Left" Height="117" Margin="0,652,0,0" VerticalAlignment="Top" Width="442" Grid.ColumnSpan="5">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Content="News" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="117" Click="Button_Click" Background="#FFE82D0F"/>
-            <Button Content="Social" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="117" Grid.Column="1" Background="#FFE82D0F"/>
-            <Button Content="Schedule" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="117" Grid.Column="2" Background="#FFE82D0F"/>
-            <Button Content="Events" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="117" Grid.ColumnSpan="2" Grid.Column="2" Margin="88,0,0,0" Click="Button_Click_1" Background="#FFE82D0F"/>
-            <Button Content="something" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="117" Grid.ColumnSpan="2" Grid.Column="3" Margin="87,0,0,0" Background="#FFE82D0F" Click="Button_Click_2"/>
-        </Grid>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="32" Stroke="Black" VerticalAlignment="Bottom" Width="442" Margin="0,0,0,737"/>
+        <local:NavBar x:Name="NavBar" VerticalAlignment="Bottom"/>
+        <Label x:Name="debugLabel" Content="Label" HorizontalAlignment="Left" Margin="156,219,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="updateDebugLabelBtn" Content="Button" HorizontalAlignment="Left" Margin="226,222,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
