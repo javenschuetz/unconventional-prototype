@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace unconventional
+namespace unconventional 
 {
     /// <summary>
     /// Interaction logic for nav_bar.xaml
