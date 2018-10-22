@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/black_cog.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/android-keyboard.png")]
 
 
