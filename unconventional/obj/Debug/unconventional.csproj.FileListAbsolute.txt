@@ -15,4 +15,7 @@ C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\unconventional
 C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\unconventional.exe
 C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\unconventional.pdb
 C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\unconventional.csprojAssemblyReference.cache
+C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\keyboard.g.cs
+C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\keyboard.baml
+C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\Map.g.cs
+C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\Map.baml

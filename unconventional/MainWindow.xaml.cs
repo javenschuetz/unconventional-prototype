@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace unconventional
 {
@@ -19,13 +20,30 @@ namespace unconventional
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {        
+    {
+        #region init
         public MainWindow()
         {
             InitializeComponent();
             this.debugLabel.Content = this.NavBar.DebugString;
             this.updateDebugLabelBtn.Click += UpdateDebugLabelBtn_Click;
+            this.show_keyboard_btn.Click += Show_keyboard_btn_Click;
+            this.NavBar.NavToMap.Click += NavToMap_Click;
+            SetInitialVisibilities();
         }
+
+        private void NavToMap_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Navigate(new Map());
+        }
+
+        private Boolean keyboard_showing = false;
+
+        private void SetInitialVisibilities() {
+            //this.sliding_keyboard.Visibility = Visibility.Hidden;
+        }
+
+        #endregion
 
         #region click handlers
 
@@ -34,6 +52,35 @@ namespace unconventional
             this.debugLabel.Content = this.NavBar.DebugString;
         }
 
+        private void Show_keyboard_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.keyboard_showing == false)
+            {
+                ShowHideMenu("sbShowBottomMenu", show_keyboard_btn, show_keyboard_btn, sliding_keyboard);
+            }
+            else {
+                ShowHideMenu("sbHideBottomMenu", show_keyboard_btn, show_keyboard_btn, sliding_keyboard);
+            }
+        }
+
         #endregion
+
+        private void ShowHideMenu(string Storyboard, Button btnHide, Button btnShow, UserControl pnl)
+        {
+            Storyboard sb = Resources[Storyboard] as Storyboard;
+            sb.Begin(pnl);
+            if (Storyboard.Contains("Show"))
+            {
+                this.keyboard_showing = true;
+                btnHide.Visibility = System.Windows.Visibility.Visible;
+                //btnShow.Visibility = System.Windows.Visibility.Hidden;
+            }
+            else if (Storyboard.Contains("Hide"))
+            {
+                this.keyboard_showing = false;
+                //.Visibility = System.Windows.Visibility.Hidden;
+                btnShow.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
     }
 }
