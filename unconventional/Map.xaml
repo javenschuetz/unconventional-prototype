@@ -9,7 +9,13 @@
       Title="Map">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="450" Source="images/map-demo.png" Margin="0,102,0,0"/>
-
+     
+        <Image HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="430" Source="images/map-demo.png" Margin="10,100,0,0" Stretch="Fill"/>
+        <Label Content="Neo-Otafest&#xD;&#xA;123 Street&#xD;&#xA;New Calgary, Mars" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="80" Grid.IsSharedSizeScope="True" Margin="10,10,10,0" FontSize="18"/>
+        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="203" Grid.IsSharedSizeScope="True" FontSize="18" Margin="10,391,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            Location Notes: <LineBreak/>
+            <LineBreak/>
+            Please note that the convention is being held under the B Dome. This means that you have to go through the Ares Tunnel and the turnoff to get to the parkade is 44B.
+        </TextBlock>
     </Grid>
 </Page>

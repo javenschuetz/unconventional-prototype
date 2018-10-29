@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/android-keyboard.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/map-demo.png")]
 
 

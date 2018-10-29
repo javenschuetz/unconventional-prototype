@@ -34,13 +34,25 @@ namespace unconventional
 
         private void NavToMap_Click(object sender, RoutedEventArgs e)
         {
-            this.main_frame.Navigate(new Map());
+            this.main_frame.Navigate(new Map()); // need to use a stored 'map' if we want persisted changes
+            ResetButtonColours();
+            this.NavBar.NavToMap.Background = Brushes.LawnGreen;
+        }
+
+        // OrangeRed is the default colour
+        private void ResetButtonColours() {
+            this.NavBar.NavToMap.Background = Brushes.OrangeRed; 
+            this.NavBar.NavToSocial.Background = Brushes.OrangeRed;
+            this.NavBar.NavToNews.Background = Brushes.OrangeRed;
+            this.NavBar.NavToSchedule.Background = Brushes.OrangeRed;
+            this.NavBar.NavToEvents.Background = Brushes.OrangeRed;
+            this.NavBar.NavToSettings.Background = Brushes.OrangeRed;
         }
 
         private Boolean keyboard_showing = false;
 
         private void SetInitialVisibilities() {
-            //this.sliding_keyboard.Visibility = Visibility.Hidden;
+            // stub - delete later if we dont need it
         }
 
         #endregion
@@ -72,13 +84,11 @@ namespace unconventional
             if (Storyboard.Contains("Show"))
             {
                 this.keyboard_showing = true;
-                btnHide.Visibility = System.Windows.Visibility.Visible;
-                //btnShow.Visibility = System.Windows.Visibility.Hidden;
+                btnHide.Visibility = System.Windows.Visibility.Visible;                
             }
             else if (Storyboard.Contains("Hide"))
             {
-                this.keyboard_showing = false;
-                //.Visibility = System.Windows.Visibility.Hidden;
+                this.keyboard_showing = false;                
                 btnShow.Visibility = System.Windows.Visibility.Visible;
             }
         }

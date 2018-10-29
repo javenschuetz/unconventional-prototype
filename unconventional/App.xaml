@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:unconventional"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <Color x:Key="ButtonColor">OrangeRed</Color>
+
     </Application.Resources>
 </Application>

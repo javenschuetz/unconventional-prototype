@@ -19,3 +19,4 @@ C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\keyboard.g.cs
 C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\keyboard.baml
 C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\Map.g.cs
 C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\Map.baml
+C:\Users\woe\vc\unconventional-prototype\unconventional\obj\Debug\App.baml

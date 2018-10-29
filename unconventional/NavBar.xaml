@@ -16,7 +16,11 @@
     </UserControl.Resources>
     <StackPanel Margin="0" VerticalAlignment="Center" Orientation="Horizontal">
         <Button x:Name="NavToNews" Content="News" Style="{StaticResource NavBarBtn}" />
-        <Button x:Name="NavToEvents" Content="Events" Style="{StaticResource NavBarBtn}" />
+        <Button x:Name="NavToEvents" Content="Events" Style="{StaticResource NavBarBtn}" >
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource ButtonColor}"/>
+            </Button.Background>
+        </Button>
         <Button x:Name="NavToSchedule" Content="Schedule" Style="{StaticResource NavBarBtn}" />
         <Button x:Name="NavToMap" Content="Map" Style="{StaticResource NavBarBtn}"  />
         <Button x:Name="NavToSocial" Content="Social" Style="{StaticResource NavBarBtn}" />
