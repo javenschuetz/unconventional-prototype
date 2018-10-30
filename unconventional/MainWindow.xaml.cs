@@ -39,6 +39,13 @@ namespace unconventional
             this.NavBar.NavToMap.Background = Brushes.LawnGreen;
         }
 
+        private void NavToNews_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Navigate(new News()); // loads mocked news interface
+            ResetButtonColours(); // resets colour
+            this.NavBar.NavToNews.Background = Brushes.LawnGreen; // set button colour
+        }
+
         // OrangeRed is the default colour
         private void ResetButtonColours() {
             this.NavBar.NavToMap.Background = Brushes.OrangeRed; 
