@@ -5,7 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:unconventional"
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="450"
+      d:DesignHeight="645
+      " d:DesignWidth="450"
       Title="Events">
 
     <Page.Resources>
@@ -14,7 +15,7 @@
 
     <Grid>
         <Label x:Name="label" Content="Events" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <ScrollViewer HorizontalAlignment="Left" Height="674" Margin="0,26,0,0" VerticalAlignment="Top" Width="450">
+        <ScrollViewer HorizontalAlignment="Left" Height="619" Margin="0,26,0,0" VerticalAlignment="Top" Width="450">
             <Grid x:Name="Schedule" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="450" Margin="10,0,0,0"/>
         </ScrollViewer>
 

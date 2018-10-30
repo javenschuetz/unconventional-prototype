@@ -19,7 +19,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
-        <local:NavBar x:Name="NavBar" VerticalAlignment="Bottom"/>
+        <local:NavBar x:Name="NavBar" VerticalAlignment="Bottom" Panel.ZIndex="100"/>
         <Label x:Name="debugLabel" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Button x:Name="updateDebugLabelBtn" Content="Button" HorizontalAlignment="Left" Margin="70,3,0,0" VerticalAlignment="Top" Width="75"/>
         <!-- we can slide this up and down as desired using animations, hiding it when its off screen -->
