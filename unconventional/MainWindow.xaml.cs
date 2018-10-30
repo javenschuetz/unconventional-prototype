@@ -29,6 +29,7 @@ namespace unconventional
             this.updateDebugLabelBtn.Click += UpdateDebugLabelBtn_Click;
             this.show_keyboard_btn.Click += Show_keyboard_btn_Click;
             this.NavBar.NavToMap.Click += NavToMap_Click;
+            this.NavBar.NavToEvents.Click += NavToEvents_Click;
             SetInitialVisibilities();
         }
 
@@ -37,6 +38,13 @@ namespace unconventional
             this.main_frame.Navigate(new Map()); // need to use a stored 'map' if we want persisted changes
             ResetButtonColours();
             this.NavBar.NavToMap.Background = Brushes.LawnGreen;
+        }
+
+        private void NavToEvents_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Navigate(new Events()); // need to use a stored 'map' if we want persisted changes
+            ResetButtonColours();
+            this.NavBar.NavToEvents.Background = Brushes.LawnGreen;
         }
 
         // OrangeRed is the default colour
