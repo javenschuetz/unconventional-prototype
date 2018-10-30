@@ -34,6 +34,10 @@ namespace unconventional
             SetInitialVisibilities();
         }
 
+        #endregion
+        
+        #region click handlers
+
         private void NavToMap_Click(object sender, RoutedEventArgs e)
         {
             this.main_frame.Navigate(new Map()); // need to use a stored 'map' if we want persisted changes
@@ -70,10 +74,6 @@ namespace unconventional
         private void SetInitialVisibilities() {
             // stub - delete later if we dont need it
         }
-
-        #endregion
-
-        #region click handlers
 
         private void UpdateDebugLabelBtn_Click(object sender, RoutedEventArgs e)
         {
