@@ -74,11 +74,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-<<<<<<< HEAD
     <Page Include="Settings.xaml">
-=======
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="News.xaml">
->>>>>>> refs/remotes/origin/master
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -92,13 +92,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
-=======
+    </Compile>
     <Compile Include="News.xaml.cs">
       <DependentUpon>News.xaml</DependentUpon>
->>>>>>> refs/remotes/origin/master
     </Compile>
     <Compile Include="Map.xaml.cs">
       <DependentUpon>Map.xaml</DependentUpon>
