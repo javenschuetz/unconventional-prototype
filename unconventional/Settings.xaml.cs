@@ -18,9 +18,9 @@ namespace unconventional
     /// <summary>
     /// Interaction logic for Map.xaml
     /// </summary>
-    public partial class Map : Page
+    public partial class Settings : Page
     {
-        public Map()
+        public Settings()
         {
             InitializeComponent();
         }
