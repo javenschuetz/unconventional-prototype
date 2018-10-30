@@ -29,12 +29,9 @@ namespace unconventional
             this.updateDebugLabelBtn.Click += UpdateDebugLabelBtn_Click;
             this.show_keyboard_btn.Click += Show_keyboard_btn_Click;
             this.NavBar.NavToMap.Click += NavToMap_Click;
-<<<<<<< HEAD
             this.NavBar.NavToEvents.Click += NavToEvents_Click;
-=======
             this.NavBar.NavToSettings.Click += NavToSettings_Click;
             this.NavBar.NavToNews.Click += NavToNews_Click;
->>>>>>> 81799c3cda8699be2cdc1f4740b128e118aef240
             SetInitialVisibilities();
         }
 
