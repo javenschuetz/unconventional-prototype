@@ -1,0 +1,21 @@
+﻿<Page x:Class="unconventional.News"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:unconventional"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="450"
+      Title="News">
+
+    <Grid>
+     
+        <Image HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="430" Source="images/map-demo.png" Margin="10,100,0,0" Stretch="Fill"/>
+        <Label Content="Neo-Otafest&#xD;&#xA;123 Street&#xD;&#xA;New Calgary, Mars" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="80" Grid.IsSharedSizeScope="True" Margin="10,10,10,0" FontSize="18"/>
+        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="203" Grid.IsSharedSizeScope="True" FontSize="18" Margin="10,391,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            Location Notes: <LineBreak/>
+            <LineBreak/>
+            Please note that the convention is being held under the B Dome. This means that you have to go through the Ares Tunnel and the turnoff to get to the parkade is 44B.
+        </TextBlock>
+    </Grid>
+</Page>
