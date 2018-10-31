@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Social.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="EventDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +80,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Social.xaml.cs">
+      <DependentUpon>Social.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EventDetail.xaml.cs">
       <DependentUpon>EventDetail.xaml</DependentUpon>
     </Compile>
