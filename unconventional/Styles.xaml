@@ -35,7 +35,7 @@ RelativeSource={RelativeSource TemplatedParent}}"></ContentPresenter>
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Name="fondoboton" BorderBrush="DarkGray" BorderThickness="3"
-CornerRadius="10,10,10,10" Background="{TemplateBinding Background}">
+CornerRadius="15,15,15,15" Background="{TemplateBinding Background}">
                         <ContentPresenter Name="contenido" Content="{Binding Path=Content,
 RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
                     </Border>
