@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace unconventional
 {
     /// <summary>
-    /// Interaction logic for Map.xaml
+    /// Interaction logic for News.xaml
     /// </summary>
     public partial class News : Page
     {
