@@ -32,6 +32,7 @@ namespace unconventional
             this.NavBar.NavToEvents.Click += NavToEvents_Click;
             this.NavBar.NavToSettings.Click += NavToSettings_Click;
             this.NavBar.NavToNews.Click += NavToNews_Click;
+            this.NavBar.NavToSchedule.Click += NavToSchedule_Click;
             SetInitialVisibilities();
             this.main_frame.Navigate(new News()); // loads mocked news interface
             ResetButtonColours(); // resets colour
@@ -68,6 +69,13 @@ namespace unconventional
             this.main_frame.Navigate(new Events()); // need to use a stored 'map' if we want persisted changes
             ResetButtonColours();
             this.NavBar.NavToEvents.Background = Brushes.LawnGreen;
+        }
+
+        private void NavToSchedule_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Navigate(new Schedule()); // need to use a stored 'map' if we want persisted changes
+            ResetButtonColours();
+            this.NavBar.NavToSchedule.Background = Brushes.LawnGreen;
         }
 
         // OrangeRed is the default colour
