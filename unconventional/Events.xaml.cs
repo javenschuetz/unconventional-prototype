@@ -60,89 +60,102 @@ namespace unconventional
 
         CheckBox[] chckFilters = new CheckBox[Category.count];
 
+        Program[][] Progs = new Program[][] {
+                new Program[] {
+                    new Program("Opening Ceremonies", 900, 1000, Categories.houseKeeping),
+                    new Program("Animethon 101", 900, 930, Categories.houseKeeping),
+                    new Program("Cosplay 101", 900, 1100, Categories.houseKeeping),
+                    new Program("Cosplay Contest", 930, 1100, Categories.contest),
+                    new Program("Cosplay Chess", 930, 1400, Categories.game),
+                    new Program("Art Contest", 1200, 1300, Categories.contest),
+                    new Program("Overwatch Championship", 1100, 1600, Categories.contest),
+                    new Program("Open Video Gaming", 900, 1600, Categories.game),
+                    new Program("Autographs with Leah Clark", 1500, 1630, Categories.guests),
+                    new Program("What They Did Right", 1300, 1430, Categories.community),
+                    new Program("Choose Your Own AMV Adventure", 1430, 1600, Categories.community),
+                    new Program("SCT - All Ages Improv Show", 1230, 1430, Categories.guests),
+                    new Program("My Hero Academia Season 2", 1000, 1400, Categories.showings),
+                    new Program("Death March", 1400, 1800, Categories.showings),
+                    new Program("Convention Etiquette 101", 1000, 1130, Categories.houseKeeping),
+                    new Program("Coming To A Theatre Near You", 1600, 1800, Categories.showings),
+                    new Program("SCT - 18+ Improv", 2000, 2200, Categories.guests),
+                    new Program("Black Clover", 1800, 2200, Categories.showings),
+                    new Program("Zap Brannigans \"How to Panel\" Panel", 1100, 1330, Categories.him),
+                    new Program("Voice Over Adventure", 1030, 1200, Categories.community)
+                },
+
+                new Program[]
+                {
+                    new Program("Saturday Morning Cartoons", 900, 1300, Categories.showings),
+                    new Program("Autographs with Matt Mercer", 1500, 1630, Categories.guests),
+                    new Program("Open Video Gaming", 900, 1600, Categories.game),
+                    new Program("Gym Battles", 1200, 1330, Categories.contest),
+                    new Program("Leah Clark Phones A Friend", 1700, 1830, Categories.guests),
+                    new Program("RWBY Vs. JNPR", 1100, 1200, Categories.trivia),
+                    new Program("Capcom Live", 1900, 2100, Categories.guests),
+                    new Program("Cosplay Chess", 930, 1400, Categories.game),
+                    new Program("Pokemon Go Walk", 1100, 1300, Categories.community),
+                    new Program("Light Novels 101", 1300, 1400, Categories.him),
+                    new Program("Animethon AMV Contest", 1500, 1600, Categories.contest),
+                    new Program("Animethon Idol 2018", 1600, 1800, Categories.contest),
+                    new Program("Leah Clar: Act With Me", 1400, 1600, Categories.guests),
+                    new Program("Wheel of Anime", 1000, 1200, Categories.trivia)
+                },
+
+                new Program[]
+                {
+                    new Program("Fate Stay Night Mythos", 1330, 1530, Categories.trivia),
+                    new Program("Live Action Mario Cart", 1400, 1530, Categories.game),
+                    new Program("Open Video Gaming", 900, 1600, Categories.game),
+                    new Program("Cards Against Animethon", 1500, 1700, Categories.game),
+                    new Program("Fire Emblem Jeopardy", 1400, 1500, Categories.trivia),
+                    new Program("Cosplay Chess", 930, 1400, Categories.game),
+                    new Program("Animethon Night Festival", 1800, 2200, Categories.houseKeeping),
+                    new Program("Maid Cafe", 1500, 1700, Categories.houseKeeping),
+                    new Program("AMV Mortal Kombat", 1200, 1500, Categories.showings),
+                    new Program("Lolita Fashion Show", 1100, 1400, Categories.community),
+                    new Program("How It's Made Cosplay", 1400, 1530, Categories.him)
+                }
+            };
+
+        string[] date = { "Friday September 21, 2018", "Saturday September 22, 2018", "Sunday September 23, 2018" };
+
+        bool[] filterCat;
+
 
         public Events()
         {
             InitializeComponent();
-            AddHandler(Mouse.PreviewMouseDownOutsideCapturedElementEvent, new MouseButtonEventHandler(HandleClickOutsideOfControl));
+            //AddHandler(Mouse.PreviewMouseDownOutsideCapturedElementEvent, new MouseButtonEventHandler(HandleClickOutsideOfControl));
+            AddHandler(Mouse.PreviewMouseDownEvent, new MouseButtonEventHandler(HandleMouseDown));
             Schedule.ColumnDefinitions.Add(new ColumnDefinition());
             //string description = Enumerations.GetEnumDescription((MyEnum)value);
 
             grdFilters.ColumnDefinitions.Add(new ColumnDefinition());
             FieldInfo[] fields = typeof(Categories).GetFields();
+            filterCat = new bool[fields.Length];
             for(int i = 0; i < fields.Length; i++)
             {
                 grdFilters.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(25.0) });
-                CheckBox chck = new CheckBox() { Content = ((Category)fields[i].GetValue(null)).name };
+                CheckBox chck = new CheckBox() { Content = ((Category)fields[i].GetValue(null)).name, IsChecked = true};
+                chck.Click += chckCategory_Clicked;
                 Grid.SetColumn(chck, 0);
                 Grid.SetRow(chck, i);
                 grdFilters.Children.Add(chck);
                 chckFilters[i] = chck;
+                chckFilters[i].Tag = i;
+                filterCat[i] = true;
             }
-            //for(int i = 0; i < chckFilters.Length; i++)
-            //{
-            //    chckFilters[i] = new CheckBox() { Content= }
-            //}
 
-            Program[] FriProg = {
-                new Program("Opening Ceremonies", 900, 1000, Categories.houseKeeping),
-                new Program("Animethon 101", 900, 930, Categories.houseKeeping),
-                new Program("Cosplay 101", 900, 1100, Categories.houseKeeping),
-                new Program("Cosplay Contest", 930, 1100, Categories.contest),
-                new Program("Cosplay Chess", 930, 1400, Categories.game),
-                new Program("Art Contest", 1200, 1300, Categories.contest),
-                new Program("Overwatch Championship", 1100, 1600, Categories.contest),
-                new Program("Open Video Gaming", 900, 1600, Categories.game),
-                new Program("Autographs with Leah Clark", 1500, 1630, Categories.guests),
-                new Program("What They Did Right", 1300, 1430, Categories.community),
-                new Program("Choose Your Own AMV Adventure", 1430, 1600, Categories.community),
-                new Program("SCT - All Ages Improv Show", 1230, 1430, Categories.guests),
-                new Program("My Hero Academia Season 2", 1000, 1400, Categories.showings),
-                new Program("Death March", 1400, 1800, Categories.showings),
-                new Program("Convention Etiquette 101", 1000, 1130, Categories.houseKeeping),
-                new Program("Coming To A Theatre Near You", 1600, 1800, Categories.showings),
-                new Program("SCT - 18+ Improv", 2000, 2200, Categories.guests),
-                new Program("Black Clover", 1800, 2200, Categories.showings),
-                new Program("Zap Brannigans \"How to Panel\" Panel", 1100, 1330, Categories.him),
-                new Program("Voice Over Adventure", 1030, 1200, Categories.community)
-            };
-
-            Program[] SatProg =
+            chckAll.IsChecked = true;
+            for(int i = 0; i < date.Length; i++)
             {
-                new Program("Saturday Morning Cartoons", 900, 1300, Categories.showings),
-                new Program("Autographs with Matt Mercer", 1500, 1630, Categories.guests),
-                new Program("Open Video Gaming", 900, 1600, Categories.game),
-                new Program("Gym Battles", 1200, 1330, Categories.contest),
-                new Program("Leah Clark Phones A Friend", 1700, 1830, Categories.guests),
-                new Program("RWBY Vs. JNPR", 1100, 1200, Categories.trivia),
-                new Program("Capcom Live", 1900, 2100, Categories.guests),
-                new Program("Cosplay Chess", 930, 1400, Categories.game),
-                new Program("Pokemon Go Walk", 1100, 1300, Categories.community),
-                new Program("Light Novels 101", 1300, 1400, Categories.him),
-                new Program("Animethon AMV Contest", 1500, 1600, Categories.contest),
-                new Program("Animethon Idol 2018", 1600, 1800, Categories.contest),
-                new Program("Leah Clar: Act With Me", 1400, 1600, Categories.guests),
-                new Program("Wheel of Anime", 1000, 1200, Categories.trivia)
-            };
-
-            Program[] SunProg =
-            {
-                new Program("Fate Stay Night Mythos", 1330, 1530, Categories.trivia),
-                new Program("Live Action Mario Cart", 1400, 1530, Categories.game),
-                new Program("Open Video Gaming", 900, 1600, Categories.game),
-                new Program("Cards Against Animethon", 1500, 1700, Categories.game),
-                new Program("Fire Emblem Jeopardy", 1400, 1500, Categories.trivia),
-                new Program("Cosplay Chess", 930, 1400, Categories.game),
-                new Program("Animethon Night Festival", 1800, 2200, Categories.houseKeeping),
-                new Program("Maid Cafe", 1500, 1700, Categories.houseKeeping),
-                new Program("AMV Mortal Kombat", 1200, 1500, Categories.showings),
-                new Program("Lolita Fashion Show", 1100, 1400, Categories.community),
-                new Program("How It's Made Cosplay", 1400, 1530, Categories.him)
-            };
+                CreateDay(date[i], Progs[i]);
+            }
             //Schedule.ShowGridLines = true;
-            CreateDay("Friday September 21, 2018", FriProg);
-            CreateDay("Saturday September 22, 2018", SatProg);
-            CreateDay("Sunday September 23, 2018", SunProg);
+            //CreateDay("Friday September 21, 2018", FriProg);
+            //CreateDay("Saturday September 22, 2018", SatProg);
+            //CreateDay("Sunday September 23, 2018", SunProg);
         }
 
         public class ProgSched
@@ -251,7 +264,7 @@ namespace unconventional
             var coldef = grid.ColumnDefinitions;
             var rowdef = grid.RowDefinitions;
 
-            int progStart = -1;
+            int progStart = progSched.Length;
             for (int i = 0; i < progSched.Length; i++)
             {
                 if (progSched[i] != null)
@@ -262,7 +275,7 @@ namespace unconventional
             }
 
 
-            int progEnd = progStart;
+            int progEnd = progStart-1;
             int maxRow = 1;
             for (int i = progStart; i < progSched.Length; i++)
             {
@@ -365,21 +378,54 @@ namespace unconventional
             e.Handled = true;
         }
 
-        private void chckAll_Checked(object sender, RoutedEventArgs e)
+        private void chckAll_Clicked(object sender, RoutedEventArgs e)
         {
             for(int i = 0; i < chckFilters.Length; i++)
             {
-                chckFilters[i].IsChecked = true;
+                chckFilters[i].IsChecked = ((CheckBox)sender).IsChecked;
+                filterCat[i] = (bool)chckFilters[i].IsChecked;
+            }
+            ConstructWithFilters();
+        }
+
+        private void ConstructWithFilters()
+        {
+            Schedule.Children.Clear();
+            Schedule.ColumnDefinitions.Clear();
+            Schedule.RowDefinitions.Clear();
+            Schedule.ColumnDefinitions.Add(new ColumnDefinition());
+            for (int i = 0; i < date.Length; i++)
+            {
+                Program[] tempProg = new Program[Progs[i].Length];
+                int k = 0;
+                for(int j = 0; j < tempProg.Length; j++)
+                {
+                    if (filterCat[Progs[i][j].category.num])
+                    {
+                        tempProg[k] = Progs[i][j];
+                        k++;
+                    }
+                }
+                Array.Resize(ref tempProg, k);
+                if(tempProg.Length != 0)
+                {
+                    CreateDay(date[i], tempProg);
+                }
             }
         }
 
-        private void chckAll_Unchecked(object sender, RoutedEventArgs e)
+        private void chckCategory_Clicked(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < chckFilters.Length; i++)
-            {
-                chckFilters[i].IsChecked = false;
-            }
+            CheckBox chckBox = (CheckBox)sender;
+            filterCat[(int)chckBox.Tag] = (bool)chckBox.IsChecked;
+            ConstructWithFilters();
         }
+
+        /*private void chckCategory_Unchecked(object sender, RoutedEventArgs e)
+        {
+            filterCat[(int)((CheckBox)sender).Tag] = false;
+            //ConstructWithFilters();
+        }*/
 
         private void ShowHideMenu(string storyboard, Grid pnl)
         {
@@ -393,17 +439,45 @@ namespace unconventional
             if (!this.filters)
             {
                 ShowHideMenu("sbShowFilters", Filters);
-                Mouse.Capture(Filters);
+                //Mouse.Capture(Filters);
             }
         }
 
-        private void HandleClickOutsideOfControl(object sender, MouseButtonEventArgs e)
+        /*private void HandleClickOutsideOfControl(object sender, MouseButtonEventArgs e)
         {
             if (this.filters)
             {
                 ShowHideMenu("sbHideFilters", Filters);
                 Mouse.Capture(null);
             }
+        }*/
+
+        //List to store all the elements under the cursor
+        private List<DependencyObject> hitResultsList = new List<DependencyObject>();
+
+        private void HandleMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+            Point pt = e.GetPosition((UIElement)sender);
+            hitResultsList.Clear();
+
+            //Retrieving all the elements under the cursor
+            VisualTreeHelper.HitTest(this, null,
+                new HitTestResultCallback(MyHitTestResult),
+                new PointHitTestParameters(pt));
+
+            //Testing if the grdFilters is under the cursor
+            if (!hitResultsList.Contains(this.Filters) && this.filters)
+            {
+                ShowHideMenu("sbHideFilters", Filters);
+            }
+        }
+
+        //Necessary callback function
+        private HitTestResultBehavior MyHitTestResult(HitTestResult result)
+        {
+            hitResultsList.Add(result.VisualHit);
+            return HitTestResultBehavior.Continue;
         }
     }
 }
