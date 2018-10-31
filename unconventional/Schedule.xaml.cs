@@ -21,7 +21,7 @@ namespace unconventional
     /// <summary>
     /// Interaction logic for Events.xaml
     /// </summary>
-    public partial class Events : Page
+    public partial class Schedule : Page
     {
         bool filters = false;
         static int interval = 30;
@@ -62,57 +62,37 @@ namespace unconventional
 
         Program[][] Progs = new Program[][] {
                 new Program[] {
-                    new Program("Opening Ceremonies", 900, 1000, Categories.houseKeeping),
-                    new Program("Animethon 101", 900, 930, Categories.houseKeeping),
                     new Program("Cosplay 101", 900, 1100, Categories.houseKeeping),
                     new Program("Cosplay Contest", 930, 1100, Categories.contest),
                     new Program("Cosplay Chess", 930, 1400, Categories.game),
                     new Program("Art Contest", 1200, 1300, Categories.contest),
-                    new Program("Overwatch Championship", 1100, 1600, Categories.contest),
-                    new Program("Open Video Gaming", 900, 1600, Categories.game),
                     new Program("Autographs with Leah Clark", 1500, 1630, Categories.guests),
-                    new Program("What They Did Right", 1300, 1430, Categories.community),
-                    new Program("Choose Your Own AMV Adventure", 1430, 1600, Categories.community),
                     new Program("SCT - All Ages Improv Show", 1230, 1430, Categories.guests),
                     new Program("My Hero Academia Season 2", 1000, 1400, Categories.showings),
                     new Program("Death March", 1400, 1800, Categories.showings),
                     new Program("Convention Etiquette 101", 1000, 1130, Categories.houseKeeping),
                     new Program("Coming To A Theatre Near You", 1600, 1800, Categories.showings),
                     new Program("SCT - 18+ Improv", 2000, 2200, Categories.guests),
-                    new Program("Black Clover", 1800, 2200, Categories.showings),
-                    new Program("Zap Brannigans \"How to Panel\" Panel", 1100, 1330, Categories.him),
-                    new Program("Voice Over Adventure", 1030, 1200, Categories.community)
                 },
 
                 new Program[]
                 {
                     new Program("Saturday Morning Cartoons", 900, 1300, Categories.showings),
                     new Program("Autographs with Matt Mercer", 1500, 1630, Categories.guests),
-                    new Program("Open Video Gaming", 900, 1600, Categories.game),
                     new Program("Gym Battles", 1200, 1330, Categories.contest),
                     new Program("Leah Clark Phones A Friend", 1700, 1830, Categories.guests),
                     new Program("RWBY Vs. JNPR", 1100, 1200, Categories.trivia),
                     new Program("Capcom Live", 1900, 2100, Categories.guests),
                     new Program("Cosplay Chess", 930, 1400, Categories.game),
-                    new Program("Pokemon Go Walk", 1100, 1300, Categories.community),
-                    new Program("Light Novels 101", 1300, 1400, Categories.him),
-                    new Program("Animethon AMV Contest", 1500, 1600, Categories.contest),
                     new Program("Animethon Idol 2018", 1600, 1800, Categories.contest),
                     new Program("Leah Clar: Act With Me", 1400, 1600, Categories.guests),
-                    new Program("Wheel of Anime", 1000, 1200, Categories.trivia)
                 },
 
                 new Program[]
                 {
                     new Program("Fate Stay Night Mythos", 1330, 1530, Categories.trivia),
-                    new Program("Live Action Mario Cart", 1400, 1530, Categories.game),
-                    new Program("Open Video Gaming", 900, 1600, Categories.game),
                     new Program("Cards Against Animethon", 1500, 1700, Categories.game),
-                    new Program("Fire Emblem Jeopardy", 1400, 1500, Categories.trivia),
-                    new Program("Cosplay Chess", 930, 1400, Categories.game),
                     new Program("Animethon Night Festival", 1800, 2200, Categories.houseKeeping),
-                    new Program("Maid Cafe", 1500, 1700, Categories.houseKeeping),
-                    new Program("AMV Mortal Kombat", 1200, 1500, Categories.showings),
                     new Program("Lolita Fashion Show", 1100, 1400, Categories.community),
                     new Program("How It's Made Cosplay", 1400, 1530, Categories.him)
                 }
@@ -123,21 +103,21 @@ namespace unconventional
         bool[] filterCat;
 
 
-        public Events()
+        public Schedule()
         {
             InitializeComponent();
             //AddHandler(Mouse.PreviewMouseDownOutsideCapturedElementEvent, new MouseButtonEventHandler(HandleClickOutsideOfControl));
             AddHandler(Mouse.PreviewMouseDownEvent, new MouseButtonEventHandler(HandleMouseDown));
-            Schedule.ColumnDefinitions.Add(new ColumnDefinition());
+            Sched.ColumnDefinitions.Add(new ColumnDefinition());
             //string description = Enumerations.GetEnumDescription((MyEnum)value);
 
             grdFilters.ColumnDefinitions.Add(new ColumnDefinition());
             FieldInfo[] fields = typeof(Categories).GetFields();
             filterCat = new bool[fields.Length];
-            for(int i = 0; i < fields.Length; i++)
+            for (int i = 0; i < fields.Length; i++)
             {
                 grdFilters.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(25.0) });
-                CheckBox chck = new CheckBox() { Content = ((Category)fields[i].GetValue(null)).name, IsChecked = true};
+                CheckBox chck = new CheckBox() { Content = ((Category)fields[i].GetValue(null)).name, IsChecked = true };
                 chck.Click += chckCategory_Clicked;
                 Grid.SetColumn(chck, 0);
                 Grid.SetRow(chck, i);
@@ -148,11 +128,11 @@ namespace unconventional
             }
 
             chckAll.IsChecked = true;
-            for(int i = 0; i < date.Length; i++)
+            for (int i = 0; i < date.Length; i++)
             {
                 CreateDay(date[i], Progs[i]);
             }
-            //Schedule.ShowGridLines = true;
+            //Sched.ShowGridLines = true;
             //CreateDay("Friday September 21, 2018", FriProg);
             //CreateDay("Saturday September 22, 2018", SatProg);
             //CreateDay("Sunday September 23, 2018", SunProg);
@@ -212,7 +192,7 @@ namespace unconventional
             {
                 name = Name;
                 int quotient = (int)(Start / 100);
-                start = (quotient*60 + (Start - quotient*100)) / interval;
+                start = (quotient * 60 + (Start - quotient * 100)) / interval;
                 quotient = (int)(End / 100);
                 length = ((quotient * 60 + (End - quotient * 100)) / interval) - start;
                 category = cat;
@@ -224,20 +204,24 @@ namespace unconventional
             Label date = new Label();
             date.Content = Date;
             date.HorizontalAlignment = HorizontalAlignment.Center;
-            Schedule.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(25.0) });
+            Sched.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(25.0) });
             Grid.SetColumn(date, 0);
-            Grid.SetRow(date, Schedule.RowDefinitions.Count-1);
+            Grid.SetRow(date, Sched.RowDefinitions.Count - 1);
             Grid sched = CreateSched(programs);
-            ScrollViewer scroll = new ScrollViewer() { HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden,
-                VerticalScrollBarVisibility = ScrollBarVisibility.Disabled, Height = sched.Height};
+            ScrollViewer scroll = new ScrollViewer()
+            {
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden,
+                VerticalScrollBarVisibility = ScrollBarVisibility.Disabled,
+                Height = sched.Height
+            };
             scroll.PreviewMouseWheel += ScrollViewer_PreviewMouseWheel;
             scroll.Content = sched;
-            Schedule.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(scroll.Height) });
+            Sched.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(scroll.Height) });
             Grid.SetColumn(scroll, 0);
-            Grid.SetRow(scroll, Schedule.RowDefinitions.Count-1);
+            Grid.SetRow(scroll, Sched.RowDefinitions.Count - 1);
 
-            Schedule.Children.Add(date);
-            Schedule.Children.Add(scroll);
+            Sched.Children.Add(date);
+            Sched.Children.Add(scroll);
 
         }
 
@@ -275,7 +259,7 @@ namespace unconventional
             }
 
 
-            int progEnd = progStart-1;
+            int progEnd = progStart - 1;
             int maxRow = 1;
             for (int i = progStart; i < progSched.Length; i++)
             {
@@ -308,7 +292,7 @@ namespace unconventional
                     while (filled[index, depth] == true)
                     {
                         depth++;
-                        if(depth >= maxRow)
+                        if (depth >= maxRow)
                         {
                             maxRow += 5;
                             bool[,] tempFilled = new bool[1 + progEnd - progStart, maxRow];
@@ -316,7 +300,7 @@ namespace unconventional
                             {
                                 for (int k = 0; k < maxRow - 5; k++)
                                 {
-                                    tempFilled[j,k] = filled[j,k];
+                                    tempFilled[j, k] = filled[j, k];
                                 }
                             }
                             filled = tempFilled;
@@ -326,8 +310,13 @@ namespace unconventional
                     {
                         rowdef.Add(new RowDefinition() { Name = "row" + (index), Height = new GridLength(eventHeight) });
                     }
-                    Button program = new Button() { Style = (Style)this.FindResource("MyButtonStyle"), Background = current.data.category.colour,
-                    VerticalContentAlignment = VerticalAlignment.Center, HorizontalContentAlignment = HorizontalAlignment.Center};
+                    Button program = new Button()
+                    {
+                        Style = (Style)this.FindResource("MyButtonStyle"),
+                        Background = current.data.category.colour,
+                        VerticalContentAlignment = VerticalAlignment.Center,
+                        HorizontalContentAlignment = HorizontalAlignment.Center
+                    };
                     program.Content = current.data.name;
                     program.Click += Program_Click;
                     Grid.SetColumn(program, index);
@@ -375,13 +364,13 @@ namespace unconventional
             //scrollviewer.LineLeft();
             else
                 scrollviewer.ScrollToHorizontalOffset(scrollviewer.HorizontalOffset - e.Delta);
-                //scrollviewer.LineRight();
+            //scrollviewer.LineRight();
             e.Handled = true;
         }
 
         private void chckAll_Clicked(object sender, RoutedEventArgs e)
         {
-            for(int i = 0; i < chckFilters.Length; i++)
+            for (int i = 0; i < chckFilters.Length; i++)
             {
                 chckFilters[i].IsChecked = ((CheckBox)sender).IsChecked;
                 filterCat[i] = (bool)chckFilters[i].IsChecked;
@@ -391,15 +380,15 @@ namespace unconventional
 
         private void ConstructWithFilters()
         {
-            Schedule.Children.Clear();
-            Schedule.ColumnDefinitions.Clear();
-            Schedule.RowDefinitions.Clear();
-            Schedule.ColumnDefinitions.Add(new ColumnDefinition());
+            Sched.Children.Clear();
+            Sched.ColumnDefinitions.Clear();
+            Sched.RowDefinitions.Clear();
+            Sched.ColumnDefinitions.Add(new ColumnDefinition());
             for (int i = 0; i < date.Length; i++)
             {
                 Program[] tempProg = new Program[Progs[i].Length];
                 int k = 0;
-                for(int j = 0; j < tempProg.Length; j++)
+                for (int j = 0; j < tempProg.Length; j++)
                 {
                     if (filterCat[Progs[i][j].category.num])
                     {
@@ -408,7 +397,7 @@ namespace unconventional
                     }
                 }
                 Array.Resize(ref tempProg, k);
-                if(tempProg.Length != 0)
+                if (tempProg.Length != 0)
                 {
                     CreateDay(date[i], tempProg);
                 }
@@ -480,7 +469,6 @@ namespace unconventional
             hitResultsList.Add(result.VisualHit);
             return HitTestResultBehavior.Continue;
         }
-
         public event EventHandler EventClick;
 
         private void Program_Click(object sender, RoutedEventArgs e)
