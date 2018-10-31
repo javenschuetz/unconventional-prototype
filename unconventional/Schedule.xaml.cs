@@ -86,40 +86,16 @@ namespace unconventional
 
             Program[] FriProg = {
                 new Program("Opening Ceremonies", 900, 1000, Categories.houseKeeping),
-                new Program("Animethon 101", 900, 930, Categories.houseKeeping),
-                new Program("Cosplay 101", 900, 1100, Categories.houseKeeping),
                 new Program("Cosplay Contest", 930, 1100, Categories.contest),
-                new Program("Cosplay Chess", 930, 1400, Categories.game),
-                new Program("Art Contest", 1200, 1300, Categories.contest),
                 new Program("Overwatch Championship", 1100, 1600, Categories.contest),
-                new Program("Open Video Gaming", 900, 1600, Categories.game),
-                new Program("Autographs with Leah Clark", 1500, 1630, Categories.guests),
-                new Program("What They Did Right", 1300, 1430, Categories.community),
-                new Program("Choose Your Own AMV Adventure", 1430, 1600, Categories.community),
-                new Program("SCT - All Ages Improv Show", 1230, 1430, Categories.guests),
                 new Program("My Hero Academia Season 2", 1000, 1400, Categories.showings),
                 new Program("Death March", 1400, 1800, Categories.showings),
-                new Program("Convention Etiquette 101", 1000, 1130, Categories.houseKeeping),
-                new Program("Coming To A Theatre Near You", 1600, 1800, Categories.showings),
-                new Program("SCT - 18+ Improv", 2000, 2200, Categories.guests),
-                new Program("Black Clover", 1800, 2200, Categories.showings),
-                new Program("Zap Brannigans \"How to Panel\" Panel", 1100, 1330, Categories.him),
-                new Program("Voice Over Adventure", 1030, 1200, Categories.community)
             };
 
             Program[] SatProg =
             {
                 new Program("Saturday Morning Cartoons", 900, 1300, Categories.showings),
-                new Program("Autographs with Matt Mercer", 1500, 1630, Categories.guests),
                 new Program("Open Video Gaming", 900, 1600, Categories.game),
-                new Program("Gym Battles", 1200, 1330, Categories.contest),
-                new Program("Leah Clark Phones A Friend", 1700, 1830, Categories.guests),
-                new Program("RWBY Vs. JNPR", 1100, 1200, Categories.trivia),
-                new Program("Capcom Live", 1900, 2100, Categories.guests),
-                new Program("Cosplay Chess", 930, 1400, Categories.game),
-                new Program("Pokemon Go Walk", 1100, 1300, Categories.community),
-                new Program("Light Novels 101", 1300, 1400, Categories.him),
-                new Program("Animethon AMV Contest", 1500, 1600, Categories.contest),
                 new Program("Animethon Idol 2018", 1600, 1800, Categories.contest),
                 new Program("Leah Clar: Act With Me", 1400, 1600, Categories.guests),
                 new Program("Wheel of Anime", 1000, 1200, Categories.trivia)
@@ -129,14 +105,7 @@ namespace unconventional
             {
                 new Program("Fate Stay Night Mythos", 1330, 1530, Categories.trivia),
                 new Program("Live Action Mario Cart", 1400, 1530, Categories.game),
-                new Program("Open Video Gaming", 900, 1600, Categories.game),
                 new Program("Cards Against Animethon", 1500, 1700, Categories.game),
-                new Program("Fire Emblem Jeopardy", 1400, 1500, Categories.trivia),
-                new Program("Cosplay Chess", 930, 1400, Categories.game),
-                new Program("Animethon Night Festival", 1800, 2200, Categories.houseKeeping),
-                new Program("Maid Cafe", 1500, 1700, Categories.houseKeeping),
-                new Program("AMV Mortal Kombat", 1200, 1500, Categories.showings),
-                new Program("Lolita Fashion Show", 1100, 1400, Categories.community),
                 new Program("How It's Made Cosplay", 1400, 1530, Categories.him)
             };
             //Schedules.ShowGridLines = true;
