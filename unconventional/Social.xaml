@@ -12,23 +12,12 @@
     </Page.Resources>
 
     <Grid>
-        <Label Content="Oct 31st, 2018:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="35" Grid.IsSharedSizeScope="True" Margin="10,10,0,0" FontSize="18">
-            <Label.Background>
-                <SolidColorBrush Color="{DynamicResource other_color}"/>
-            </Label.Background>
-        </Label>
-        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="57" Grid.IsSharedSizeScope="True" FontSize="18" Margin="10,55,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled"><Run Text="7:32 PM: Please be aware that event A has changed to room 101."/><InlineUIContainer>
-        
-            </InlineUIContainer><LineBreak/></TextBlock>
-        <TextBlock Width="430" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" TextWrapping="WrapWithOverflow" Grid.IsSharedSizeScope="True" Height="72" HorizontalAlignment="Left" FontSize="18" Margin="10,123,0,0"><Run Text="6:19 PM: Please be advised that the building had been taken over by ABC."/><LineBreak/></TextBlock>
         <Rectangle Fill="#000000" HorizontalAlignment="Left" Height="1" Margin="10,117,0,0" Stroke="Black" VerticalAlignment="Top" Width="430"/>
-        <Label Content="Oct 30th, 2018:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="35" Grid.IsSharedSizeScope="True" Margin="10,203,0,0" FontSize="18">
-            <Label.Background>
-                <SolidColorBrush Color="{DynamicResource other_color}"/>
-            </Label.Background>
-        </Label>
-        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="30" Grid.IsSharedSizeScope="True" FontSize="18" Margin="10,243,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-            8:45 AM: The apocalypse is here.
-        </TextBlock>
+        <Button FontSize="40" Content="Official" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="215" Height="102"/>
+        <Button FontSize="40" Content="Unofficial" HorizontalAlignment="Left" Margin="225,10,0,0" VerticalAlignment="Top" Width="215" Height="102"/>
+        <Button FontSize="20" Content="Channel 1" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="146" Height="46"/>
+        <Button FontSize="20" Content="Channel 2" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" Width="146" Height="46"/>
+        <Button FontSize="20" Content="Channel 3" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="146" Height="46"/>
+        <Button FontSize="20" Content="Contact Us" HorizontalAlignment="Left" Margin="10,276,0,0" VerticalAlignment="Top" Width="146" Height="46"/>
     </Grid>
 </Page>
