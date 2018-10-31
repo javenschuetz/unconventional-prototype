@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Schedule.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Events.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +76,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Schedule.xaml.cs">
+      <DependentUpon>Schedule.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Events.xaml.cs">
       <DependentUpon>Events.xaml</DependentUpon>
     </Compile>
