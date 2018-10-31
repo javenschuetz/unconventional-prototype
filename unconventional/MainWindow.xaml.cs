@@ -22,6 +22,8 @@ namespace unconventional
     public partial class MainWindow : Window
     {
         #region init
+        Events eve = new Events();
+        Schedule sched = new Schedule();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,12 +32,21 @@ namespace unconventional
             this.show_keyboard_btn.Click += Show_keyboard_btn_Click;
             this.NavBar.NavToMap.Click += NavToMap_Click;
             this.NavBar.NavToEvents.Click += NavToEvents_Click;
+            this.NavBar.NavToSchedule.Click += NavToSchedule_Click;
             this.NavBar.NavToSettings.Click += NavToSettings_Click;
             this.NavBar.NavToNews.Click += NavToNews_Click;
             SetInitialVisibilities();
             this.main_frame.Navigate(new News()); // loads mocked news interface
             ResetButtonColours(); // resets colour
             this.NavBar.NavToNews.Background = Brushes.LawnGreen; // set button colour
+            eve.EventClick += new EventHandler(NavEventDetails);
+            sched.EventClick += new EventHandler(NavEventDetails);
+        }
+
+        private void NavEventDetails(object sender, EventArgs e)
+        {
+            this.main_frame.Navigate(new EventDetail());
+            ResetButtonColours();
         }
 
         #endregion
@@ -65,9 +76,16 @@ namespace unconventional
 
         private void NavToEvents_Click(object sender, RoutedEventArgs e)
         {
-            this.main_frame.Navigate(new Events()); // need to use a stored 'map' if we want persisted changes
+            this.main_frame.Navigate(eve); // need to use a stored 'map' if we want persisted changes
             ResetButtonColours();
             this.NavBar.NavToEvents.Background = Brushes.LawnGreen;
+        }
+
+        private void NavToSchedule_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Navigate(sched); // need to use a stored 'map' if we want persisted changes
+            ResetButtonColours();
+            this.NavBar.NavToSchedule.Background = Brushes.LawnGreen;
         }
 
         // OrangeRed is the default colour

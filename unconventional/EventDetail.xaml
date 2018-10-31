@@ -1,0 +1,22 @@
+﻿<Page x:Class="unconventional.EventDetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:unconventional"
+      mc:Ignorable="d" 
+      d:DesignHeight="645" d:DesignWidth="455"
+      Title="EventDetail">
+    <Page.Resources>
+        <ResourceDictionary Source="Styles.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="645" VerticalAlignment="Top" Width="455">
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="48" Background="{StaticResource Header}" TextWrapping="Wrap" Text="Opening Ceremonies" VerticalAlignment="Top" Width="445" FontSize="18" FontWeight="Bold" TextDecorations="{x:Null}" VerticalContentAlignment="Bottom"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,48,0,0" Background="{StaticResource textBlock1}" TextWrapping="Wrap" Text="Come one come all, me new friends, become iconic characters. Join us as we set off the metaphorical canons for this years opening ceremonies. Give praise to those who gave us such a wonderous event. Welcome travelers from distant lands. Reminisce on tales of convention past, and make way for new adventures. Weclome to Animethon!" VerticalAlignment="Top" Height="91" Width="445"/>
+            <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="0,139,0,0" Background="{StaticResource textBlock2}" TextWrapping="Wrap" Text="The opening ceremonies is the first event of the Animethon convention. During this event we will take the time to introduce some of our volunteers, thank all of them for their diligent work and to our sponsors for their continued support, welcome guests to the convention,. It's not all bussiness though. We will be going over some of the exiting new events we have planned this year, and do our best to try to encourage you to try some of the awesome things we are all excited about" VerticalAlignment="Top" Height="102" Width="445"/>
+            <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="Friday September 21, 2018&#x0a;GlenB 102, 9:00AM-10:00AM" VerticalAlignment="Top" Width="445" Margin="0,241,0,0" HorizontalContentAlignment="Center"/>
+        </Grid>
+
+    </Grid>
+</Page>

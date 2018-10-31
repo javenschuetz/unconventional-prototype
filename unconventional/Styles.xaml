@@ -30,4 +30,8 @@ RelativeSource={RelativeSource TemplatedParent}}"></ContentPresenter>
         </Setter>
     </Style>
     <SolidColorBrush x:Key="TransparentBackground" Color="Cyan" Opacity="0.15"/>
+    <SolidColorBrush x:Key="Header" Color="LawnGreen" Opacity="0.15"/>
+    <SolidColorBrush x:Key="Footer" Color="Gold"  Opacity="0.15"/>
+    <SolidColorBrush x:Key="textBlock1" Color="Gold"  Opacity="0.15"/>
+    <SolidColorBrush x:Key="textBlock2" Color="Silver"  Opacity="0.15"/>
 </ResourceDictionary>
