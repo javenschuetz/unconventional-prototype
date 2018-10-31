@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -10,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -21,41 +23,66 @@ namespace unconventional
     /// </summary>
     public partial class Events : Page
     {
+        bool filters = false;
         static int interval = 30;
         static double eventHeight = 25.0;
         static double timeWidth = 100.0;
         static double timeHeader = 40.0;
 
         int maxCol = 24 * (60 / interval);
-        public enum Categories
+
+        public class Category
         {
-            [Description("House Keeping")]
-            houseKeeping,
-            [Description("Contest")]
-            contest,
-            [Description("Game")]
-            game,
-            [Description("How it's Made")]
-            him,
-            [Description("Guests")]
-            guests,
-            [Description("Trivia")]
-            trivia,
-            [Description("Showings")]
-            showings,
-            [Description("Community")]
-            community
+            public static int count = 0;
+            public string name;
+            public int num;
+            public SolidColorBrush colour;
+
+            public Category(string Name, SolidColorBrush Colour)
+            {
+                name = Name;
+                num = count;
+                colour = Colour;
+                count++;
+            }
+        }
+        public class Categories
+        {
+            public static Category houseKeeping = new Category("House Keeping", Brushes.Green);
+            public static Category contest = new Category("Contest", Brushes.Pink);
+            public static Category game = new Category("Game", Brushes.Blue);
+            public static Category him = new Category("How It's Made", Brushes.Crimson);
+            public static Category guests = new Category("Guests", Brushes.Indigo);
+            public static Category trivia = new Category("Trivia", Brushes.Cyan);
+            public static Category showings = new Category("Showings", Brushes.Teal);
+            public static Category community = new Category("Community", Brushes.Yellow);
         }
 
-        SolidColorBrush[] categoryColours = { Brushes.Green, Brushes.Pink, Brushes.Blue, Brushes.Crimson, Brushes.Indigo, Brushes.Cyan, Brushes.Teal, Brushes.Yellow };
-
-        //string description = Enumerations.GetEnumDescription((MyEnum)value);
+        CheckBox[] chckFilters = new CheckBox[Category.count];
 
 
         public Events()
         {
             InitializeComponent();
+            AddHandler(Mouse.PreviewMouseDownOutsideCapturedElementEvent, new MouseButtonEventHandler(HandleClickOutsideOfControl));
             Schedule.ColumnDefinitions.Add(new ColumnDefinition());
+            //string description = Enumerations.GetEnumDescription((MyEnum)value);
+
+            grdFilters.ColumnDefinitions.Add(new ColumnDefinition());
+            FieldInfo[] fields = typeof(Categories).GetFields();
+            for(int i = 0; i < fields.Length; i++)
+            {
+                grdFilters.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(25.0) });
+                CheckBox chck = new CheckBox() { Content = ((Category)fields[i].GetValue(null)).name };
+                Grid.SetColumn(chck, 0);
+                Grid.SetRow(chck, i);
+                grdFilters.Children.Add(chck);
+                chckFilters[i] = chck;
+            }
+            //for(int i = 0; i < chckFilters.Length; i++)
+            //{
+            //    chckFilters[i] = new CheckBox() { Content= }
+            //}
 
             Program[] FriProg = {
                 new Program("Opening Ceremonies", 900, 1000, Categories.houseKeeping),
@@ -167,8 +194,8 @@ namespace unconventional
             public string name;
             public int start;
             public int length;
-            public Categories category;
-            public Program(string Name, int Start, int End, Categories cat)
+            public Category category;
+            public Program(string Name, int Start, int End, Category cat)
             {
                 name = Name;
                 int quotient = (int)(Start / 100);
@@ -188,7 +215,7 @@ namespace unconventional
             Grid.SetColumn(date, 0);
             Grid.SetRow(date, Schedule.RowDefinitions.Count-1);
             Grid sched = CreateSched(programs);
-            ScrollViewer scroll = new ScrollViewer() { HorizontalScrollBarVisibility = ScrollBarVisibility.Visible,
+            ScrollViewer scroll = new ScrollViewer() { HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden,
                 VerticalScrollBarVisibility = ScrollBarVisibility.Disabled, Height = sched.Height};
             scroll.PreviewMouseWheel += ScrollViewer_PreviewMouseWheel;
             scroll.Content = sched;
@@ -286,7 +313,7 @@ namespace unconventional
                     {
                         rowdef.Add(new RowDefinition() { Name = "row" + (index), Height = new GridLength(eventHeight) });
                     }
-                    Button program = new Button() { Style = (Style)this.FindResource("MyButtonStyle"), Background = categoryColours[(int)current.data.category]};
+                    Button program = new Button() { Style = (Style)this.FindResource("MyButtonStyle"), Background = current.data.category.colour};
                     program.Content = current.data.name;
                     //program.HorizontalContentAlignment = HorizontalAlignment.Center;
                     Grid.SetColumn(program, index);
@@ -336,6 +363,47 @@ namespace unconventional
                 scrollviewer.ScrollToHorizontalOffset(scrollviewer.HorizontalOffset - e.Delta);
                 //scrollviewer.LineRight();
             e.Handled = true;
+        }
+
+        private void chckAll_Checked(object sender, RoutedEventArgs e)
+        {
+            for(int i = 0; i < chckFilters.Length; i++)
+            {
+                chckFilters[i].IsChecked = true;
+            }
+        }
+
+        private void chckAll_Unchecked(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < chckFilters.Length; i++)
+            {
+                chckFilters[i].IsChecked = false;
+            }
+        }
+
+        private void ShowHideMenu(string storyboard, Grid pnl)
+        {
+            Storyboard sb = Resources[storyboard] as Storyboard;
+            sb.Begin(pnl);
+            this.filters = !this.filters;
+        }
+
+        private void btnFilters_Click(object sender, RoutedEventArgs e)
+        {
+            if (!this.filters)
+            {
+                ShowHideMenu("sbShowFilters", Filters);
+                Mouse.Capture(Filters);
+            }
+        }
+
+        private void HandleClickOutsideOfControl(object sender, MouseButtonEventArgs e)
+        {
+            if (this.filters)
+            {
+                ShowHideMenu("sbHideFilters", Filters);
+                Mouse.Capture(null);
+            }
         }
     }
 }

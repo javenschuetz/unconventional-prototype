@@ -50,3 +50,4 @@ C:\Users\Colt\Documents\GitHub\unconventional-prototype\unconventional\obj\Debug
 C:\Users\Colt\Documents\GitHub\unconventional-prototype\unconventional\obj\Debug\unconventional.csproj.GenerateResource.Cache
 C:\Users\Colt\Documents\GitHub\unconventional-prototype\unconventional\obj\Debug\unconventional.exe
 C:\Users\Colt\Documents\GitHub\unconventional-prototype\unconventional\obj\Debug\unconventional.pdb
+C:\Users\Colt\Documents\GitHub\unconventional-prototype\unconventional\obj\Debug\unconventional.csprojResolveAssemblyReference.cache
