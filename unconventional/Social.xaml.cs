@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace unconventional
 {
     /// <summary>
-    /// Interaction logic for News.xaml
+    /// Interaction logic for Social.xaml
     /// </summary>
-    public partial class Settings : Page
+    public partial class Social : Page
     {
-        public Settings()
+        public Social()
         {
             InitializeComponent();
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
