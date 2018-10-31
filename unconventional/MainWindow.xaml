@@ -24,7 +24,7 @@
         <Button x:Name="updateDebugLabelBtn" Content="Button" HorizontalAlignment="Left" Margin="70,3,0,0" VerticalAlignment="Top" Width="75"/>
         <!-- we can slide this up and down as desired using animations, hiding it when its off screen -->
         <!-- name is its name in the code-behind -->
-        <local:keyboard x:Name="sliding_keyboard" HorizontalAlignment="Left" Height="300" Margin="4,776,0,-305" VerticalAlignment="Top" Width="450" OpacityMask="Black" Background="Black" Panel.ZIndex="1"/>
+        <local:keyboard x:Name="sliding_keyboard" HorizontalAlignment="Left" Height="300" Margin="4,776,0,-305" VerticalAlignment="Top" Width="450" OpacityMask="Black" Background="Black" Panel.ZIndex="101"/>
         <Button x:Name="show_keyboard_btn" Content="show keyboard" HorizontalAlignment="Left" Margin="352,0,0,0" VerticalAlignment="Top" Width="107"/>
         <Frame x:Name="main_frame" HorizontalAlignment="Left" Height="645" VerticalAlignment="Top" Width="455" Margin="4,26,0,0" NavigationUIVisibility="Hidden" />
         <Label Content="debug section, del later" HorizontalAlignment="Left" Margin="201,-3,0,0" VerticalAlignment="Top"/>
