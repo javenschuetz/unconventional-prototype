@@ -25,7 +25,7 @@ namespace unconventional
     {
         bool filters = false;
         static int interval = 30;
-        static double eventHeight = 25.0;
+        static double eventHeight = 48.0;
         static double timeWidth = 100.0;
         static double timeHeader = 40.0;
 
