@@ -33,6 +33,9 @@ namespace unconventional
             this.NavBar.NavToSettings.Click += NavToSettings_Click;
             this.NavBar.NavToNews.Click += NavToNews_Click;
             SetInitialVisibilities();
+            this.main_frame.Navigate(new News()); // loads mocked news interface
+            ResetButtonColours(); // resets colour
+            this.NavBar.NavToNews.Background = Brushes.LawnGreen; // set button colour
         }
 
         #endregion
@@ -115,6 +118,11 @@ namespace unconventional
                 this.keyboard_showing = false;                
                 btnShow.Visibility = System.Windows.Visibility.Visible;
             }
+        }
+
+        private void NavBar_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
