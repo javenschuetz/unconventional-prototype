@@ -9,7 +9,7 @@
                     <Border Name="fondoboton" BorderBrush="DarkGray" BorderThickness="3"
 CornerRadius="10,0,10,0" Background="{TemplateBinding Background}">
                         <ContentPresenter Name="contenido" Content="{Binding Path=Content,
-RelativeSource={RelativeSource TemplatedParent}}"></ContentPresenter>
+RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="Center"></ContentPresenter>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -24,6 +24,20 @@ RelativeSource={RelativeSource TemplatedParent}}"></ContentPresenter>
 CornerRadius="10,10,10,10" Background="{TemplateBinding Background}">
                         <ContentPresenter Name="contenido" Content="{Binding Path=Content,
 RelativeSource={RelativeSource TemplatedParent}}"></ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="RoundButton" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Orange" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="fondoboton" BorderBrush="DarkGray" BorderThickness="3"
+CornerRadius="10,10,10,10" Background="{TemplateBinding Background}">
+                        <ContentPresenter Name="contenido" Content="{Binding Path=Content,
+RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
