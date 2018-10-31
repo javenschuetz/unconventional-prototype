@@ -48,4 +48,28 @@ RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="Center" Hor
     <SolidColorBrush x:Key="Footer" Color="Gold"  Opacity="0.15"/>
     <SolidColorBrush x:Key="textBlock1" Color="Gold"  Opacity="0.15"/>
     <SolidColorBrush x:Key="textBlock2" Color="Silver"  Opacity="0.15"/>
+    <ControlTemplate x:Key="StarToggleButton" TargetType="{x:Type ToggleButton}">
+        <Canvas
+                    Width="76"
+                    Height="76"
+                    Clip="F1 M 0,0L 76,0L 76,76L 0,76L 0,0">
+            <Path
+                        x:Name="ButtonPath"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Canvas.Left="17.416"
+                        Canvas.Top="18"
+                        Data="F1 M 17.416,32.25L 32.910,32.25L 38,18L 43.089,32.25L 58.583,32.25L 45.679,41.494L 51.458,56L 38,48.083L 26.125,56L 30.597,41.710L 17.416,32.25 Z "
+                        Fill="Transparent"
+                        Stroke="Black"
+                        StrokeThickness="2"
+                        Stretch="Fill"/>
+        </Canvas>
+        <!-- When checked, fill with Yellow -->
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter TargetName="ButtonPath" Property="Fill" Value="Yellow"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
 </ResourceDictionary>
