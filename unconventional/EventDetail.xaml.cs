@@ -23,6 +23,14 @@ namespace unconventional
         public EventDetail()
         {
             InitializeComponent();
+            SolidColorBrush trans = new SolidColorBrush(Colors.LawnGreen);
+            trans.Opacity = 0.15f;
+            txtTitle.Background = trans;
+        }
+
+        private void chckFav_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

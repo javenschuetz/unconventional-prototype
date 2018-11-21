@@ -24,10 +24,14 @@ namespace unconventional
     public partial class Events : Page
     {
         bool filters = false;
-        static int interval = 30;
-        static double eventHeight = 48.0;
-        static double timeWidth = 100.0;
-        static double timeHeader = 40.0;
+        const int interval = 30;
+        const double eventHeight = 48.0;
+        const double timeWidth = 100.0;
+        const double timeHeader = 40.0;
+        const double whiteSpace = 10.0;
+
+        static Brush favColour = Brushes.Gold;
+        static Brush notFavColour = Brushes.LightGray;
 
         int maxCol = 24 * (60 / interval);
 
@@ -208,6 +212,7 @@ namespace unconventional
             public int start;
             public int length;
             public Category category;
+            public bool fav = false;
             public Program(string Name, int Start, int End, Category cat)
             {
                 name = Name;
@@ -216,6 +221,10 @@ namespace unconventional
                 quotient = (int)(End / 100);
                 length = ((quotient * 60 + (End - quotient * 100)) / interval) - start;
                 category = cat;
+            }
+            public Program(string Name, int Start, int End, Category cat, bool Fav) : this(Name, Start, End, cat)
+            {
+                fav = Fav;
             }
         }
 
@@ -326,7 +335,7 @@ namespace unconventional
                     {
                         rowdef.Add(new RowDefinition() { Name = "row" + (index), Height = new GridLength(eventHeight) });
                     }
-                    Button program = new Button() { Style = (Style)this.FindResource("MyButtonStyle"), Background = current.data.category.colour,
+                    Button program = new Button() { Style = (Style)this.FindResource("MyButtonStyle"), Background = current.data.category.colour, BorderBrush = current.data.fav ? favColour : notFavColour,
                     VerticalContentAlignment = VerticalAlignment.Center, HorizontalContentAlignment = HorizontalAlignment.Center};
                     program.Content = current.data.name;
                     program.Click += Program_Click;
