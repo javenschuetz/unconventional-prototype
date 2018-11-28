@@ -33,7 +33,7 @@ namespace unconventional
         const double whiteSpace = 10.0;
 
         static Brush favColour = Brushes.Gold;
-        static Brush notFavColour = Brushes.LightGray;
+        static Brush notFavColour = Brushes.White;
 
         int maxCol = 24 * (60 / interval);
 

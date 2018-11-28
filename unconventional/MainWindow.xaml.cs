@@ -24,6 +24,10 @@ namespace unconventional
         #region init
         Events eve = new Events();
         Schedule sched = new Schedule();
+
+        private static Brush navColour = Brushes.White;
+        private static Brush navSelectColour = Brushes.LightGray;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -39,7 +43,7 @@ namespace unconventional
             SetInitialVisibilities();
             this.main_frame.Navigate(new News()); // loads mocked news interface
             ResetButtonColours(); // resets colour
-            this.NavBar.NavToNews.Background = Brushes.LawnGreen; // set button colour
+            this.NavBar.NavToNews.Background = navSelectColour; // set button colour
             eve.EventClick += new EventHandler(NavEventDetails);
             sched.EventClick += new EventHandler(NavEventDetails);
         }
@@ -58,51 +62,51 @@ namespace unconventional
         {
             this.main_frame.Navigate(new Map()); // need to use a stored 'map' if we want persisted changes
             ResetButtonColours();
-            this.NavBar.NavToMap.Background = Brushes.LawnGreen;
+            this.NavBar.NavToMap.Background = navSelectColour;
         }
 		
         private void NavToSettings_Click(object sender, RoutedEventArgs e)
         {
             this.main_frame.Navigate(new Settings()); // need to use a stored 'map' if we want persisted changes
             ResetButtonColours(); // resets colour
-            this.NavBar.NavToSettings.Background = Brushes.LawnGreen; // highlight button
+            this.NavBar.NavToSettings.Background = navSelectColour; // highlight button
 		}
 		
         private void NavToNews_Click(object sender, RoutedEventArgs e)
         {
             this.main_frame.Navigate(new News()); // loads mocked news interface
             ResetButtonColours(); // resets colour
-            this.NavBar.NavToNews.Background = Brushes.LawnGreen; // set button colour
+            this.NavBar.NavToNews.Background = navSelectColour; // set button colour
         }
 
         private void NavToEvents_Click(object sender, RoutedEventArgs e)
         {
             this.main_frame.Navigate(eve); // need to use a stored 'map' if we want persisted changes
             ResetButtonColours();
-            this.NavBar.NavToEvents.Background = Brushes.LawnGreen;
+            this.NavBar.NavToEvents.Background = navSelectColour;
         }
 
         private void NavToSocial_Click(object sender, RoutedEventArgs e)
         {
             this.main_frame.Navigate(new Social()); // need to use a stored 'map' if we want persisted changes
             ResetButtonColours();
-            this.NavBar.NavToSocial.Background = Brushes.LawnGreen;
+            this.NavBar.NavToSocial.Background = navSelectColour;
         }
         private void NavToSchedule_Click(object sender, RoutedEventArgs e)
         {
             this.main_frame.Navigate(sched); // need to use a stored 'map' if we want persisted changes
             ResetButtonColours();
-            this.NavBar.NavToSchedule.Background = Brushes.LawnGreen;
+            this.NavBar.NavToSchedule.Background = navSelectColour;
         }
 
         // OrangeRed is the default colour
         private void ResetButtonColours() {
-            this.NavBar.NavToMap.Background = Brushes.OrangeRed; 
-            this.NavBar.NavToSocial.Background = Brushes.OrangeRed;
-            this.NavBar.NavToNews.Background = Brushes.OrangeRed;
-            this.NavBar.NavToSchedule.Background = Brushes.OrangeRed;
-            this.NavBar.NavToEvents.Background = Brushes.OrangeRed;
-            this.NavBar.NavToSettings.Background = Brushes.OrangeRed;
+            this.NavBar.NavToMap.Background = navColour; 
+            this.NavBar.NavToSocial.Background = navColour;
+            this.NavBar.NavToNews.Background = navColour;
+            this.NavBar.NavToSchedule.Background = navColour;
+            this.NavBar.NavToEvents.Background = navColour;
+            this.NavBar.NavToSettings.Background = navColour;
         }
 
         private Boolean keyboard_showing = false;
