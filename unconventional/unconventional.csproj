@@ -181,5 +181,8 @@
   <ItemGroup>
     <Resource Include="images\android-keyboard.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\otafest.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

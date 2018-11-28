@@ -15,17 +15,17 @@
         </Style>
     </UserControl.Resources>
     <StackPanel Margin="0" VerticalAlignment="Center" Orientation="Horizontal">
-        <Button x:Name="NavToNews" Content="News" Style="{StaticResource NavBarBtn}" Background="White" />
-        <Button x:Name="NavToEvents" Content="Events" Style="{StaticResource NavBarBtn}" >
+        <Button x:Name="NavToNews" Content="News" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" />
+        <Button x:Name="NavToEvents" Content="Events" Style="{StaticResource NavBarBtn}" FontWeight="Bold" >
             <Button.Background>
                 <SolidColorBrush Color="White"/>
             </Button.Background>
         </Button>
-        <Button x:Name="NavToSchedule" Content="Schedule" Style="{StaticResource NavBarBtn}" Background="White" />
-        <Button x:Name="NavToMap" Content="Map" Style="{StaticResource NavBarBtn}" Background="White"  />
-        <Button x:Name="NavToSocial" Content="Social" Style="{StaticResource NavBarBtn}" Background="White" />
-        <Button x:Name="NavToSettings" Style="{StaticResource NavBarBtn}" Background="White" >
-            <Image Source="images/2000px-Gear_icon_svg.svg.png"/>
+        <Button x:Name="NavToSchedule" Content="Schedule" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" />
+        <Button x:Name="NavToMap" Content="Map" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold"  />
+        <Button x:Name="NavToSocial" Content="Social" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" />
+        <Button x:Name="NavToSettings" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" >
+            <Image Source="images/2000px-Gear_icon_svg.svg.png" Margin="15,0"/>
         </Button>
     </StackPanel>
 

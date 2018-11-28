@@ -9,13 +9,16 @@
       Title="Map">
 
     <Grid>
-     
-        <Image HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="430" Source="images/map-demo.png" Margin="10,100,0,0" Stretch="Fill"/>
-        <Label Content="Neo-Otafest&#xD;&#xA;123 Street&#xD;&#xA;New Calgary, Mars" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="80" Grid.IsSharedSizeScope="True" Margin="10,10,10,0" FontSize="18"/>
-        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="203" Grid.IsSharedSizeScope="True" FontSize="18" Margin="10,391,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-            Location Notes: <LineBreak/>
+
+        <Image HorizontalAlignment="Center" Height="178" VerticalAlignment="Top" Width="430" Source="images/otafest.jpg" Margin="10,113,10,0" Stretch="Fill"/>
+        <Label Content="Calgary Telus Convention Centre&#xD;&#xA;120 9 Ave SE&#xD;&#xA;Calgary, AB T2G 0P3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="85" Grid.IsSharedSizeScope="True" Margin="10,10,0,0" FontSize="18"/>
+        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="203" Grid.IsSharedSizeScope="True" FontSize="18" Margin="9,295,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            Parking: <LineBreak/>
             <LineBreak/>
-            Please note that the convention is being held under the B Dome. This means that you have to go through the Ares Tunnel and the turnoff to get to the parkade is 44B.
+            The Telus Convention Centre has a parking garage located at 727 – 1 St SE.
+            <LineBreak/>
+            <LineBreak/>
+            There are other parking garaged and street parking in the vicinity. Be sure to obey all parking signs!
         </TextBlock>
     </Grid>
 </Page>
