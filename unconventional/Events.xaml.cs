@@ -367,7 +367,7 @@ namespace unconventional
                 Button header = new Button();
                 header.IsEnabled = false;
                 int quotient = (int)(i / (60 / interval));
-                header.Content = quotient + ":" + ((i % (60 / interval)) * interval).ToString().PadLeft(2, '0');
+                header.Content = quotient % 25 + ":" + ((i % (60 / interval)) * interval).ToString().PadLeft(2, '0');
                 Grid.SetColumn(header, index);
                 Grid.SetRow(header, 0);
                 grid.Children.Add(header);
