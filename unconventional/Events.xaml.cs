@@ -85,7 +85,7 @@ namespace unconventional
                 Descs[i] = new List<String>();
             }
 
-            List<ProgramJSON> progs = JsonConvert.DeserializeObject<List<ProgramJSON>>(File.ReadAllText(@"otafest.json"));
+            List<ProgramJSON> progs = JsonConvert.DeserializeObject<List<ProgramJSON>>(File.ReadAllText(@"..\..\otafest.json"));
 
             foreach(ProgramJSON p in progs)
             {
