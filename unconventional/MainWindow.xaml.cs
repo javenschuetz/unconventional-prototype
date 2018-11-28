@@ -31,9 +31,9 @@ namespace unconventional
         public MainWindow()
         {
             InitializeComponent();
-            this.debugLabel.Content = this.NavBar.DebugString;
-            this.updateDebugLabelBtn.Click += UpdateDebugLabelBtn_Click;
-            this.show_keyboard_btn.Click += Show_keyboard_btn_Click;
+            
+            
+            
             this.NavBar.NavToMap.Click += NavToMap_Click;
             this.NavBar.NavToEvents.Click += NavToEvents_Click;
             this.NavBar.NavToSchedule.Click += NavToSchedule_Click;
@@ -115,12 +115,9 @@ namespace unconventional
             // stub - delete later if we dont need it
         }
 
-        private void UpdateDebugLabelBtn_Click(object sender, RoutedEventArgs e)
-        {
-            this.debugLabel.Content = this.NavBar.DebugString;
-        }
+        
 
-        private void Show_keyboard_btn_Click(object sender, RoutedEventArgs e)
+        /*private void Show_keyboard_btn_Click(object sender, RoutedEventArgs e)
         {
             if (this.keyboard_showing == false)
             {
@@ -129,7 +126,7 @@ namespace unconventional
             else {
                 ShowHideMenu("sbHideBottomMenu", show_keyboard_btn, show_keyboard_btn, sliding_keyboard);
             }
-        }
+        }*/
 
         #endregion
 
