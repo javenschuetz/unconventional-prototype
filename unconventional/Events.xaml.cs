@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -50,77 +52,23 @@ namespace unconventional
                 count++;
             }
         }
-        public class Categories
-        {
-            public static Category houseKeeping = new Category("House Keeping", Brushes.Green);
-            public static Category contest = new Category("Contest", Brushes.Pink);
-            public static Category game = new Category("Game", Brushes.Aqua);
-            public static Category him = new Category("How It's Made", Brushes.Crimson);
-            public static Category guests = new Category("Guests", Brushes.AliceBlue);
-            public static Category trivia = new Category("Trivia", Brushes.Cyan);
-            public static Category showings = new Category("Showings", Brushes.Teal);
-            public static Category community = new Category("Community", Brushes.Yellow);
-        }
+
+        public static BrushConverter converter = new BrushConverter();
+        public static Category[] Categories = { new Category("18+ Only", (SolidColorBrush)converter.ConvertFrom("#FF0000")),
+            new Category("AMV Event", (SolidColorBrush)converter.ConvertFrom("#44F4C4")),
+            new Category("Anime Showing", (SolidColorBrush)converter.ConvertFrom("#B7FBFF")),
+            new Category("Community Panel", (SolidColorBrush)converter.ConvertFrom("#7F97F3")),
+            new Category("Dedicated Space", (SolidColorBrush)converter.ConvertFrom("#B1B1B1")),
+            new Category("Gaming Event", (SolidColorBrush)converter.ConvertFrom("#FFBC57")),
+            new Category("Guest Event", (SolidColorBrush)converter.ConvertFrom("#FFFD67")),
+            new Category("Otafest Event", (SolidColorBrush)converter.ConvertFrom("#EFC8FE"))
+        };
 
         CheckBox[] chckFilters = new CheckBox[Category.count];
 
-        Program[][] Progs = new Program[][] {
-                new Program[] {
-                    new Program("Opening Ceremonies", 900, 1000, Categories.houseKeeping),
-                    new Program("Animethon 101", 900, 930, Categories.houseKeeping),
-                    new Program("Cosplay 101", 900, 1100, Categories.houseKeeping),
-                    new Program("Cosplay Contest", 930, 1100, Categories.contest),
-                    new Program("Cosplay Chess", 930, 1400, Categories.game),
-                    new Program("Art Contest", 1200, 1300, Categories.contest),
-                    new Program("Overwatch Championship", 1100, 1600, Categories.contest),
-                    new Program("Open Video Gaming", 900, 1600, Categories.game),
-                    new Program("Autographs with Leah Clark", 1500, 1630, Categories.guests),
-                    new Program("What They Did Right", 1300, 1430, Categories.community),
-                    new Program("Choose Your Own AMV Adventure", 1430, 1600, Categories.community),
-                    new Program("SCT - All Ages Improv Show", 1230, 1430, Categories.guests),
-                    new Program("My Hero Academia Season 2", 1000, 1400, Categories.showings),
-                    new Program("Death March", 1400, 1800, Categories.showings),
-                    new Program("Convention Etiquette 101", 1000, 1130, Categories.houseKeeping),
-                    new Program("Coming To A Theatre Near You", 1600, 1800, Categories.showings),
-                    new Program("SCT - 18+ Improv", 2000, 2200, Categories.guests),
-                    new Program("Black Clover", 1800, 2200, Categories.showings),
-                    new Program("Zap Brannigans \"How to Panel\" Panel", 1100, 1330, Categories.him),
-                    new Program("Voice Over Adventure", 1030, 1200, Categories.community)
-                },
-
-                new Program[]
-                {
-                    new Program("Saturday Morning Cartoons", 900, 1300, Categories.showings),
-                    new Program("Autographs with Matt Mercer", 1500, 1630, Categories.guests),
-                    new Program("Open Video Gaming", 900, 1600, Categories.game),
-                    new Program("Gym Battles", 1200, 1330, Categories.contest),
-                    new Program("Leah Clark Phones A Friend", 1700, 1830, Categories.guests),
-                    new Program("RWBY Vs. JNPR", 1100, 1200, Categories.trivia),
-                    new Program("Capcom Live", 1900, 2100, Categories.guests),
-                    new Program("Cosplay Chess", 930, 1400, Categories.game),
-                    new Program("Pokemon Go Walk", 1100, 1300, Categories.community),
-                    new Program("Light Novels 101", 1300, 1400, Categories.him),
-                    new Program("Animethon AMV Contest", 1500, 1600, Categories.contest),
-                    new Program("Animethon Idol 2018", 1600, 1800, Categories.contest),
-                    new Program("Leah Clar: Act With Me", 1400, 1600, Categories.guests),
-                    new Program("Wheel of Anime", 1000, 1200, Categories.trivia)
-                },
-
-                new Program[]
-                {
-                    new Program("Fate Stay Night Mythos", 1330, 1530, Categories.trivia),
-                    new Program("Live Action Mario Cart", 1400, 1530, Categories.game),
-                    new Program("Open Video Gaming", 900, 1600, Categories.game),
-                    new Program("Cards Against Animethon", 1500, 1700, Categories.game),
-                    new Program("Fire Emblem Jeopardy", 1400, 1500, Categories.trivia),
-                    new Program("Cosplay Chess", 930, 1400, Categories.game),
-                    new Program("Animethon Night Festival", 1800, 2200, Categories.houseKeeping),
-                    new Program("Maid Cafe", 1500, 1700, Categories.houseKeeping),
-                    new Program("AMV Mortal Kombat", 1200, 1500, Categories.showings),
-                    new Program("Lolita Fashion Show", 1100, 1400, Categories.community),
-                    new Program("How It's Made Cosplay", 1400, 1530, Categories.him)
-                }
-            };
+        //Program[][] Progs = new Program[3][];
+        List<Program>[] Progs = new List<Program>[3];
+        List<string>[] Descs = new List<string>[3];
 
         string[] date = { "Friday September 21, 2018", "Saturday September 22, 2018", "Sunday September 23, 2018" };
 
@@ -130,18 +78,34 @@ namespace unconventional
         public Events()
         {
             InitializeComponent();
+
+            for(int i = 0; i < Progs.Length; i++)
+            {
+                Progs[i] = new List<Program>();
+                Descs[i] = new List<String>();
+            }
+
+            List<ProgramJSON> progs = JsonConvert.DeserializeObject<List<ProgramJSON>>(File.ReadAllText(@"otafest.json"));
+
+            foreach(ProgramJSON p in progs)
+            {
+                Progs[p.day].Add(new Program(p));
+                Descs[p.day].Add(p.desc);
+            }
+
             //AddHandler(Mouse.PreviewMouseDownOutsideCapturedElementEvent, new MouseButtonEventHandler(HandleClickOutsideOfControl));
             AddHandler(Mouse.PreviewMouseDownEvent, new MouseButtonEventHandler(HandleMouseDown));
             Schedule.ColumnDefinitions.Add(new ColumnDefinition());
             //string description = Enumerations.GetEnumDescription((MyEnum)value);
 
             grdFilters.ColumnDefinitions.Add(new ColumnDefinition());
-            FieldInfo[] fields = typeof(Categories).GetFields();
-            filterCat = new bool[fields.Length];
-            for(int i = 0; i < fields.Length; i++)
+            //FieldInfo[] fields = typeof(Categories).GetFields();
+            //filterCat = new bool[fields.Length];
+            filterCat = new bool[Categories.Length];
+            for(int i = 0; i < Categories.Length; i++)
             {
                 grdFilters.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(25.0) });
-                CheckBox chck = new CheckBox() { Content = ((Category)fields[i].GetValue(null)).name, IsChecked = true};
+                CheckBox chck = new CheckBox() { Content = Categories[i].name, IsChecked = true};
                 chck.Click += chckCategory_Clicked;
                 Grid.SetColumn(chck, 0);
                 Grid.SetRow(chck, i);
@@ -211,9 +175,45 @@ namespace unconventional
             public string name;
             public int start;
             public int length;
-            public Category category;
+            public int category;
             public bool fav = false;
-            public Program(string Name, int Start, int End, Category cat)
+            
+            public Program(ProgramJSON js)
+            {
+                name = js.name;
+                start = js.start;
+                length = js.length;
+                category = js.category;
+            }
+        }
+
+        public class ProgramJSON
+        {
+            public string name;
+            public int start;
+            public int length;
+            public int day;
+            public int category;
+            public string desc;
+            /*public int End
+            {
+                set {
+                    int quotient = (int)(value / 100);
+                    length = ((quotient * 60 + (value - quotient * 100)) / interval) - start; }
+            }*/
+            [JsonConstructor]
+            public ProgramJSON(string Name, int Start, int End, int Day, int Category, string Description)
+            {
+                name = Name;
+                int quotient = (int)(Start / 100);
+                start = (quotient * 60 + (Start - quotient * 100)) / interval;
+                quotient = (int)(End / 100);
+                length = ((quotient * 60 + (End - quotient * 100)) / interval) - start;
+                day = Day;
+                category = Category;
+                desc = Description;
+            }
+            /*public Program(string Name, int Start, int End, Category cat)
             {
                 name = Name;
                 int quotient = (int)(Start / 100);
@@ -222,13 +222,13 @@ namespace unconventional
                 length = ((quotient * 60 + (End - quotient * 100)) / interval) - start;
                 category = cat;
             }
-            public Program(string Name, int Start, int End, Category cat, bool Fav) : this(Name, Start, End, cat)
+            /*public Program(string Name, int Start, int End, Category cat, bool Fav) : this(Name, Start, End, cat)
             {
                 fav = Fav;
-            }
+            }*/
         }
 
-        public void CreateDay(string Date, Program[] programs)
+        public void CreateDay(string Date, List<Program> programs)
         {
             Label date = new Label();
             date.Content = Date;
@@ -250,13 +250,13 @@ namespace unconventional
 
         }
 
-        public Grid CreateSched(Program[] programs)
+        public Grid CreateSched(List<Program> programs)
         {
             Grid grid = new Grid();
             //grid.ShowGridLines = true;
 
             ProgSched[] progSched = new ProgSched[maxCol];
-            for (int i = 0; i < programs.Length; i++)
+            for (int i = 0; i < programs.Count; i++)
             {
                 Node node = new Node(programs[i]);
                 if (progSched[node.data.start] == null)
@@ -297,7 +297,7 @@ namespace unconventional
             }
 
             //Provide a buffer of up to 4 more conflictions that may be "piled up" from other timeslots
-            maxRow += 5;
+            maxRow += 10;
 
             bool[,] filled = new bool[1 + progEnd - progStart, maxRow];
 
@@ -335,7 +335,7 @@ namespace unconventional
                     {
                         rowdef.Add(new RowDefinition() { Name = "row" + (index), Height = new GridLength(eventHeight) });
                     }
-                    Button program = new Button() { Style = (Style)this.FindResource("MyButtonStyle"), Background = current.data.category.colour, BorderBrush = current.data.fav ? favColour : notFavColour,
+                    Button program = new Button() { Style = (Style)this.FindResource("MyButtonStyle"), Background = Categories[current.data.category].colour, BorderBrush = current.data.fav ? favColour : notFavColour,
                     VerticalContentAlignment = VerticalAlignment.Center, HorizontalContentAlignment = HorizontalAlignment.Center};
                     program.Content = current.data.name;
                     program.Click += Program_Click;
@@ -406,18 +406,19 @@ namespace unconventional
             Schedule.ColumnDefinitions.Add(new ColumnDefinition());
             for (int i = 0; i < date.Length; i++)
             {
-                Program[] tempProg = new Program[Progs[i].Length];
-                int k = 0;
-                for(int j = 0; j < tempProg.Length; j++)
+                List<Program> tempProg = new List<Program>();
+                //tempProg.Capacity = Progs[i].Count;
+                //int k = 0;
+                for(int j = 0; j < Progs[i].Count; j++)
                 {
-                    if (filterCat[Progs[i][j].category.num])
+                    if (filterCat[Progs[i][j].category])
                     {
-                        tempProg[k] = Progs[i][j];
-                        k++;
+                        tempProg.Add(Progs[i][j]);
+                        //k++;
                     }
                 }
-                Array.Resize(ref tempProg, k);
-                if(tempProg.Length != 0)
+                //Array.Resize(ref tempProg, k);
+                if(tempProg.Count != 0)
                 {
                     CreateDay(date[i], tempProg);
                 }
