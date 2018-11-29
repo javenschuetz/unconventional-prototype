@@ -17,6 +17,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Effects;
 
 namespace unconventional
 {
@@ -335,8 +336,23 @@ namespace unconventional
                     {
                         rowdef.Add(new RowDefinition() { Name = "row" + (index), Height = new GridLength(eventHeight) });
                     }
-                    Button program = new Button() { Style = (Style)this.FindResource("MyButtonStyle"), Background = Categories[current.data.category].colour, BorderBrush = current.data.fav ? favColour : notFavColour,
-                    VerticalContentAlignment = VerticalAlignment.Center, HorizontalContentAlignment = HorizontalAlignment.Center};
+                    Button program = new Button() {
+                            Style = (Style)this.FindResource("MyButtonStyle"),
+                            Background = Categories[current.data.category].colour,
+                            BorderBrush = current.data.fav ? favColour : notFavColour,
+                            VerticalContentAlignment = VerticalAlignment.Center,
+                            HorizontalContentAlignment = HorizontalAlignment.Center};
+                    
+                    // couldn't get this to work in time
+                    /*UIElement uie = new UIElement();
+                    uie.Effect = new DropShadowEffect
+                        {
+                            Color = new Color { A = 255, R = 255, G = 255, B = 0 },
+                            Direction = 320,
+                            ShadowDepth = 1,
+                            Opacity = 1
+                        };
+                        */
                     program.Content = current.data.name;
                     program.Click += Program_Click;
                     Grid.SetColumn(program, index);
