@@ -14,18 +14,39 @@
             <Setter Property="Margin" Value="0" />
         </Style>
     </UserControl.Resources>
-    <StackPanel Margin="0" VerticalAlignment="Center" Orientation="Horizontal">
-        <Button x:Name="NavToNews" Content="News" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" />
-        <Button x:Name="NavToEvents" Content="Events" Style="{StaticResource NavBarBtn}" FontWeight="Bold" >
+    <StackPanel Margin="0" VerticalAlignment="Center" Orientation="Horizontal" Width="465">
+        <Button x:Name="NavToNews" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" Width="90" >
+            <Grid>
+                <Image Source="images/news.png" Margin="10,-5,10.6,5.6"/>
+                <Label Content="News" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,62,0,-13.8" Height="23" HorizontalContentAlignment="Center" FontSize="10" Width="88"/>
+            </Grid>
+        </Button>
+        <Button x:Name="NavToEvents" Style="{StaticResource NavBarBtn}" FontWeight="Bold" Width="90" >
             <Button.Background>
                 <SolidColorBrush Color="White"/>
             </Button.Background>
+            <Grid>
+                <Image Source="images/events.png" Margin="10,-5,10.6,5.6"/>
+                <Label Content="Events" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,62,0,-13.8" Height="23" HorizontalContentAlignment="Center" FontSize="10" Width="88"/>
+            </Grid>
         </Button>
-        <Button x:Name="NavToSchedule" Content="Schedule" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" />
-        <Button x:Name="NavToMap" Content="Map" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold"  />
-        <Button x:Name="NavToSocial" Content="Social" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" />
-        <Button x:Name="NavToSettings" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" >
-            <Image Source="images/2000px-Gear_icon_svg.svg.png" Margin="15,0"/>
+        <Button x:Name="NavToMap" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" Width="90"  >
+            <Grid>
+                <Image Source="images/world-map.png" Margin="10,-5,10.6,5.6"/>
+                <Label Content="Map" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,62,0,-13.8" Height="23" HorizontalContentAlignment="Center" FontSize="10" Width="88"/>
+            </Grid>
+        </Button>
+        <Button x:Name="NavToSocial" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" Width="90" >
+            <Grid>
+                <Image Source="images/social.png" Margin="10,-5,10.6,5.6"/>
+                <Label Content="Social" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,62,0,-13.8" Height="23" HorizontalContentAlignment="Center" FontSize="10" Width="88"/>
+            </Grid>
+        </Button>
+        <Button x:Name="NavToSettings" Style="{StaticResource NavBarBtn}" Background="White" FontWeight="Bold" Width="90" >
+            <Grid>
+                <Image Source="images/gear-transparent-background-3.png" Margin="10,-8,10,9.2"/>
+                <Label Content="Settings" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,62,0,-13.8" Width="88" Height="23" HorizontalContentAlignment="Center" FontSize="10"/>
+            </Grid>
         </Button>
     </StackPanel>
 

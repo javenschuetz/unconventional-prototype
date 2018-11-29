@@ -43,7 +43,6 @@ namespace unconventional
             // surely these can be combined into a single handler, but that would require 
             // looking up how the 'sender' and 'e' arguments work
             this.NavToEvents.Click += NavToEvents_Click;
-            this.NavToSchedule.Click += NavToSchedule_Click;
             this.NavToNews.Click += NavToNews_Click;
             this.NavToMap.Click += NavToMap_Click;
             this.NavToSettings.Click += NavToSettings_Click;

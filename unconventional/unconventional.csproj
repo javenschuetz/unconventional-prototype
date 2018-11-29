@@ -99,10 +99,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Schedule.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Settings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -129,9 +125,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Schedule.xaml.cs">
-      <DependentUpon>Schedule.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
@@ -183,6 +176,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\otafest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\news.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bbf0b3245833ddeb2c943368289537bc-map-travel-kit-icon-by-vexels.png" />
+    <Resource Include="images\events.png" />
+    <Resource Include="images\map-transparent.png" />
+    <Resource Include="images\world-map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\social.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

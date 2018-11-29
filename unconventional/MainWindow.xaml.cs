@@ -23,20 +23,17 @@ namespace unconventional
     {
         #region init
         Events eve = new Events();
-        Schedule sched = new Schedule();
-
+        
         private static Brush navColour = Brushes.White;
         private static Brush navSelectColour = Brushes.LightGray;
 
         public MainWindow()
         {
             InitializeComponent();
-            
-            
-            
+
             this.NavBar.NavToMap.Click += NavToMap_Click;
             this.NavBar.NavToEvents.Click += NavToEvents_Click;
-            this.NavBar.NavToSchedule.Click += NavToSchedule_Click;
+            
             this.NavBar.NavToSettings.Click += NavToSettings_Click;
             this.NavBar.NavToNews.Click += NavToNews_Click;
             this.NavBar.NavToSocial.Click += NavToSocial_Click;
@@ -45,7 +42,6 @@ namespace unconventional
             ResetButtonColours(); // resets colour
             this.NavBar.NavToNews.Background = navSelectColour; // set button colour
             eve.EventClick += new EventHandler(NavEventDetails);
-            sched.EventClick += new EventHandler(NavEventDetails);
         }
 
         private void NavEventDetails(object sender, EventArgs e)
@@ -92,19 +88,12 @@ namespace unconventional
             ResetButtonColours();
             this.NavBar.NavToSocial.Background = navSelectColour;
         }
-        private void NavToSchedule_Click(object sender, RoutedEventArgs e)
-        {
-            this.main_frame.Navigate(sched); // need to use a stored 'map' if we want persisted changes
-            ResetButtonColours();
-            this.NavBar.NavToSchedule.Background = navSelectColour;
-        }
 
         // OrangeRed is the default colour
         private void ResetButtonColours() {
             this.NavBar.NavToMap.Background = navColour; 
             this.NavBar.NavToSocial.Background = navColour;
             this.NavBar.NavToNews.Background = navColour;
-            this.NavBar.NavToSchedule.Background = navColour;
             this.NavBar.NavToEvents.Background = navColour;
             this.NavBar.NavToSettings.Background = navColour;
         }
