@@ -23,7 +23,7 @@
         <!-- we can slide this up and down as desired using animations, hiding it when its off screen -->
         <!-- name is its name in the code-behind -->
         <local:keyboard x:Name="sliding_keyboard" HorizontalAlignment="Left" Height="300" Margin="4,776,0,-305" VerticalAlignment="Top" Width="450" OpacityMask="Black" Background="Black" Panel.ZIndex="101"/>
-        <Frame x:Name="main_frame" HorizontalAlignment="Left" Height="645" VerticalAlignment="Top" Width="455" Margin="4,26,0,0" NavigationUIVisibility="Hidden" />
+        <Frame x:Name="main_frame" HorizontalAlignment="Left" Height="645" VerticalAlignment="Top" Width="455" Margin="0,26,0,0" NavigationUIVisibility="Hidden" />
 
 
     </Grid>

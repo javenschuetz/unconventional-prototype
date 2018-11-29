@@ -8,11 +8,11 @@
       d:DesignHeight="700" d:DesignWidth="450"
       Title="Map">
 
-    <Grid>
+    <Grid Margin="15,0">
 
-        <Image HorizontalAlignment="Center" Height="178" VerticalAlignment="Top" Width="430" Source="images/otafest.jpg" Margin="10,113,10,0" Stretch="Fill"/>
+        <Image HorizontalAlignment="Center" Height="220" VerticalAlignment="Top" Source="images/otafest.jpg" Margin="0,113,0.6,0" Stretch="Fill" Width="419"/>
         <Label Content="Calgary Telus Convention Centre&#xD;&#xA;120 9 Ave SE&#xD;&#xA;Calgary, AB T2G 0P3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="85" Grid.IsSharedSizeScope="True" Margin="10,10,0,0" FontSize="18"/>
-        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="203" Grid.IsSharedSizeScope="True" FontSize="18" Margin="9,295,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="410" Height="203" Grid.IsSharedSizeScope="True" FontSize="18" Margin="9,345,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled">
             Parking: <LineBreak/>
             <LineBreak/>
             The Telus Convention Centre has a parking garage located at 727 – 1 St SE.
