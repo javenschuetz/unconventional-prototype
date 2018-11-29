@@ -342,7 +342,7 @@ namespace unconventional
                             BorderBrush = current.data.fav ? favColour : notFavColour,
                             VerticalContentAlignment = VerticalAlignment.Center,
                             HorizontalContentAlignment = HorizontalAlignment.Center};
-                    
+
                     // couldn't get this to work in time
                     /*UIElement uie = new UIElement();
                     uie.Effect = new DropShadowEffect
@@ -353,7 +353,7 @@ namespace unconventional
                             Opacity = 1
                         };
                         */
-                    program.Content = current.data.name;
+                    program.Content = "    " + current.data.name;
                     program.Click += Program_Click;
                     Grid.SetColumn(program, index);
                     Grid.SetRow(program, depth);
