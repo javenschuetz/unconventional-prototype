@@ -9,15 +9,32 @@
       Title="Map">
 
     <Grid Margin="15,0">
-
-        <Image HorizontalAlignment="Center" Height="220" VerticalAlignment="Top" Source="images/otafest.jpg" Margin="0,113,0.6,0" Stretch="Fill" Width="419"/>
-        <Label Content="Calgary Telus Convention Centre&#xD;&#xA;120 9 Ave SE&#xD;&#xA;Calgary, AB T2G 0P3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="85" Grid.IsSharedSizeScope="True" Margin="10,10,0,0" FontSize="18"/>
-        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="410" Height="203" Grid.IsSharedSizeScope="True" FontSize="18" Margin="9,345,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-            Parking: <LineBreak/>
-            <LineBreak/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="175"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Calgary Telus Convention Centre&#xD;&#xA;120 9 Ave SE&#xD;&#xA;Calgary, AB T2G 0P3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="430" Height="85" Grid.IsSharedSizeScope="True" Margin="10,10,0,0" FontSize="18"/>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Main Floor">
+                <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="images/mainFloor.png" Stretch="Uniform"/>
+            </TabItem>
+            <TabItem Header="Upper Floor">
+                <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="images/upperFloor.png" Stretch="Uniform"/>
+            </TabItem>
+            <TabItem Header="Lower Floor">
+                <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="images/lowerFloor.png" Stretch="Uniform"/>
+            </TabItem>
+            <TabItem Header="Exhibitor Hall">
+                <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="images/exhibitorHall.png" Stretch="Uniform"/>
+            </TabItem>
+        </TabControl>
+        <TextBlock Grid.Row="2" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18">
+            <LineBreak />
+            Parking: <LineBreak />
             The Telus Convention Centre has a parking garage located at 727 – 1 St SE.
-            <LineBreak/>
-            <LineBreak/>
+            <LineBreak />
+            <LineBreak />
             There are other parking garaged and street parking in the vicinity. Be sure to obey all parking signs!
         </TextBlock>
     </Grid>

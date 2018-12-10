@@ -198,5 +198,11 @@
   <ItemGroup>
     <Resource Include="images\social.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\exhibitorHall.png" />
+    <Resource Include="images\lowerFloor.png" />
+    <Resource Include="images\mainFloor.png" />
+    <Resource Include="images\upperFloor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

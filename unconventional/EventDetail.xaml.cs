@@ -22,7 +22,7 @@ namespace unconventional
     public partial class EventDetail : Page
     {
         public const double opacity = 0.5;
-        public SolidColorBrush textColour = new SolidColorBrush(Colors.Gold);
+        public SolidColorBrush textColour = new SolidColorBrush(Colors.Beige);
         private Events.Event e;
         private bool origFav;
 
@@ -33,8 +33,11 @@ namespace unconventional
             origFav = e.Fav;
             Events.Program prog = e.prog;
             chckFav.IsChecked = this.e.Fav;
-            txtTitle.Background = Events.Categories[prog.category].colour;
-            txtTitle.Background.Opacity = opacity;
+            grdTitle.Background = Events.Categories[prog.category].colour;
+            grdTitle.Background.Opacity = opacity;
+            txtTitle.Text = prog.name;
+            txtTitle.Background = new SolidColorBrush(Colors.White);
+            txtTitle.Background.Opacity = 0.0;
             //vbText.Height = Height - (txtTitle.Height + txtInfo.Height);
             //TextBlock txtDesc = new TextBlock() {Background = textColour, Width = this.Width};
             txtDesc.Background = textColour;
@@ -112,10 +115,10 @@ namespace unconventional
             this.e.Fav = !this.e.Fav;
             Events.needsReload = this.e.Fav != origFav && Events.favsFilter;
             txtToaster.Text = chckFav.IsChecked == true ? "Event added to favourites" : "Event removed from favourites";
-            DoubleAnimation anim = new DoubleAnimation(0.0, 1.0, new Duration(new TimeSpan(0, 0, 3)));
+            //DoubleAnimation anim = new DoubleAnimation(0.0, 1.0, new Duration(new TimeSpan(0, 0, 3)));
             //anim.AutoReverse = true;
-            txtToaster.BeginAnimation(TextBox.OpacityProperty, anim);
-            anim = new DoubleAnimation(1.0, 0.0, new Duration(new TimeSpan(0, 0, 5)));
+            //txtToaster.BeginAnimation(TextBox.OpacityProperty, anim);
+            DoubleAnimation anim = new DoubleAnimation(1.0, 0.0, new Duration(new TimeSpan(0, 0, 5)));
             txtToaster.BeginAnimation(TextBox.OpacityProperty, anim);
         }
     }
