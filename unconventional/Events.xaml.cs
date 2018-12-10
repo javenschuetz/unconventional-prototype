@@ -27,8 +27,10 @@ namespace unconventional
     public partial class Events : Page
     {
         bool filters = false;
-        public bool needsReload = false;
-        const int interval = 30;
+        public static bool favsFilter = false;
+        public string nameFilter = "";
+        public static bool needsReload = false;
+        public const int interval = 30;
         const double eventHeight = 48.0;
         const double timeWidth = 100.0;
         const double timeHeader = 40.0;
@@ -80,16 +82,22 @@ namespace unconventional
         {
             public Program prog;
             private bool fav = false;
+
             public bool Fav
             {
                 get { return fav; }
                 set
                 {
                     fav = value;
+                    prog.fav = value;
                     if (fav)
-                        BorderBrush = favColour;
+                        //BorderBrush = favColour;
+                        this.FontWeight = FontWeights.UltraBold;
+                    //this.Style.Setters.Add(new Setter(TextBlock.FontWeightProperty, "Bold"));
                     else
-                        BorderBrush = notFavColour;
+                        //BorderBrush = notFavColour;
+                        //this.Style.Setters.Add(new Setter(TextBlock.FontWeightProperty, "Normal"));
+                        this.FontWeight = FontWeights.Normal;
                 }
             }
         }
@@ -101,6 +109,11 @@ namespace unconventional
 
             //swFav.Background = new SolidColorBrush(Colors.LightGray);
             //swFav.Opacity = 0.5;
+
+            txtSearch.Background = new SolidColorBrush(Colors.White);
+            txtSearch.Foreground = new SolidColorBrush(Colors.LightGray);
+            txtSearch.Background.Opacity = 0.25;
+            txtSearch.Foreground.Opacity = 0.5;
 
             for(int i = 0; i < Progs.Length; i++)
             {
@@ -205,7 +218,9 @@ namespace unconventional
             public int length;
             public int category;
             public bool fav = false;
-            
+            public string[] speakers;
+            public string location;
+
             public Program(ProgramJSON js, int Day)
             {
                 day = Day;
@@ -214,6 +229,8 @@ namespace unconventional
                 start = js.start;
                 length = js.length;
                 category = js.category;
+                speakers = js.speakers;
+                location = js.location;
             }
         }
 
@@ -266,8 +283,10 @@ namespace unconventional
         {
             Label date = new Label();
             date.Content = Date;
+            date.FontSize = 16;
+            date.FontWeight = FontWeights.Bold;
             date.HorizontalAlignment = HorizontalAlignment.Center;
-            Schedule.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(25.0) });
+            Schedule.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(30.0) });
             Grid.SetColumn(date, 0);
             Grid.SetRow(date, Schedule.RowDefinitions.Count-1);
             Grid sched = CreateSched(programs);
@@ -373,9 +392,10 @@ namespace unconventional
                             Style = (Style)this.FindResource("MyButtonStyle"),
                             Background = Categories[current.data.category].colour,
                             VerticalContentAlignment = VerticalAlignment.Center,
-                            HorizontalContentAlignment = HorizontalAlignment.Center, Fav = current.data.fav};
+                            HorizontalContentAlignment = HorizontalAlignment.Center,
+                            BorderBrush = notFavColour,
+                        prog = current.data, Fav = current.data.fav};
                     program.Background.Opacity = eventOpac;
-                    program.prog = current.data;
 
                     // couldn't get this to work in time
                     /*UIElement uie = new UIElement();
@@ -458,45 +478,95 @@ namespace unconventional
             Schedule.ColumnDefinitions.Add(new ColumnDefinition());
             if(swFav.IsChecked == true)
             {
-                for (int i = 0; i < date.Length; i++)
+                if(nameFilter.Length == 0)
                 {
-                    List<Program> tempProg = new List<Program>();
-                    //tempProg.Capacity = Progs[i].Count;
-                    //int k = 0;
-                    for (int j = 0; j < Progs[i].Count; j++)
+                    for (int i = 0; i < date.Length; i++)
                     {
-                        if (filterCat[Progs[i][j].category] && Progs[i][j].fav == true)
+                        List<Program> tempProg = new List<Program>();
+                        //tempProg.Capacity = Progs[i].Count;
+                        //int k = 0;
+                        for (int j = 0; j < Progs[i].Count; j++)
                         {
-                            tempProg.Add(Progs[i][j]);
-                            //k++;
+                            if (filterCat[Progs[i][j].category] && Progs[i][j].fav == true)
+                            {
+                                tempProg.Add(Progs[i][j]);
+                                //k++;
+                            }
+                        }
+                        //Array.Resize(ref tempProg, k);
+                        if (tempProg.Count != 0)
+                        {
+                            CreateDay(date[i], tempProg);
                         }
                     }
-                    //Array.Resize(ref tempProg, k);
-                    if (tempProg.Count != 0)
+                }
+                else
+                {
+                    for (int i = 0; i < date.Length; i++)
                     {
-                        CreateDay(date[i], tempProg);
+                        List<Program> tempProg = new List<Program>();
+                        //tempProg.Capacity = Progs[i].Count;
+                        //int k = 0;
+                        for (int j = 0; j < Progs[i].Count; j++)
+                        {
+                            if (filterCat[Progs[i][j].category] && Progs[i][j].fav == true && Progs[i][j].name.Contains(nameFilter))
+                            {
+                                tempProg.Add(Progs[i][j]);
+                                //k++;
+                            }
+                        }
+                        //Array.Resize(ref tempProg, k);
+                        if (tempProg.Count != 0)
+                        {
+                            CreateDay(date[i], tempProg);
+                        }
                     }
                 }
             }
             else
             {
-                for (int i = 0; i < date.Length; i++)
+                if (nameFilter.Length == 0)
                 {
-                    List<Program> tempProg = new List<Program>();
-                    //tempProg.Capacity = Progs[i].Count;
-                    //int k = 0;
-                    for (int j = 0; j < Progs[i].Count; j++)
+                    for (int i = 0; i < date.Length; i++)
                     {
-                        if (filterCat[Progs[i][j].category])
+                        List<Program> tempProg = new List<Program>();
+                        //tempProg.Capacity = Progs[i].Count;
+                        //int k = 0;
+                        for (int j = 0; j < Progs[i].Count; j++)
                         {
-                            tempProg.Add(Progs[i][j]);
-                            //k++;
+                            if (filterCat[Progs[i][j].category])
+                            {
+                                tempProg.Add(Progs[i][j]);
+                                //k++;
+                            }
+                        }
+                        //Array.Resize(ref tempProg, k);
+                        if (tempProg.Count != 0)
+                        {
+                            CreateDay(date[i], tempProg);
                         }
                     }
-                    //Array.Resize(ref tempProg, k);
-                    if (tempProg.Count != 0)
+                }
+                else
+                {
+                    for (int i = 0; i < date.Length; i++)
                     {
-                        CreateDay(date[i], tempProg);
+                        List<Program> tempProg = new List<Program>();
+                        //tempProg.Capacity = Progs[i].Count;
+                        //int k = 0;
+                        for (int j = 0; j < Progs[i].Count; j++)
+                        {
+                            if (filterCat[Progs[i][j].category] && Progs[i][j].name.Contains(nameFilter))
+                            {
+                                tempProg.Add(Progs[i][j]);
+                                //k++;
+                            }
+                        }
+                        //Array.Resize(ref tempProg, k);
+                        if (tempProg.Count != 0)
+                        {
+                            CreateDay(date[i], tempProg);
+                        }
                     }
                 }
             }
@@ -578,6 +648,32 @@ namespace unconventional
 
         private void swFav_Click(object sender, RoutedEventArgs e)
         {
+            favsFilter = !favsFilter;
+            ConstructWithFilters();
+        }
+
+        private void txtSearch_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtSearch.Text = "";
+            txtSearch.FontStyle = FontStyles.Normal;
+            txtSearch.Foreground = new SolidColorBrush(Colors.Black);
+            txtSearch.Foreground.Opacity = 1.0;
+        }
+
+        private void txtSearch_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (txtSearch.Text.Trim().Length == 0)
+            {
+                txtSearch.Text = "Search event by name";
+                txtSearch.FontStyle = FontStyles.Italic;
+                txtSearch.Foreground = new SolidColorBrush(Colors.LightGray);
+                txtSearch.Foreground.Opacity = 0.5;
+                nameFilter = "";
+            }
+            else
+            {
+                nameFilter = txtSearch.Text.Trim();
+            }
             ConstructWithFilters();
         }
     }

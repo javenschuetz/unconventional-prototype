@@ -23,11 +23,16 @@ namespace unconventional
     {
         public const double opacity = 0.5;
         public SolidColorBrush textColour = new SolidColorBrush(Colors.Gold);
+        private Events.Event e;
+        private bool origFav;
 
         public EventDetail(Events.Event e)
         {
             InitializeComponent();
+            this.e = e;
+            origFav = e.Fav;
             Events.Program prog = e.prog;
+            chckFav.IsChecked = this.e.Fav;
             txtTitle.Background = Events.Categories[prog.category].colour;
             txtTitle.Background.Opacity = opacity;
             //vbText.Height = Height - (txtTitle.Height + txtInfo.Height);
@@ -35,6 +40,34 @@ namespace unconventional
             txtDesc.Background = textColour;
             txtDesc.Background.Opacity = opacity;
             txtDesc.Text = Events.Descs[prog.day][prog.id];
+            string content = "";
+            if (prog.day == 0)
+                content = "Friday, September 21st ";
+            else if (prog.day == 1)
+                content = "Friday, September 22nd ";
+            else
+                content = "Friday September 23rd";
+            content += prog.start < 26 ? (prog.start / 2) : (prog.start / 2) % 12;
+            content += (prog.start % 2) == 0 ? ":00" : ":30";
+            content += (prog.start < 24 || prog.start >= 48) ? "AM-" : "PM-";
+            content += (prog.start + prog.length) < 26 ? ((prog.start + prog.length) / 2) : ((prog.start + prog.length) / 2) % 12;
+            //content += (prog.start + prog.length) / 2;
+            content += ((prog.start + prog.length) % 2) == 0 ? ":00" : ":30";
+            content += ((prog.start + prog.length) < 24 || (prog.start + prog.length) >= 48) ? "AM" : "PM";
+            txtTime.Text = content;
+
+            txtLocation.Text = prog.location;
+            if (prog.speakers.Length > 0)
+            {
+                txtSpeaker.Text = "Speakers: ";
+                for (int i = 0; i < prog.speakers.Length - 1; i++)
+                    txtSpeaker.Text += prog.speakers[i] + ", ";
+                txtSpeaker.Text += prog.speakers[prog.speakers.Length-1];
+                txtSpeaker.Height = 25;
+            }
+            else
+                txtSpeaker.Height = 0;
+            UpdateLayout();
             /*RowDefinition row = grdContent.RowDefinitions[0];
             while (row.ActualHeight < 500)
             {
@@ -54,7 +87,7 @@ namespace unconventional
         {
             RowDefinition row = grdContent.RowDefinitions[0];
             UpdateLayout();
-            double top = this.ActualHeight - (txtTitle.ActualHeight + txtInfo.ActualHeight);
+            double top = this.ActualHeight - (txtTitle.ActualHeight + grdInfo.ActualHeight);
             double bottom = top * 0.85;
             //txtDesc.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
             //txtDesc.Arrange(new Rect(0, 0, txtDesc.DesiredSize.Width, txtDesc.DesiredSize.Height));
@@ -76,6 +109,8 @@ namespace unconventional
 
         private void chckFav_Click(object sender, RoutedEventArgs e)
         {
+            this.e.Fav = !this.e.Fav;
+            Events.needsReload = this.e.Fav != origFav && Events.favsFilter;
             txtToaster.Text = chckFav.IsChecked == true ? "Event added to favourites" : "Event removed from favourites";
             DoubleAnimation anim = new DoubleAnimation(0.0, 1.0, new Duration(new TimeSpan(0, 0, 3)));
             //anim.AutoReverse = true;

@@ -82,9 +82,9 @@ namespace unconventional
 
         private void NavToEvents_Click(object sender, RoutedEventArgs e)
         {
-            if (eve.needsReload)
+            if (Events.needsReload)
             {
-                eve.needsReload = false;
+                Events.needsReload = false;
                 eve.ConstructWithFilters();
             }
             this.main_frame.Navigate(eve); // need to use a stored 'map' if we want persisted changes
