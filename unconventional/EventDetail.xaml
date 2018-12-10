@@ -8,16 +8,50 @@
       d:DesignHeight="645" d:DesignWidth="455"
       Title="EventDetail">
     <Page.Resources>
-        <ResourceDictionary Source="Styles.xaml"></ResourceDictionary>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"></ResourceDictionary>
+                <!-- thanks to: http://www.codescratcher.com/wpf/sliding-panel-in-wpf/ -->
+                <ResourceDictionary>
+                    <Storyboard x:Key="toastShow">
+                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                            <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="24"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                    <Storyboard x:Key="toastHide">
+                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                            <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="24"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Page.Resources>
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="645" VerticalAlignment="Top" Width="455">
-            <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Opening Ceremonies" VerticalAlignment="Top" Width="445" FontSize="18" FontWeight="Bold" TextDecorations="{x:Null}" VerticalContentAlignment="Bottom" Focusable="False"/>
-            <TextBlock x:Name="txtFun" HorizontalAlignment="Left" Margin="0,48,0,0" Background="{StaticResource textBlock1}" TextWrapping="Wrap" Text="Come one come all, me new friends, become iconic characters. Join us as we set off the metaphorical canons for this years opening ceremonies. Give praise to those who gave us such a wonderous event. Welcome travelers from distant lands. Reminisce on tales of convention past, and make way for new adventures. Weclome to Animethon!" VerticalAlignment="Top" Height="91" Width="445"/>
-            <TextBlock x:Name="txtFormal" HorizontalAlignment="Left" Margin="0,139,0,0" Background="{StaticResource textBlock2}" TextWrapping="Wrap" Text="The opening ceremonies is the first event of the Animethon convention. During this event we will take the time to introduce some of our volunteers, thank all of them for their diligent work and to our sponsors for their continued support, welcome guests to the convention,. It's not all bussiness though. We will be going over some of the exiting new events we have planned this year, and do our best to try to encourage you to try some of the awesome things we are all excited about" VerticalAlignment="Top" Height="102" Width="445"/>
-            <TextBox x:Name="txtInfo" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="Friday September 21, 2018&#x0a;GlenB 102, 9:00AM-10:00AM" VerticalAlignment="Top" Width="445" Margin="0,241,0,0" HorizontalContentAlignment="Center" Focusable="False"/>
-            <CheckBox x:Name="chckFav" Content="CheckBox" HorizontalAlignment="Left" Margin="401,10,0,0" VerticalAlignment="Top" Template="{DynamicResource StarToggleButton}" Height="28" Width="24" RenderTransformOrigin="2.285,-1.212" Checked="chckFav_Checked"/>
+        <Grid x:Name="grd" HorizontalAlignment="Left" Height="645" VerticalAlignment="Top" Width="455">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" x:Name="txtTitle" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Opening Ceremonies" VerticalAlignment="Top" Width="455" FontSize="24" FontWeight="Bold" TextDecorations="{x:Null}" VerticalContentAlignment="Bottom" Focusable="False"/>
+            <CheckBox Grid.Row="0" x:Name="chckFav" Content="CheckBox" HorizontalAlignment="Left" Margin="401,10,0,0" VerticalAlignment="Top" Template="{DynamicResource StarToggleButton}" Height="28" Width="24" RenderTransformOrigin="2.285,-1.212" Click="chckFav_Click"/>
+            <Grid x:Name="grdContent" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" Loaded="RowDefinition_Loaded"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" x:Name="txtDesc" TextWrapping="Wrap" Margin="0,0,5,0"/>
+            </Grid>
+            <!--><DockPanel Grid.Row="1">
+                <TextBlock DockPanel.Dock="Top" x:Name="txtDesc" TextWrapping="Wrap" Margin="0,0,5,0"/>
+                <TextBlock DockPanel.Dock="Bottom" x:Name="txtDesc2" Text="asdas" TextWrapping="Wrap" Margin="0,0,5,0"/>
+            </DockPanel><-->
+            <!--> <Viewbox Grid.Row="1" x:Name="vbText" Stretch="Fill">
+            </Viewbox><!-->
+            <TextBox Grid.Row="3" x:Name="txtInfo" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Friday September 21, 2018&#x0a;GlenB 102, 9:00AM-10:00AM" VerticalAlignment="Top" Width="455" HorizontalContentAlignment="Center" Focusable="False"/>
+            <TextBox Grid.Row="1" x:Name="txtToaster" IsEnabled="false" Margin="273,522,0,0" TextAlignment="Center" Opacity="0.0" Background="LightGray">
+                
+            </TextBox>
         </Grid>
-
     </Grid>
 </Page>

@@ -27,6 +27,11 @@ namespace unconventional
         private static Brush navColour = Brushes.White;
         private static Brush navSelectColour = Brushes.LightGray;
 
+        public class ProgArgs: EventArgs
+        {
+            public Events.Program prog;
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -41,12 +46,12 @@ namespace unconventional
             this.main_frame.Navigate(new News()); // loads mocked news interface
             ResetButtonColours(); // resets colour
             this.NavBar.NavToNews.Background = navSelectColour; // set button colour
-            eve.EventClick += new EventHandler(NavEventDetails);
+            eve.EventClick += new EventHandler<Events.Event>(NavEventDetails);
         }
 
-        private void NavEventDetails(object sender, EventArgs e)
+        private void NavEventDetails(object sender, Events.Event e)
         {
-            this.main_frame.Navigate(new EventDetail());
+            this.main_frame.Navigate(new EventDetail(e));
             ResetButtonColours();
         }
 
@@ -77,6 +82,11 @@ namespace unconventional
 
         private void NavToEvents_Click(object sender, RoutedEventArgs e)
         {
+            if (eve.needsReload)
+            {
+                eve.needsReload = false;
+                eve.ConstructWithFilters();
+            }
             this.main_frame.Navigate(eve); // need to use a stored 'map' if we want persisted changes
             ResetButtonColours();
             this.NavBar.NavToEvents.Background = navSelectColour;

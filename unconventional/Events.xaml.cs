@@ -27,12 +27,13 @@ namespace unconventional
     public partial class Events : Page
     {
         bool filters = false;
+        public bool needsReload = false;
         const int interval = 30;
         const double eventHeight = 48.0;
         const double timeWidth = 100.0;
         const double timeHeader = 40.0;
-        const double whiteSpace = 10.0;
-
+        //const double whiteSpace = 10.0;
+        const double eventOpac = 0.5;
         static Brush favColour = Brushes.Gold;
         static Brush notFavColour = Brushes.White;
 
@@ -69,28 +70,51 @@ namespace unconventional
 
         //Program[][] Progs = new Program[3][];
         List<Program>[] Progs = new List<Program>[3];
-        List<string>[] Descs = new List<string>[3];
+        public static List<string>[] Descs = new List<string>[3];
 
         string[] date = { "Friday September 21, 2018", "Saturday September 22, 2018", "Sunday September 23, 2018" };
 
         bool[] filterCat;
+
+        public class Event : Button
+        {
+            public Program prog;
+            private bool fav = false;
+            public bool Fav
+            {
+                get { return fav; }
+                set
+                {
+                    fav = value;
+                    if (fav)
+                        BorderBrush = favColour;
+                    else
+                        BorderBrush = notFavColour;
+                }
+            }
+        }
 
 
         public Events()
         {
             InitializeComponent();
 
+            //swFav.Background = new SolidColorBrush(Colors.LightGray);
+            //swFav.Opacity = 0.5;
+
             for(int i = 0; i < Progs.Length; i++)
             {
                 Progs[i] = new List<Program>();
                 Descs[i] = new List<String>();
             }
+            Program.count = new int[Progs.Length];
 
             List<ProgramJSON> progs = JsonConvert.DeserializeObject<List<ProgramJSON>>(File.ReadAllText(@"..\..\otafest.json"));
 
-            foreach(ProgramJSON p in progs)
+            for(int i = 0; i < progs.Count; i++)
             {
-                Progs[p.day].Add(new Program(p));
+                ProgramJSON p = progs[i];
+                Progs[p.day].Add(new Program(p, p.day));
                 Descs[p.day].Add(p.desc);
             }
 
@@ -173,14 +197,19 @@ namespace unconventional
 
         public class Program
         {
+            public static int[] count;
+            public int id;
+            public int day;
             public string name;
             public int start;
             public int length;
             public int category;
             public bool fav = false;
             
-            public Program(ProgramJSON js)
+            public Program(ProgramJSON js, int Day)
             {
+                day = Day;
+                id = count[day]++;
                 name = js.name;
                 start = js.start;
                 length = js.length;
@@ -195,6 +224,8 @@ namespace unconventional
             public int length;
             public int day;
             public int category;
+            public string[] speakers;
+            public string location;
             public string desc;
             /*public int End
             {
@@ -203,7 +234,7 @@ namespace unconventional
                     length = ((quotient * 60 + (value - quotient * 100)) / interval) - start; }
             }*/
             [JsonConstructor]
-            public ProgramJSON(string Name, int Start, int End, int Day, int Category, string Description)
+            public ProgramJSON(string Name, int Start, int End, int Day, int Category, string[] Speakers, string Location, string Description)
             {
                 name = Name;
                 int quotient = (int)(Start / 100);
@@ -212,6 +243,8 @@ namespace unconventional
                 length = ((quotient * 60 + (End - quotient * 100)) / interval) - start;
                 day = Day;
                 category = Category;
+                speakers = Speakers;
+                location = Location;
                 desc = Description;
             }
             /*public Program(string Name, int Start, int End, Category cat)
@@ -336,12 +369,13 @@ namespace unconventional
                     {
                         rowdef.Add(new RowDefinition() { Name = "row" + (index), Height = new GridLength(eventHeight) });
                     }
-                    Button program = new Button() {
+                    Event program = new Event() {
                             Style = (Style)this.FindResource("MyButtonStyle"),
                             Background = Categories[current.data.category].colour,
-                            BorderBrush = current.data.fav ? favColour : notFavColour,
                             VerticalContentAlignment = VerticalAlignment.Center,
-                            HorizontalContentAlignment = HorizontalAlignment.Center};
+                            HorizontalContentAlignment = HorizontalAlignment.Center, Fav = current.data.fav};
+                    program.Background.Opacity = eventOpac;
+                    program.prog = current.data;
 
                     // couldn't get this to work in time
                     /*UIElement uie = new UIElement();
@@ -353,7 +387,8 @@ namespace unconventional
                             Opacity = 1
                         };
                         */
-                    program.Content = "    " + current.data.name;
+                    program.Content = new TextBlock() { Text = current.data.name, TextTrimming = TextTrimming.WordEllipsis,
+                        Margin = new Thickness(10.0, 0.0, 10.0, 0.0) };
                     program.Click += Program_Click;
                     Grid.SetColumn(program, index);
                     Grid.SetRow(program, depth);
@@ -382,6 +417,7 @@ namespace unconventional
                 int index = i - progStart;
                 Button header = new Button();
                 header.IsEnabled = false;
+                header.Foreground = Brushes.Black;
                 int quotient = (int)(i / (60 / interval));
                 header.Content = quotient % 25 + ":" + ((i % (60 / interval)) * interval).ToString().PadLeft(2, '0');
                 Grid.SetColumn(header, index);
@@ -414,29 +450,54 @@ namespace unconventional
             ConstructWithFilters();
         }
 
-        private void ConstructWithFilters()
+        public void ConstructWithFilters()
         {
             Schedule.Children.Clear();
             Schedule.ColumnDefinitions.Clear();
             Schedule.RowDefinitions.Clear();
             Schedule.ColumnDefinitions.Add(new ColumnDefinition());
-            for (int i = 0; i < date.Length; i++)
+            if(swFav.IsChecked == true)
             {
-                List<Program> tempProg = new List<Program>();
-                //tempProg.Capacity = Progs[i].Count;
-                //int k = 0;
-                for(int j = 0; j < Progs[i].Count; j++)
+                for (int i = 0; i < date.Length; i++)
                 {
-                    if (filterCat[Progs[i][j].category])
+                    List<Program> tempProg = new List<Program>();
+                    //tempProg.Capacity = Progs[i].Count;
+                    //int k = 0;
+                    for (int j = 0; j < Progs[i].Count; j++)
                     {
-                        tempProg.Add(Progs[i][j]);
-                        //k++;
+                        if (filterCat[Progs[i][j].category] && Progs[i][j].fav == true)
+                        {
+                            tempProg.Add(Progs[i][j]);
+                            //k++;
+                        }
+                    }
+                    //Array.Resize(ref tempProg, k);
+                    if (tempProg.Count != 0)
+                    {
+                        CreateDay(date[i], tempProg);
                     }
                 }
-                //Array.Resize(ref tempProg, k);
-                if(tempProg.Count != 0)
+            }
+            else
+            {
+                for (int i = 0; i < date.Length; i++)
                 {
-                    CreateDay(date[i], tempProg);
+                    List<Program> tempProg = new List<Program>();
+                    //tempProg.Capacity = Progs[i].Count;
+                    //int k = 0;
+                    for (int j = 0; j < Progs[i].Count; j++)
+                    {
+                        if (filterCat[Progs[i][j].category])
+                        {
+                            tempProg.Add(Progs[i][j]);
+                            //k++;
+                        }
+                    }
+                    //Array.Resize(ref tempProg, k);
+                    if (tempProg.Count != 0)
+                    {
+                        CreateDay(date[i], tempProg);
+                    }
                 }
             }
         }
@@ -507,12 +568,17 @@ namespace unconventional
             return HitTestResultBehavior.Continue;
         }
 
-        public event EventHandler EventClick;
+        public event EventHandler<Event> EventClick;
 
         private void Program_Click(object sender, RoutedEventArgs e)
         {
             if (EventClick != null)
-                EventClick(this, e);
+                EventClick(this, ((Event)e.Source));
+        }
+
+        private void swFav_Click(object sender, RoutedEventArgs e)
+        {
+            ConstructWithFilters();
         }
     }
 }

@@ -5,6 +5,8 @@
         "Day": 1,
         "Name": "91 Days (14P)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 201",
         "Description": "During the Prohibition era, in the Lawless district the law has no power, the mafia rule the streets, and the illegally made liquor flows freely. Avilio lived in this district, but after the murder of his family, he went into hiding."
     },
     {
@@ -13,6 +15,10 @@
         "Day": 1,
         "Name": "A Paladin's Guide to the Galaxy",
         "Category": 3,
+        "Speakers": [
+            "Marcus M."
+        ],
+        "Location": "Glen 209",
         "Description": "Join the paladins of Voltron as they teach you the ins and outs of surviving in space, as well as answer questions some may have about being the defenders of the universe!"
     },
     {
@@ -21,6 +27,10 @@
         "Day": 1,
         "Name": "A Silent Voice: Sign & Speak",
         "Category": 3,
+        "Speakers": [
+            "Chandler B."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "Known as Koe no Katachi in Japan, A Silent Voice features a deaf protagonist and extensive use of Japanese sign language. The rookie manga presents accurate deaf representation to the world."
     },
     {
@@ -29,6 +39,10 @@
         "Day": 1,
         "Name": "A Song of Ice and Fire / Game of Thrones",
         "Category": 3,
+        "Speakers": [
+            "Amin S."
+        ],
+        "Location": "Macleod E3",
         "Description": "Come discuss popular and obscure fan theories with other fans. Compare the books versus the television show and participate in a general Q&A."
     },
     {
@@ -37,6 +51,10 @@
         "Day": 1,
         "Name": "Advanced Cosplay Electronics",
         "Category": 3,
+        "Speakers": [
+            "Randell c."
+        ],
+        "Location": "Macleod E3",
         "Description": "We'll be talking about some of the basics in electronic circuitry for use in cosplay, with insight on all the tips and tricks of making a functional circuit in your costumes."
     },
     {
@@ -45,6 +63,8 @@
         "Day": 1,
         "Name": "Akiba's Trip (14P)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 202",
         "Description": "An urban legend describes monsters known as \"bagurimono\" lurk in dark corners of Akihabara, the paradise of anime. When Tamotsu encounters one, he is almost killed but saved at the last moment by a girl named Matome."
     },
     {
@@ -53,6 +73,10 @@
         "Day": 0,
         "Name": "All About Fantasy Cosplay",
         "Category": 3,
+        "Speakers": [
+            "Kathleen D."
+        ],
+        "Location": "Macleod E3",
         "Description": "Best place to get elf ears? What's with lace front wigs? Is leatherworking as intimidating as it looks? And how DO you play the Game of Thrones? Answers are here, noble cosplayer!"
     },
     {
@@ -61,6 +85,8 @@
         "Day": 1,
         "Name": "All Out!! (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 201",
         "Description": "On his first day in Kanagawa Prefectural High School, Kenji meets the tall Sumiaki during a game of rugby. Kenji strikes a friendship with Sumiaki, and soon joins the rugby club."
     },
     {
@@ -69,6 +95,10 @@
         "Day": 0,
         "Name": "Amiibo tournament BRAWL IN THE FAMILY",
         "Category": 3,
+        "Speakers": [
+            "Brett L."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "Got an amiibo with sick moves ? Well then... SHOW ME YOUR MOVES! The amiibo Tournament is back and ready for another year of hard knocks - there will be stock Amiibos available too so everyone can play!"
     },
     {
@@ -77,6 +107,10 @@
         "Day": 0,
         "Name": "AMV Audio Swap II",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "What happens when you take an existing AMV and add a different audio track to it? Sometimes random chance makes AMV's even more awesome, and what you end up with may be unpredictable and even more entertaining."
     },
     {
@@ -85,14 +119,22 @@
         "Day": 0,
         "Name": "AMV Contest",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Main Events",
         "Description": "We are pleased to bring this beloved event back yet again for Otafest 2017! Come and experience the full spectrum of entertainment as editors from all over the world compete in several categories. Pick up a ballot and get ready to choose the Audience's Best in Show. On Sunday morning, we'll be showing all our non- finalist entries, as well as all winners."
     },
     {
         "Start": 2300,
-        "End": 2500,
+        "End": 2400,
         "Day": 1,
         "Name": "AMV Hell Marathon",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Feel like you're missing AMV Hell in your life? We present some of the best segments of AMV Hell and its many imitators, from the 13 years of its existence, marathon style."
     },
     {
@@ -101,6 +143,10 @@
         "Day": 1,
         "Name": "AMV Mortal Combat 2.0",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Come join the fun as we pit AMV's to fight it out in the video arena. Cheer on your favorites and help decide the fate of AMV's in mortal combat!"
     },
     {
@@ -109,6 +155,8 @@
         "Day": 0,
         "Name": "AMV Showcase",
         "Category": 1,
+        "Speakers": [],
+        "Location": "Macleod E4",
         "Description": ""
     },
     {
@@ -117,6 +165,8 @@
         "Day": 0,
         "Name": "AMV Showcase",
         "Category": 1,
+        "Speakers": [],
+        "Location": "Macleod E4",
         "Description": ""
     },
     {
@@ -125,6 +175,8 @@
         "Day": 1,
         "Name": "AMV Showcase",
         "Category": 1,
+        "Speakers": [],
+        "Location": "Macleod E4",
         "Description": ""
     },
     {
@@ -133,6 +185,8 @@
         "Day": 1,
         "Name": "AMV Showcase",
         "Category": 1,
+        "Speakers": [],
+        "Location": "Macleod E4",
         "Description": ""
     },
     {
@@ -141,6 +195,8 @@
         "Day": 0,
         "Name": "AMV Showcase",
         "Category": 1,
+        "Speakers": [],
+        "Location": "Macleod E4",
         "Description": ""
     },
     {
@@ -149,6 +205,10 @@
         "Day": 0,
         "Name": "AMV Sing, Clap & Stomp-a-long",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Come and join in as we Sing-A-Long, Clap-A-Long and Stomp-A-Long to AMVs!"
     },
     {
@@ -157,6 +217,10 @@
         "Day": 1,
         "Name": "AMV Trailers",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Anime parody trailers have spawned a whole new class of AMVs, and we've got an hour full of them! These trailers might even be more interesting than the originals!"
     },
     {
@@ -165,6 +229,10 @@
         "Day": 1,
         "Name": "AMVs Are Trying To Sell You Stuff",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "If you thought television had too many ads, just wait till you see these what these AMV's are selling!"
     },
     {
@@ -173,6 +241,10 @@
         "Day": 0,
         "Name": "An Idiot's Guide to Anime",
         "Category": 0,
+        "Speakers": [
+            "Brendan H."
+        ],
+        "Location": "Macleod E3",
         "Description": "Having been exposed to less than 2 hours of anime in his life, join Brendan the Otafest Medic as he provides his insight and commentary on clips, specially hand selected by the Otafest AV staff. Revel in his relative innocence and naive interpretation of the surprise clips presented to him."
     },
     {
@@ -181,6 +253,10 @@
         "Day": 0,
         "Name": "An Introduction to Kenji Miyazawa",
         "Category": 3,
+        "Speakers": [
+            "Cory G."
+        ],
+        "Location": "Macleod E1",
         "Description": "Explore the life of Japan's beloved poet and fairytale writer Kenji Miyazawa through anime based on his works, including a dramatic reading of one of his stories."
     },
     {
@@ -189,6 +265,10 @@
         "Day": 1,
         "Name": "Anime Caption This",
         "Category": 3,
+        "Speakers": [
+            "Aaron S."
+        ],
+        "Location": "Macleod E1",
         "Description": "Pictures, screenshots, cels, photobombs, and so much more. Get ready to caption some hilarious and awkward pictures in Anime Caption This!"
     },
     {
@@ -197,6 +277,10 @@
         "Day": 1,
         "Name": "Anime Dragon's Den",
         "Category": 3,
+        "Speakers": [
+            "James  W."
+        ],
+        "Location": "Glen 209",
         "Description": "Think you got a great idea for an anime series? Pitch it to the Dragons; an elite panel of Investors, who, in reality have zero credentials whatsoever. Only THEY stand between you and your dream venture… but only if the concept is so good…or so bad?"
     },
     {
@@ -205,6 +289,10 @@
         "Day": 1,
         "Name": "Anime Hentai Superfight",
         "Category": 3,
+        "Speakers": [
+            "Brett L."
+        ],
+        "Location": "Glen 208",
         "Description": "Come try out superfight - see what kind of risqué powers your favorite anime and hentai characters get involved in!"
     },
     {
@@ -213,6 +301,10 @@
         "Day": 0,
         "Name": "Anime Jeopardy Contest",
         "Category": 3,
+        "Speakers": [
+            "Rory M."
+        ],
+        "Location": "Macleod E1",
         "Description": "Want to test your knowledge for fun and prizes and prove how much of an otaku you really are? Get chosen from the audience and compete for the right to be called the ultimate Anime Jeopardy champion!"
     },
     {
@@ -221,6 +313,10 @@
         "Day": 1,
         "Name": "Anime Name Game",
         "Category": 3,
+        "Speakers": [
+            "Aaron S."
+        ],
+        "Location": "Macleod E1",
         "Description": "It's the anime version of Celebrity Name Game, with some fun twists."
     },
     {
@@ -229,6 +325,10 @@
         "Day": 1,
         "Name": "Anime Name That Tune",
         "Category": 3,
+        "Speakers": [
+            "Jeffrey W."
+        ],
+        "Location": "Telus 103",
         "Description": "Think you can name your favourite anime openings and endings? Well then test your reflexes and wits against others for prizes in the ultimate musical showdown!"
     },
     {
@@ -237,6 +337,10 @@
         "Day": 1,
         "Name": "Anime Scene It!",
         "Category": 3,
+        "Speakers": [
+            "Jeffrey W."
+        ],
+        "Location": "Macleod E3",
         "Description": "I'll take a potato chip and EAT IT. If you can recognize an anime scene like that see if you can crush the competition as you try complete against others to identify anime scenes the fastest."
     },
     {
@@ -245,6 +349,10 @@
         "Day": 1,
         "Name": "Anime Things",
         "Category": 3,
+        "Speakers": [
+            "Francis C."
+        ],
+        "Location": "Telus 103",
         "Description": "Things you wouldn't expect to find in a Gundam. Things Speed Racer also has for accessories. Even Things you never suspected Naruto to use as a weapon. Come check out all our Anime Things!"
     },
     {
@@ -253,6 +361,10 @@
         "Day": 1,
         "Name": "Anime Through the Ages",
         "Category": 3,
+        "Speakers": [
+            "Robin F."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "Like history and anime? Want to learn about the shifts in demographics, anime booms, and the history of anime conventions? Then this is the panel for you!"
     },
     {
@@ -261,6 +373,8 @@
         "Day": 1,
         "Name": "Aoi Hanoo [Live Action] (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 205",
         "Description": "Kazuhiko has enrolled at the Osaka University of Arts with the goal of being the best animator in the country. His classmates include the likes of Hideaki Anno, Hiroyuki Yamaga and Takami Akai – the founding members of Gainax."
     },
     {
@@ -269,6 +383,10 @@
         "Day": 1,
         "Name": "Artist Spotlight with Birdy",
         "Category": 6,
+        "Speakers": [
+            "Birdy"
+        ],
+        "Location": "Glen 209",
         "Description": "See how Birdy puts together his style, from every line and curve to hues and shades."
     },
     {
@@ -277,6 +395,8 @@
         "Day": 1,
         "Name": "ARTISTS HATE HIM: 1 evil trick to git gud designing OCs (do not steal) and make better ART!",
         "Category": 3,
+        "Speakers": [],
+        "Location": "Macleod E2",
         "Description": "While art and design is seen as one of those things as having \"no shortcuts \", there are, in fact many techniques and dare I say, shortcuts, to becomming a better artist and designer! Let's all learn from each other's failures and have an active discussion on the little things that we can do (tonight) for the big gains in our OCs/ fanart/original works!"
     },
     {
@@ -285,6 +405,10 @@
         "Day": 1,
         "Name": "Ask Jerry Anything",
         "Category": 6,
+        "Speakers": [
+            "Jerry Jewell"
+        ],
+        "Location": "Glen 203 - 204",
         "Description": "Something you wanna ask Jerry that may have nothing to do with anime at all? Now's the time!"
     },
     {
@@ -293,6 +417,10 @@
         "Day": 1,
         "Name": "Autographs with Carolina Ravassa",
         "Category": 6,
+        "Speakers": [
+            "Carolina Ravassa"
+        ],
+        "Location": "Exhibitor Hall - Autograph Corner",
         "Description": ""
     },
     {
@@ -301,6 +429,10 @@
         "Day": 0,
         "Name": "Autographs with Carolina Ravassa",
         "Category": 6,
+        "Speakers": [
+            "Carolina Ravassa"
+        ],
+        "Location": "Exhibitor Hall - Autograph Corner",
         "Description": ""
     },
     {
@@ -309,6 +441,10 @@
         "Day": 1,
         "Name": "Autographs with Drunk Gaming",
         "Category": 6,
+        "Speakers": [
+            "Drunk Gaming"
+        ],
+        "Location": "Exhibitor Hall - Autograph Corner",
         "Description": ""
     },
     {
@@ -317,6 +453,10 @@
         "Day": 1,
         "Name": "Autographs with Jerry Jewell",
         "Category": 6,
+        "Speakers": [
+            "Jerry Jewell"
+        ],
+        "Location": "Exhibitor Hall - Autograph Corner",
         "Description": ""
     },
     {
@@ -325,6 +465,10 @@
         "Day": 0,
         "Name": "Autographs with Jerry Jewell",
         "Category": 6,
+        "Speakers": [
+            "Jerry Jewell"
+        ],
+        "Location": "Exhibitor Hall - Autograph Corner",
         "Description": ""
     },
     {
@@ -333,6 +477,10 @@
         "Day": 1,
         "Name": "Autographs with PinGamE",
         "Category": 6,
+        "Speakers": [
+            "Pingame"
+        ],
+        "Location": "Exhibitor Hall - Autograph Corner",
         "Description": ""
     },
     {
@@ -341,6 +489,10 @@
         "Day": 1,
         "Name": "Autographs with The Runaway Guys",
         "Category": 6,
+        "Speakers": [
+            "The Runaway Guys"
+        ],
+        "Location": "Exhibitor Hall - Autograph Corner",
         "Description": ""
     },
     {
@@ -349,6 +501,10 @@
         "Day": 0,
         "Name": "Autographs with The Runaway Guys",
         "Category": 6,
+        "Speakers": [
+            "The Runaway Guys"
+        ],
+        "Location": "Exhibitor Hall - Autograph Corner",
         "Description": ""
     },
     {
@@ -357,6 +513,13 @@
         "Day": 0,
         "Name": "Autographs with Tracy, Ron & Jill",
         "Category": 6,
+        "Speakers": [
+            "Jill Frappier",
+            "",
+            "Read More &rarr;",
+            ""
+        ],
+        "Location": "Exhibitor Hall - Sailor Moon Booth (E59)",
         "Description": ""
     },
     {
@@ -365,6 +528,13 @@
         "Day": 1,
         "Name": "Autographs with Tracy, Ron & Jill",
         "Category": 6,
+        "Speakers": [
+            "Jill Frappier",
+            "",
+            "Read More &rarr;",
+            ""
+        ],
+        "Location": "Exhibitor Hall - Sailor Moon Booth (E59)",
         "Description": ""
     },
     {
@@ -373,6 +543,13 @@
         "Day": 1,
         "Name": "Autographs with Tracy, Ron & Jill",
         "Category": 6,
+        "Speakers": [
+            "Jill Frappier",
+            "",
+            "Read More &rarr;",
+            ""
+        ],
+        "Location": "Exhibitor Hall - Sailor Moon Booth (E59)",
         "Description": ""
     },
     {
@@ -381,6 +558,13 @@
         "Day": 0,
         "Name": "Autographs with Tracy, Ron & Jill",
         "Category": 6,
+        "Speakers": [
+            "Jill Frappier",
+            "",
+            "Read More &rarr;",
+            ""
+        ],
+        "Location": "Exhibitor Hall - Sailor Moon Booth (E59)",
         "Description": ""
     },
     {
@@ -389,6 +573,10 @@
         "Day": 0,
         "Name": "Awesomecore AMVs",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Come and sit back and watch the world's best AMV's... OK, so these might be a bit strange, twisted and mind blowing, but they are never short of AWESOME! Did we mention we also have some awesome prizes to give away?"
     },
     {
@@ -397,6 +585,10 @@
         "Day": 1,
         "Name": "Basics of Armour 101",
         "Category": 3,
+        "Speakers": [
+            "Julian B."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "A basic introductory panel explaining and outlining basic ideas, details and simple ways to start your way into building cosplay armour!"
     },
     {
@@ -405,6 +597,10 @@
         "Day": 1,
         "Name": "Basics of Japanese Language and Culture",
         "Category": 3,
+        "Speakers": [
+            "Lauren M."
+        ],
+        "Location": "Macleod E3",
         "Description": "Teaches the basics of Japanese such as pronunciation, basic sentences and vocabulary, prefixes, numbers, body language (such as proper bowing and what NOT to do with chopsticks) and regional holidays."
     },
     {
@@ -413,6 +609,10 @@
         "Day": 0,
         "Name": "Best of Anime According to AMV's",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "One of the most popular AMV blocks ever! So we've proven time and time again that AMV's never lie and ALWAYS tell us what an anime is all about... right? Join in the fun as we take some of the best ones and sprinkle in some new ones for an hour of amusement."
     },
     {
@@ -421,6 +621,8 @@
         "Day": 2,
         "Name": "Board Games at Night with Pips Boardgame Café",
         "Category": 5,
+        "Speakers": [],
+        "Location": "Pips 24-Hour Lounge (Sun Alta 1)",
         "Description": "As part of Otafest's 24-hour experience, night owls looking to play board games can visit the Pips 24-Hour Lounge on the Marriott's second floor between 12am &ndash; 6am for board gaming provided by Pips Board Game Cafe! We'll also have anime marathoning nearby all night long when you want to watch more than participate!"
     },
     {
@@ -429,6 +631,8 @@
         "Day": 1,
         "Name": "Board Games at Night with Pips Boardgame Café",
         "Category": 5,
+        "Speakers": [],
+        "Location": "Pips 24-Hour Lounge (Sun Alta 1)",
         "Description": "As part of Otafest's 24-hour experience, night owls looking to play board games can visit the Pips 24-Hour Lounge on the Marriott's second floor between 12am &ndash; 6am for board gaming provided by Pips Board Game Cafe! We'll also have anime marathoning nearby all night long when you want to watch more than participate!"
     },
     {
@@ -437,6 +641,10 @@
         "Day": 1,
         "Name": "Board Games with Fallcon",
         "Category": 5,
+        "Speakers": [
+            "Fallcon"
+        ],
+        "Location": "Macleod A1",
         "Description": "The Anime Board Game Room is designed for attendees to take a break from the hustle from cosplay and vendors to panels and showings! There are a lot of anime and Asian culture-inspired board games out in the market today, and this is a chance for folks to come in, sit down and learn one of these games! These events are hosted in association with Fallcon – check their website at fallcon.com!"
     },
     {
@@ -445,6 +653,10 @@
         "Day": 0,
         "Name": "Board Games with Fallcon",
         "Category": 5,
+        "Speakers": [
+            "Fallcon"
+        ],
+        "Location": "Macleod A1",
         "Description": "The Anime Board Game Room is designed for attendees to take a break from the hustle from cosplay and vendors to panels and showings! There are a lot of anime and Asian culture-inspired board games out in the market today, and this is a chance for folks to come in, sit down and learn one of these games! These events are hosted in association with Fallcon – check their website at fallcon.com!"
     },
     {
@@ -453,6 +665,10 @@
         "Day": 1,
         "Name": "Can YOU Survive the Imperial Demon Army",
         "Category": 3,
+        "Speakers": [
+            "Kamryn M."
+        ],
+        "Location": "Glen 209",
         "Description": "Do you think you have what it takes to survive the Imperial Demon Army from Seraph of the End? Compete head to head to become a part of the Imperial Demon Army and take down the vampires!"
     },
     {
@@ -461,6 +677,10 @@
         "Day": 1,
         "Name": "Canada 150, Roof Top Fireworks Extravaganza!",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Marriott Patio",
         "Description": "For the first time ever, we're excited to provide an exclusive rooftop patio for our attendees. Come watch the Canada Day fireworks with Otafest with a special musical guest providing the soundtrack! Open to all ages, the Marriott Rooftop Patio will be providing food, nonalcoholic drink, and alcoholic beverages (ID required). The rooftop patio can be accessed through the Sunalta Room in the Marriott. The patio is available to Otafest attendees only! Enjoy a great view of the Canada Day fireworks! Be warned &ndash; if we hit capacity, we may have to turn folks away!"
     },
     {
@@ -469,6 +689,10 @@
         "Day": 1,
         "Name": "Cardfight Vanguard Tournament",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": ""
     },
     {
@@ -477,6 +701,10 @@
         "Day": 0,
         "Name": "Cardfight Vanguard Tournament",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": ""
     },
     {
@@ -485,6 +713,10 @@
         "Day": 0,
         "Name": "Cards Against Otafest",
         "Category": 3,
+        "Speakers": [
+            "Dan R."
+        ],
+        "Location": "Macleod E2",
         "Description": "Cards Against Otafest is BACK… AGAIN…?? Let's lock a bunch of nerds in a room and play a large-scale game of Cards Against Humanity, The results will be fun, humorous, and horrifying."
     },
     {
@@ -493,6 +725,10 @@
         "Day": 0,
         "Name": "Channel A",
         "Category": 3,
+        "Speakers": [
+            "Aaron S."
+        ],
+        "Location": "Telus 103",
         "Description": "Based on the hit party game, Channel A Studios is changing their broadcast lineup again. Find out what new series are on the horizon and help pitch new ideas for the next hit anime!"
     },
     {
@@ -501,7 +737,11 @@
         "Day": 1,
         "Name": "Comedy AMVs",
         "Category": 1,
-        "Description": "Is it any wonder why it's the most popular AMV Category? Join us for a full block of comedy awesomeness! Get your seats early, they fill up fast!"
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
+        "Description": "Is it any wonder why it's the most popular AMV category? Join us for a full block of comedy awesomeness! Get your seats early, they fill up fast!"
     },
     {
         "Start": 0,
@@ -509,6 +749,10 @@
         "Day": 1,
         "Name": "Comedy on the Edge",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Want more comedy videos and are looking for more mature content that just can't be shown during the day? You've come to the right block!"
     },
     {
@@ -517,6 +761,10 @@
         "Day": 1,
         "Name": "Con Horror Stories: Fellowship of the Creeps",
         "Category": 3,
+        "Speakers": [
+            "Lauren W."
+        ],
+        "Location": "Macleod E1",
         "Description": "Convention Horror Stories has returned! Con Horror Stories is a panel to share stories about weird, funny, creepy, and downright ridiculous things that occur during conventions. Relax and have fun!"
     },
     {
@@ -525,6 +773,10 @@
         "Day": 0,
         "Name": "CON-SURVIVAL 101",
         "Category": 3,
+        "Speakers": [
+            "Nathan Y."
+        ],
+        "Location": "Macleod E2",
         "Description": "Curious about the convention scene? Look no further; we've got some tips on how you can get the most out of your weekend shenanigans!"
     },
     {
@@ -533,6 +785,10 @@
         "Day": 0,
         "Name": "Convention Horror Stories",
         "Category": 3,
+        "Speakers": [
+            "Noa B."
+        ],
+        "Location": "Telus 103",
         "Description": "Got a convention horror story you'd like to share? Wanna hear the daring tales of others? Then this is the panel for you! Just remember to bring your ID!"
     },
     {
@@ -541,6 +797,10 @@
         "Day": 1,
         "Name": "Cosplay Dating Game",
         "Category": 3,
+        "Speakers": [
+            "Skylar F."
+        ],
+        "Location": "Glen 209",
         "Description": "Find the love of your life in our cosplay dating panel! Answer questions from our lovely bachelorettes and pray you get picked!"
     },
     {
@@ -549,6 +809,10 @@
         "Day": 1,
         "Name": "Cosplay Fashion Show & Skit Contest",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Main Events",
         "Description": "This is always one of the biggest events of any convention, and certainly the most popular here at Otafest! Come and see the results of everyone's creativity as they pay tribute to their favourite anime characters through costumes!"
     },
     {
@@ -557,6 +821,10 @@
         "Day": 1,
         "Name": "Cosplay for Broke Folks",
         "Category": 3,
+        "Speakers": [
+            "Lindsey H."
+        ],
+        "Location": "Telus 103",
         "Description": "Wanna cosplay but think it's too expensive? Well it doesn't have to be! Learn some tips from two people who've been there and done that."
     },
     {
@@ -565,6 +833,10 @@
         "Day": 1,
         "Name": "Cosplay Music Videos (CMVs)",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Step into the world of Cosplay Music Videos. From storytelling to mind candy effects, take a journey on the other side of music video fandom."
     },
     {
@@ -573,6 +845,10 @@
         "Day": 0,
         "Name": "Cosplay Showcase: Craftsmanship Contest",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E1",
         "Description": "Otafest proudly presents the Cosplay Showcase! For those cosplayers out there who want to show off their costumes but don't necessarily want to do so on-stage during the Cosplay Fashion Show, this event is for you! Here, our judges will look at your costume in detail. No prior experience is necessary as we have separate categories for beginners and experts. Winners will be announced at the Awards Ceremony!"
     },
     {
@@ -581,6 +857,10 @@
         "Day": 1,
         "Name": "Cosplay Weapons and props 101",
         "Category": 3,
+        "Speakers": [
+            "Dan R."
+        ],
+        "Location": "Glen 203 - 204",
         "Description": "Ever wondered how to make a certain prop, or why your prop was fine at one convention only to be banned at the next? Join us to discuss and learn about props and conventions."
     },
     {
@@ -589,7 +869,11 @@
         "Day": 0,
         "Name": "Crossplay Pageant",
         "Category": 3,
-        "Description": "The Crossplay Pageant is a 2-round contest for crossplayers._x000D_<br /> Round 1 will have an introduction and a Q&A from our judges followed by a Talent Show; Round 2 is a mystery round involving improv!"
+        "Speakers": [
+            "Landon D."
+        ],
+        "Location": "Telus 103",
+        "Description": "The Crossplay Pageant is a 2-round contest for crossplayers._x000D_  Round 1 will have an introduction and a Q&A from our judges followed by a Talent Show; Round 2 is a mystery round involving improv!"
     },
     {
         "Start": 2100,
@@ -597,6 +881,10 @@
         "Day": 1,
         "Name": "Disney Sing-Along!",
         "Category": 3,
+        "Speakers": [
+            "Kathleen D."
+        ],
+        "Location": "Macleod E3",
         "Description": "Come one, come all, and sing along with your favorite Disney songs!"
     },
     {
@@ -605,6 +893,10 @@
         "Day": 0,
         "Name": "Disney Through AMV's",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Like anime? Like Disney? What if anime was mixed with Disney? Come and join us in a panel of AMV's through Disney music. Come see zeroes becoming heroes, tales as old as time, and a magical bear-cat trying to get two people to kiss, and more!"
     },
     {
@@ -613,6 +905,8 @@
         "Day": 1,
         "Name": "Drifters (14P)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 202",
         "Description": "In a parallel world mankind is locked in an endless war with the monsters of the land. In our world, when warriors of great renown and skill perish they are sent to that world to influence the course of that war – they are known as drifters."
     },
     {
@@ -621,6 +915,10 @@
         "Day": 0,
         "Name": "EDM Concert - WTCHDCTR",
         "Category": 6,
+        "Speakers": [
+            "WTCHDCTR"
+        ],
+        "Location": "Main Events",
         "Description": "DJ WTCHDCTR starts off the 2017 dance at Otafest by influencing classical Japanese sounds with hard-hitting EDM rhythms that will replace your heartbeat with sick beats and show your love for a local Calgary talent on Friday night!"
     },
     {
@@ -629,6 +927,10 @@
         "Day": 1,
         "Name": "Exhibitor Hall - Artist Alley, Autographs, Concession, Photo Booth, Sketch Drive, Vendors",
         "Category": 4,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Exhibitor Hall",
         "Description": ""
     },
     {
@@ -637,6 +939,10 @@
         "Day": 0,
         "Name": "Exhibitor Hall - Artist Alley, Autographs, Concession, Photo Booth, Sketch Drive, Vendors",
         "Category": 4,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Exhibitor Hall",
         "Description": ""
     },
     {
@@ -645,6 +951,10 @@
         "Day": 1,
         "Name": "Fake Artist goes to Otafest",
         "Category": 3,
+        "Speakers": [
+            "Shawn M."
+        ],
+        "Location": "Macleod E1",
         "Description": "Based on a popular Japanese game, players take turns collectively drawing a picture but one doesn't know what the drawing is supposed to be. Can the fake artist hide the fact or will they get caught?"
     },
     {
@@ -653,6 +963,8 @@
         "Day": 1,
         "Name": "Fantastic Fights (14P)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 205",
         "Description": "A collection of fantastic and iconic fights spanning many genres and styles of animation arranged for your viewing pleasure."
     },
     {
@@ -661,6 +973,8 @@
         "Day": 1,
         "Name": "Fantastic Fights (14P)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 205",
         "Description": "A collection of fantastic and iconic fights spanning many genres and styles of animation arranged for your viewing pleasure."
     },
     {
@@ -669,6 +983,8 @@
         "Day": 1,
         "Name": "Fantastic Fights (14P)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 205",
         "Description": "A collection of fantastic and iconic fights spanning many genres and styles of animation arranged for your viewing pleasure."
     },
     {
@@ -677,6 +993,10 @@
         "Day": 0,
         "Name": "Fire Emblem Wars 2; The Reckoning",
         "Category": 3,
+        "Speakers": [
+            "Paige K."
+        ],
+        "Location": "Telus 103",
         "Description": "Welcome back to another Waifu/Husbando war with Robin and Orochi as your hosts! Support your faves, learn all about characters and maybe play a few games as well!"
     },
     {
@@ -685,7 +1005,11 @@
         "Day": 2,
         "Name": "Five Nights at Freddy's - Theories and Timelines",
         "Category": 3,
-        "Description": "New Job? Check. Pizza? Check? An array of psychotic haunted animal robots trying to kill you? Of course!_x000D_<br /> Come find out what Freddy's is all about and discuss what theorists think really happened!"
+        "Speakers": [
+            "Amanda L."
+        ],
+        "Location": "Telus 101 - 102",
+        "Description": "New Job? Check. Pizza? Check? An array of psychotic haunted animal robots trying to kill you? Of course!_x000D_  Come find out what Freddy's is all about and discuss what theorists think really happened!"
     },
     {
         "Start": 1300,
@@ -693,6 +1017,8 @@
         "Day": 1,
         "Name": "Flip Flappers (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 201",
         "Description": "Papika and Cocona hold the keys to open the door. When the two girls meet, their adventures in a different time and different overlapping dimension called \"Pure Illusion\" begin."
     },
     {
@@ -701,6 +1027,8 @@
         "Day": 1,
         "Name": "Flying Witch (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 201",
         "Description": "Every witch, when they reach the age of sixteen, is supposed to move out on their own and be independent… But Makoto is a bit air headed, clumsy and prone to getting lost; so she's moving in with relatives in the county instead."
     },
     {
@@ -709,6 +1037,10 @@
         "Day": 0,
         "Name": "Foam Sword Tournament",
         "Category": 3,
+        "Speakers": [
+            "Hank L."
+        ],
+        "Location": "Telus 104 - 106",
         "Description": "Display your strength and wits! Gear will be provided, random participants can fight after the main events - first come, first serve, and may the best triumph!"
     },
     {
@@ -717,7 +1049,11 @@
         "Day": 0,
         "Name": "Forza 6 Leaderboard Tournament",
         "Category": 7,
-        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)<br /> <br /> Tracks (Randomized):<br /> - Lime Rock Park<br /> - Road Atlanta<br /> - Monza <br /> <br /> Car (Randomized):<br /> - Ford GT 2017<br /> - Hummer H1 Alpha 2006<br /> - Ferrari #1 Scuderia Ferrari 641 1990"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)    Tracks (Randomized):  - Lime Rock Park  - Road Atlanta  - Monza     Car (Randomized):  - Ford GT 2017  - Hummer H1 Alpha 2006  - Ferrari #1 Scuderia Ferrari 641 1990"
     },
     {
         "Start": 1600,
@@ -725,7 +1061,11 @@
         "Day": 0,
         "Name": "Forza 6 Leaderboard Tournament",
         "Category": 7,
-        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)<br /> <br /> Tracks (Randomized):<br /> - Lime Rock Park<br /> - Road Atlanta<br /> - Monza <br /> <br /> Car (Randomized):<br /> - Ford GT 2017<br /> - Hummer H1 Alpha 2006<br /> - Ferrari #1 Scuderia Ferrari 641 1990"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)    Tracks (Randomized):  - Lime Rock Park  - Road Atlanta  - Monza     Car (Randomized):  - Ford GT 2017  - Hummer H1 Alpha 2006  - Ferrari #1 Scuderia Ferrari 641 1990"
     },
     {
         "Start": 1000,
@@ -733,7 +1073,11 @@
         "Day": 1,
         "Name": "Forza 6 Leaderboard Tournament",
         "Category": 7,
-        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)<br /> <br /> Tracks (Randomized):<br /> - Lime Rock Park<br /> - Road Atlanta<br /> - Monza <br /> <br /> Car (Randomized):<br /> - Ford GT 2017<br /> - Hummer H1 Alpha 2006<br /> - Ferrari #1 Scuderia Ferrari 641 1990"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)    Tracks (Randomized):  - Lime Rock Park  - Road Atlanta  - Monza     Car (Randomized):  - Ford GT 2017  - Hummer H1 Alpha 2006  - Ferrari #1 Scuderia Ferrari 641 1990"
     },
     {
         "Start": 1300,
@@ -741,7 +1085,11 @@
         "Day": 1,
         "Name": "Forza 6 Leaderboard Tournament",
         "Category": 7,
-        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)<br /> <br /> Tracks (Randomized):<br /> - Lime Rock Park<br /> - Road Atlanta<br /> - Monza <br /> <br /> Car (Randomized):<br /> - Ford GT 2017<br /> - Hummer H1 Alpha 2006<br /> - Ferrari #1 Scuderia Ferrari 641 1990"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)    Tracks (Randomized):  - Lime Rock Park  - Road Atlanta  - Monza     Car (Randomized):  - Ford GT 2017  - Hummer H1 Alpha 2006  - Ferrari #1 Scuderia Ferrari 641 1990"
     },
     {
         "Start": 1600,
@@ -749,7 +1097,11 @@
         "Day": 1,
         "Name": "Forza 6 Leaderboard Tournament",
         "Category": 7,
-        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)<br /> <br /> Tracks (Randomized):<br /> - Lime Rock Park<br /> - Road Atlanta<br /> - Monza <br /> <br /> Car (Randomized):<br /> - Ford GT 2017<br /> - Hummer H1 Alpha 2006<br /> - Ferrari #1 Scuderia Ferrari 641 1990"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)    Tracks (Randomized):  - Lime Rock Park  - Road Atlanta  - Monza     Car (Randomized):  - Ford GT 2017  - Hummer H1 Alpha 2006  - Ferrari #1 Scuderia Ferrari 641 1990"
     },
     {
         "Start": 1000,
@@ -757,7 +1109,11 @@
         "Day": 0,
         "Name": "Forza 6 Leaderboard Tournament",
         "Category": 7,
-        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)<br /> <br /> Tracks (Randomized):<br /> - Lime Rock Park<br /> - Road Atlanta<br /> - Monza <br /> <br /> Car (Randomized):<br /> - Ford GT 2017<br /> - Hummer H1 Alpha 2006<br /> - Ferrari #1 Scuderia Ferrari 641 1990"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Ready to go all out? Burn rubber in our Forza 6 leaderboard tournament presented by Microsoft! Take a seet in the official Forza Chair and steer your way to victory with the Official Forza Wheel! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Drop-in (Each player can participate in multiple rounds, but can only win once per day.)    Tracks (Randomized):  - Lime Rock Park  - Road Atlanta  - Monza     Car (Randomized):  - Ford GT 2017  - Hummer H1 Alpha 2006  - Ferrari #1 Scuderia Ferrari 641 1990"
     },
     {
         "Start": 1230,
@@ -765,6 +1121,10 @@
         "Day": 1,
         "Name": "Free Play Card Gaming Based on Space",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": ""
     },
     {
@@ -773,6 +1133,10 @@
         "Day": 0,
         "Name": "Free Play Card Gaming",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": ""
     },
     {
@@ -781,6 +1145,10 @@
         "Day": 0,
         "Name": "Friday Night Dance - James Landino",
         "Category": 6,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Main Events",
         "Description": "You've heard his music in videogames and webseries and now you can enjoy his work LIVE! Headlining our Friday Night Dance, James Landino is going to bring only the top-scoring videogame music this weekend. It's a time attack to see just how many moves you can pop in."
     },
     {
@@ -789,7 +1157,11 @@
         "Day": 1,
         "Name": "Full moon Festival: An Introduction to Tsukiuta",
         "Category": 3,
-        "Description": "Join us in the moonlight festival where we introduce you to the world of Tsukiuta! _x000D_<br /> A series about EVEN MORE idols that collabs with famous vocaloid producers and each representing the 12 months."
+        "Speakers": [
+            "Kristine S."
+        ],
+        "Location": "Macleod E2",
+        "Description": "Join us in the moonlight festival where we introduce you to the world of Tsukiuta! _x000D_  A series about EVEN MORE idols that collabs with famous vocaloid producers and each representing the 12 months."
     },
     {
         "Start": 1600,
@@ -797,6 +1169,8 @@
         "Day": 1,
         "Name": "Fuuka (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 201",
         "Description": "Yuu is the new boy in town and finds himself drawn to Fuuka. Discovering that they both love the same band and his bass playing compliments Fuuka's singing voice, they start a band."
     },
     {
@@ -805,6 +1179,10 @@
         "Day": 0,
         "Name": "Gender and You",
         "Category": 3,
+        "Speakers": [
+            "Harley J."
+        ],
+        "Location": "Macleod E1",
         "Description": "Come join as we discuss a variety of transgender characters in fictional media, the importance of representation, and how it affects us."
     },
     {
@@ -813,6 +1191,10 @@
         "Day": 1,
         "Name": "Gladzy: Armorcrafting with Worbla and Eva Foam",
         "Category": 6,
+        "Speakers": [
+            "Gladzy Kei"
+        ],
+        "Location": "Glen 203 - 204",
         "Description": "Gladzy Kei talks about the process behind creating your own armor cosplay from scratch, starting with reference photos, gathering materials, making your own patterns, all the way up to final fabrication."
     },
     {
@@ -821,6 +1203,10 @@
         "Day": 1,
         "Name": "Gladzy: Designing Your Own Cosplay",
         "Category": 6,
+        "Speakers": [
+            "Gladzy Kei"
+        ],
+        "Location": "Glen 203 - 204",
         "Description": "Armored princesses, Pokémon gijinkas, and more! Gladzy Kei talks about the process behind re-imagining existing characters with your own creative twist."
     },
     {
@@ -829,6 +1215,10 @@
         "Day": 1,
         "Name": "Got Milk? ~ A HaiQ&A story",
         "Category": 3,
+        "Speakers": [
+            "Giuliana C."
+        ],
+        "Location": "Telus 103",
         "Description": "Come to our Haikyuu panel! Q&A and games for prizes - it'll be all GWAH and BOW and stuff!!"
     },
     {
@@ -837,7 +1227,11 @@
         "Day": 0,
         "Name": "Halo 5 Free For All Tournament",
         "Category": 7,
-        "Description": "Are you a master chef? Well, the chief doesn't care! There's no time for cooking when you're busy pummeling your opponents into the ground and reigning supreme with some cool Microsoft swag!<br /> <br /> # of Players: 4 (Pre-registration and/or drop-in) <br /> Number of Rounds: 3<br /> Time Limit per round: 15 Minutes<br /> Game Type: Slayer<br /> Respawn: 5 Seconds<br /> Maps: Random"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Are you a master chef? Well, the chief doesn't care! There's no time for cooking when you're busy pummeling your opponents into the ground and reigning supreme with some cool Microsoft swag!    # of Players: 4 (Pre-registration and/or drop-in)   Number of Rounds: 3  Time Limit per round: 15 Minutes  Game Type: Slayer  Respawn: 5 Seconds  Maps: Random"
     },
     {
         "Start": 1200,
@@ -845,7 +1239,11 @@
         "Day": 1,
         "Name": "Halo 5 Free For All Tournament",
         "Category": 7,
-        "Description": "Are you a master chef? Well, the chief doesn't care! There's no time for cooking when you're busy pummeling your opponents into the ground and reigning supreme with some cool Microsoft swag!<br /> <br /> # of Players: 4 (Pre-registration and/or drop-in) <br /> Number of Rounds: 3<br /> Time Limit per round: 15 Minutes<br /> Game Type: Slayer<br /> Respawn: 5 Seconds<br /> Maps: Random"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Are you a master chef? Well, the chief doesn't care! There's no time for cooking when you're busy pummeling your opponents into the ground and reigning supreme with some cool Microsoft swag!    # of Players: 4 (Pre-registration and/or drop-in)   Number of Rounds: 3  Time Limit per round: 15 Minutes  Game Type: Slayer  Respawn: 5 Seconds  Maps: Random"
     },
     {
         "Start": 1500,
@@ -853,7 +1251,11 @@
         "Day": 1,
         "Name": "Halo 5 Free For All Tournament",
         "Category": 7,
-        "Description": "Are you a master chef? Well, the chief doesn't care! There's no time for cooking when you're busy pummeling your opponents into the ground and reigning supreme with some cool Microsoft swag!<br /> <br /> # of Players: 4 (Pre-registration and/or drop-in) <br /> Number of Rounds: 3<br /> Time Limit per round: 15 Minutes<br /> Game Type: Slayer<br /> Respawn: 5 Seconds<br /> Maps: Random"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Are you a master chef? Well, the chief doesn't care! There's no time for cooking when you're busy pummeling your opponents into the ground and reigning supreme with some cool Microsoft swag!    # of Players: 4 (Pre-registration and/or drop-in)   Number of Rounds: 3  Time Limit per round: 15 Minutes  Game Type: Slayer  Respawn: 5 Seconds  Maps: Random"
     },
     {
         "Start": 1200,
@@ -861,7 +1263,11 @@
         "Day": 0,
         "Name": "Halo 5 Free For All Tournament",
         "Category": 7,
-        "Description": "Are you a master chef? Well, the chief doesn't care! There's no time for cooking when you're busy pummeling your opponents into the ground and reigning supreme with some cool Microsoft swag!<br /> <br /> # of Players: 4 (Pre-registration and/or drop-in) <br /> Number of Rounds: 3<br /> Time Limit per round: 15 Minutes<br /> Game Type: Slayer<br /> Respawn: 5 Seconds<br /> Maps: Random"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "Are you a master chef? Well, the chief doesn't care! There's no time for cooking when you're busy pummeling your opponents into the ground and reigning supreme with some cool Microsoft swag!    # of Players: 4 (Pre-registration and/or drop-in)   Number of Rounds: 3  Time Limit per round: 15 Minutes  Game Type: Slayer  Respawn: 5 Seconds  Maps: Random"
     },
     {
         "Start": 1800,
@@ -869,6 +1275,10 @@
         "Day": 0,
         "Name": "Hangout Space",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Marriott Patio",
         "Description": "The SunAlta Rooftop Patio is a casual, Otafest-exclusive hangout place on the Marriott's second floor for you to take a load off in between panels and shopping! The patio is a fantastic place to grab a bite to eat, take a break, and chill with your friends! Come by and enjoy the view; watch all of Stephen Ave pass by below! Music! Food! Beverages! All ages welcome! Over 18? We'll also have liquor available! Please enjoy responsibly; if overly intoxicated, you will be asked to leave. Don't forget your ID!"
     },
     {
@@ -877,6 +1287,10 @@
         "Day": 1,
         "Name": "Hangout Space",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Marriott Patio",
         "Description": "The SunAlta Rooftop Patio is a casual, Otafest-exclusive hangout place on the Marriott's second floor for you to take a load off in between panels and shopping! The patio is a fantastic place to grab a bite to eat, take a break, and chill with your friends! Come by and enjoy the view; watch all of Stephen Ave pass by below! Music! Food! Beverages! All ages welcome! Over 18? We'll also have liquor available! Please enjoy responsibly; if overly intoxicated, you will be asked to leave. Don't forget your ID!"
     },
     {
@@ -885,6 +1299,10 @@
         "Day": 1,
         "Name": "Hangout Space (Beer Available)",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Marriott Patio",
         "Description": "The SunAlta Rooftop Patio is a casual, Otafest-exclusive hangout place on the Marriott's second floor for you to take a load off in between panels and shopping! The patio is a fantastic place to grab a bite to eat, take a break, and chill with your friends! Come by and enjoy the view; watch all of Stephen Ave pass by below! Music! Food! Beverages! All ages welcome! Over 18? We'll also have liquor available! Please enjoy responsibly; if overly intoxicated, you will be asked to leave. Don't forget your ID!"
     },
     {
@@ -893,6 +1311,10 @@
         "Day": 0,
         "Name": "Hangout Space - Beer Available",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Marriott Patio",
         "Description": "The SunAlta Rooftop Patio is a casual, Otafest-exclusive hangout place on the Marriott's second floor for you to take a load off in between panels and shopping! The patio is a fantastic place to grab a bite to eat, take a break, and chill with your friends! Come by and enjoy the view; watch all of Stephen Ave pass by below! Music! Food! Beverages! All ages welcome! Over 18? We'll also have liquor available! Please enjoy responsibly; if overly intoxicated, you will be asked to leave. Don't forget your ID!"
     },
     {
@@ -901,6 +1323,10 @@
         "Day": 0,
         "Name": "Hangout Space",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Marriott Patio",
         "Description": "The SunAlta Rooftop Patio is a casual, Otafest-exclusive hangout place on the Marriott's second floor for you to take a load off in between panels and shopping! The patio is a fantastic place to grab a bite to eat, take a break, and chill with your friends! Come by and enjoy the view; watch all of Stephen Ave pass by below! Music! Food! Beverages! All ages welcome! Over 18? We'll also have liquor available! Please enjoy responsibly; if overly intoxicated, you will be asked to leave. Don't forget your ID!"
     },
     {
@@ -909,6 +1335,10 @@
         "Day": 0,
         "Name": "Hentai East and West",
         "Category": 3,
+        "Speakers": [
+            "Alana M."
+        ],
+        "Location": "Macleod E3",
         "Description": "How has hentai influenced the Eastern and Western culture? Discuss how hentai's impact has it changed how we perceive and partake of adult content."
     },
     {
@@ -917,6 +1347,10 @@
         "Day": 1,
         "Name": "Hetalia World Conference",
         "Category": 3,
+        "Speakers": [
+            "Ashley D."
+        ],
+        "Location": "Telus 103",
         "Description": "Speed running games, quizzes, and Ask The Countries! A fun and engaging panel for any Hetalia fan!"
     },
     {
@@ -925,6 +1359,10 @@
         "Day": 1,
         "Name": "Husbando Hour",
         "Category": 3,
+        "Speakers": [
+            "Julian B."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "An anime and videogame-based game show where participants must compete for their favourite \"Husbandos\", rising to the top and claiming the title of of \"Ultimate Husbando\" for prizes!"
     },
     {
@@ -933,6 +1371,10 @@
         "Day": 0,
         "Name": "Idol Conversation",
         "Category": 3,
+        "Speakers": [
+            "Stacey M."
+        ],
+        "Location": "Telus 104 - 106",
         "Description": "What is an Idol? If you've ever asked yourself this question, look no further for the answers you seek."
     },
     {
@@ -941,6 +1383,8 @@
         "Day": 1,
         "Name": "Idol Incidents (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 201",
         "Description": "The politicians and political parties of Japan are no longer able to govern or represent the people. Rising to the challenge, Idol groups take up the roles of government and work to the better the country that adores them."
     },
     {
@@ -949,6 +1393,8 @@
         "Day": 1,
         "Name": "Interviews with Monster Girls (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 202",
         "Description": "Tetsuo is a teacher working at Shibasaki High School and specializes in the physiological study of demi-humans – vampires, succubus and snow women. Unfortunately, demi-humans aren't very common so he hasn't actually met one before."
     },
     {
@@ -957,6 +1403,10 @@
         "Day": 0,
         "Name": "Introduction to Crossplay",
         "Category": 3,
+        "Speakers": [
+            "Ashley D."
+        ],
+        "Location": "Macleod E2",
         "Description": "Introduction to crossplay and different ways to go about it!"
     },
     {
@@ -965,6 +1415,10 @@
         "Day": 1,
         "Name": "Introduction to Ensemble Stars",
         "Category": 3,
+        "Speakers": [
+            "Madison S."
+        ],
+        "Location": "Macleod E3",
         "Description": "Do you love idols and spending all your time playing mobile games? Then Ensemble Stars may be the game for you! Join two of the shining stars of Yumenosaki to learn more about the series and more fun!"
     },
     {
@@ -973,6 +1427,10 @@
         "Day": 1,
         "Name": "Inu-Brothers Q&A",
         "Category": 3,
+        "Speakers": [
+            "Ashley L."
+        ],
+        "Location": "Telus 103",
         "Description": "Come join Inuyasha and Sesshoumaru in a Q&A! Ask the brothers about their adventures and their lives before, during, and after their feudal fairytale, or dare the doggy duo to perform a trick or two!"
     },
     {
@@ -981,6 +1439,10 @@
         "Day": 0,
         "Name": "Iron Cosplay Scanvanger Hunt",
         "Category": 3,
+        "Speakers": [
+            "Landon D."
+        ],
+        "Location": "Telus 104 - 106",
         "Description": "Feeling creative? Come make a cosplay out of random supplies with your team! Send your cosplayer on a scavanger hunt and see just how well your cosplay holds up!"
     },
     {
@@ -989,6 +1451,8 @@
         "Day": 1,
         "Name": "Izetta the Last Witch (14P)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 202",
         "Description": "Long ago the White Witch saved the kingdom of Elystadt from being conquered. Now on the brick of war, the princess is despritely searching for allies to fend off an invasion when she meets a witch named Izetta on a train."
     },
     {
@@ -997,6 +1461,10 @@
         "Day": 0,
         "Name": "J-Rock Concert - Pingame",
         "Category": 6,
+        "Speakers": [
+            "Pingame"
+        ],
+        "Location": "Main Events",
         "Description": "It's Otafest 2017's first musical act of the year: rocking out with Ryuma and Hide of PinGamE! Calgary welcomes this freshly-minted indie duo as they bring their tremendous electronic rock sound to North America for the first time on Friday evening. They'll bring the noise, you bring the moves!"
     },
     {
@@ -1005,6 +1473,10 @@
         "Day": 1,
         "Name": "Jackbox Games with Otafest",
         "Category": 3,
+        "Speakers": [
+            "Tracy L."
+        ],
+        "Location": "Macleod E2",
         "Description": "Let's play party videogames with the Otafest crew! Whether it's trivia, mad libs, or straight-up deceit, it's all about getting the most points for the WIN!"
     },
     {
@@ -1013,6 +1485,10 @@
         "Day": 1,
         "Name": "Japanification Identification",
         "Category": 3,
+        "Speakers": [
+            "Jordin J."
+        ],
+        "Location": "Macleod E2",
         "Description": "We've all seen the funny and weird commercials that come out of Japan at times but the question is: &ldquo;Can you identify the product by ad content alone?&rdquo;"
     },
     {
@@ -1021,6 +1497,10 @@
         "Day": 0,
         "Name": "Join Us: Ouran High School Host Club!",
         "Category": 3,
+        "Speakers": [
+            "Zoha A."
+        ],
+        "Location": "Telus 103",
         "Description": "Join us! Come enjoy some mini games, re-enactions, trivia, and truth or dare with none other than your favourite hosts while savouring some warm drinks and delicious sweets!"
     },
     {
@@ -1029,6 +1509,10 @@
         "Day": 1,
         "Name": "Just Dance, Passport, and Device Bar",
         "Category": 7,
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
         "Description": "Hang out at the Microsoft booth to play some games, check out the tech, and just chill with your friends! There may be prizes! ;)"
     },
     {
@@ -1037,6 +1521,10 @@
         "Day": 0,
         "Name": "Just Dance, Passport, and Device Bar",
         "Category": 7,
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
         "Description": "Hang out at the Microsoft booth to play some games, check out the tech, and just chill with your friends! There may be prizes! ;)"
     },
     {
@@ -1045,6 +1533,10 @@
         "Day": 0,
         "Name": "K-Pop Random Dance Play",
         "Category": 3,
+        "Speakers": [
+            "Courtney H."
+        ],
+        "Location": "Telus 104 - 106",
         "Description": "K-Pop? At my anime convention… again?! Started at Animethon, we have now made our way to Otafest! Come join us for a fun hour filled with a whole lot of dancing!"
     },
     {
@@ -1053,6 +1545,10 @@
         "Day": 0,
         "Name": "Kingdom Hearts Trivia",
         "Category": 3,
+        "Speakers": [
+            "Catriona M."
+        ],
+        "Location": "Telus 103",
         "Description": "Think you know everything about Kingdom Hearts? Come on down and pit yourself against other fans."
     },
     {
@@ -1061,6 +1557,8 @@
         "Day": 1,
         "Name": "Kobayashi's Dragon Maid (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 202",
         "Description": "Overworked and drunk, Kobayashi stumbles into the forest and saves a dragon on the verge of death with nowhere to go. After drinking a bottle of sake with the dragon, they decide it will live with her as a maid."
     },
     {
@@ -1069,6 +1567,10 @@
         "Day": 1,
         "Name": "Korean Martial Arts Through History",
         "Category": 3,
+        "Speakers": [
+            "Ryan R."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "More than just modern taekwondo, Korea has a deep and fascinating martial history. Learn about the roots of Korean martial arts, how they changed through history, and discover other modern Korean arts"
     },
     {
@@ -1077,6 +1579,10 @@
         "Day": 1,
         "Name": "Kpop 101",
         "Category": 3,
+        "Speakers": [
+            "Caitlin L."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "For new Korean pop music fans having trouble figuring out what the heck is going on or older fans looking for a new group: We're here to help you!"
     },
     {
@@ -1085,6 +1591,10 @@
         "Day": 0,
         "Name": "Kpop Crash Course 2.0",
         "Category": 3,
+        "Speakers": [
+            "Giuliana C."
+        ],
+        "Location": "Telus 104 - 106",
         "Description": "Its time to dust off those dancing shoes again! Its back! Get ready to experience some more k-pop, and if dance isn't your thing? Don't worry! Come, watch, and listen to some of your favorite songs!"
     },
     {
@@ -1093,6 +1603,10 @@
         "Day": 0,
         "Name": "Late night Karaoke",
         "Category": 3,
+        "Speakers": [
+            "Rachael Y."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "Sing your heart out in late night Karaoke! Support Otafest's charity! What do you have to lose?"
     },
     {
@@ -1101,6 +1615,10 @@
         "Day": 1,
         "Name": "Let's Talk Twitch with FeralWife & GradLifeGaming AKA Drunk Gaming",
         "Category": 7,
+        "Speakers": [
+            "FeralWife"
+        ],
+        "Location": "Glen 209",
         "Description": "Twitch is an awesome platform for the gaming community to connect. Join these streamers for a Q&A session ALL about Twitch."
     },
     {
@@ -1109,6 +1627,10 @@
         "Day": 0,
         "Name": "LIGHT NOVELS 101: AN INTRODUCTION TO LIGHT NOVELS",
         "Category": 3,
+        "Speakers": [
+            "Nathan Y."
+        ],
+        "Location": "Macleod E3",
         "Description": "What's a light novel? Interested to find out another source for anime other than manga and games? Come on by and we'll show you the ropes."
     },
     {
@@ -1117,6 +1639,10 @@
         "Day": 0,
         "Name": "Lights, Camera, Action!",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Come check out some of our favorite action AMVs!"
     },
     {
@@ -1125,6 +1651,10 @@
         "Day": 1,
         "Name": "Living and Teaching in Japan",
         "Category": 3,
+        "Speakers": [
+            "Jessica R."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "Jessica has spent one year living and teaching English in Japan. Are you curious about doing the same? Do you like hearing stories from those who have lived abroad? This is the panel for you!"
     },
     {
@@ -1133,6 +1663,10 @@
         "Day": 1,
         "Name": "Lolita Fashion 101",
         "Category": 3,
+        "Speakers": [
+            "Doan H."
+        ],
+        "Location": "Macleod E2",
         "Description": "Interested in Lolita fashion? Come learn more about the style and the secret life of a Lolita."
     },
     {
@@ -1141,6 +1675,10 @@
         "Day": 1,
         "Name": "Maid Matsuri",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Telus 104 - 106",
         "Description": "Join in the festivities and come to the Matsuri! Play festival games with us and your friends for a chance to win prizes! If you are looking for a snack, there are Japanese snacks and drinks available for you to indulge in as well. If you're looking for a dose of cute, you can grab some cute merchandise lovingly handmade by our Maid & Butler Cafe members!"
     },
     {
@@ -1149,6 +1687,10 @@
         "Day": 0,
         "Name": "Meet Birdy in Artist Alley",
         "Category": 6,
+        "Speakers": [
+            "Birdy"
+        ],
+        "Location": "Exhibitor Hall - Birdy's Table (A2)",
         "Description": ""
     },
     {
@@ -1157,6 +1699,10 @@
         "Day": 1,
         "Name": "Meet Birdy in Artist Alley",
         "Category": 6,
+        "Speakers": [
+            "Birdy"
+        ],
+        "Location": "Exhibitor Hall - Birdy's Table (A2)",
         "Description": ""
     },
     {
@@ -1165,6 +1711,10 @@
         "Day": 1,
         "Name": "Meet Birdy in Artist Alley",
         "Category": 6,
+        "Speakers": [
+            "Birdy"
+        ],
+        "Location": "Exhibitor Hall - Birdy's Table (A2)",
         "Description": ""
     },
     {
@@ -1173,6 +1723,10 @@
         "Day": 0,
         "Name": "Meet Birdy in Artist Alley",
         "Category": 6,
+        "Speakers": [
+            "Birdy"
+        ],
+        "Location": "Exhibitor Hall - Birdy's Table (A2)",
         "Description": ""
     },
     {
@@ -1181,6 +1735,10 @@
         "Day": 1,
         "Name": "Meet Gladzy in Artist Alley",
         "Category": 6,
+        "Speakers": [
+            "Gladzy Kei"
+        ],
+        "Location": "Exhibitor Hall - Gladzy's Table (A1)",
         "Description": ""
     },
     {
@@ -1189,6 +1747,10 @@
         "Day": 1,
         "Name": "Meet Gladzy in Artist Alley",
         "Category": 6,
+        "Speakers": [
+            "Gladzy Kei"
+        ],
+        "Location": "Exhibitor Hall - Gladzy's Table (A1)",
         "Description": ""
     },
     {
@@ -1197,6 +1759,10 @@
         "Day": 0,
         "Name": "Meet Gladzy in Artist Alley",
         "Category": 6,
+        "Speakers": [
+            "Gladzy Kei"
+        ],
+        "Location": "Exhibitor Hall - Gladzy's Table (A1)",
         "Description": ""
     },
     {
@@ -1205,6 +1771,10 @@
         "Day": 0,
         "Name": "Meet & Greet Pingame!",
         "Category": 6,
+        "Speakers": [
+            "Pingame"
+        ],
+        "Location": "Macleod E3",
         "Description": "Get up close and personal with the dynamic duo and get your selfies and autographs!"
     },
     {
@@ -1213,6 +1783,10 @@
         "Day": 1,
         "Name": "Meet Reika in the Exhibitor Hall",
         "Category": 6,
+        "Speakers": [
+            "Reika"
+        ],
+        "Location": "Exhibitor Hall - Reika's Booth (E62)",
         "Description": ""
     },
     {
@@ -1221,6 +1795,10 @@
         "Day": 1,
         "Name": "Meet Reika in the Exhibitor Hall",
         "Category": 6,
+        "Speakers": [
+            "Reika"
+        ],
+        "Location": "Exhibitor Hall - Reika's Booth (E62)",
         "Description": ""
     },
     {
@@ -1229,6 +1807,10 @@
         "Day": 1,
         "Name": "Meet Reika in the Exhibitor Hall",
         "Category": 6,
+        "Speakers": [
+            "Reika"
+        ],
+        "Location": "Exhibitor Hall - Reika's Booth (E62)",
         "Description": ""
     },
     {
@@ -1237,6 +1819,10 @@
         "Day": 0,
         "Name": "Meet Reika in the Exhibitor Hall",
         "Category": 6,
+        "Speakers": [
+            "Reika"
+        ],
+        "Location": "Exhibitor Hall - Reika's Booth (E62)",
         "Description": ""
     },
     {
@@ -1245,6 +1831,8 @@
         "Day": 1,
         "Name": "Minami Kamakura High School Girls Cycling Club (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 201",
         "Description": "After moving from Nagasaki to Kamakura, Hiromi decides to start riding her bicycle to school every day. Being out of practice she struggles with the ride but, luckily, there are people ready to help her get better at it."
     },
     {
@@ -1253,6 +1841,10 @@
         "Day": 1,
         "Name": "Mix and Mingler",
         "Category": 3,
+        "Speakers": [
+            "Brittany S."
+        ],
+        "Location": "Glen 209",
         "Description": "Start the summer off right by mingling with some amazing people who love Japanese culture as much as you!"
     },
     {
@@ -1261,6 +1853,8 @@
         "Day": 1,
         "Name": "Mob Psycho 100 (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 202",
         "Description": "Mob is a quiet unassuming boy who only wants to live a normal everyday life, a perfectly achievable goal if not for his immense psychic powers. Normally able to keeps his powers subdued, when his emotions peak things tend to explode."
     },
     {
@@ -1269,6 +1863,10 @@
         "Day": 1,
         "Name": "Monster hunter open season!",
         "Category": 3,
+        "Speakers": [
+            "Brett L."
+        ],
+        "Location": "Glen 208",
         "Description": "Come swing by and hunt with your fellow hunters from across Alberta!"
     },
     {
@@ -1277,6 +1875,10 @@
         "Day": 1,
         "Name": "Nefariously Bad Fanfic Theatre",
         "Category": 3,
+        "Speakers": [
+            "Melissa N."
+        ],
+        "Location": "Glen 208",
         "Description": "Last time, we ruined your childhoods and destroyed your perception of the Teletubbies forever. Join us for another round of horribly written fanfiction."
     },
     {
@@ -1285,6 +1887,8 @@
         "Day": 1,
         "Name": "New Game! (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 205",
         "Description": "After graduating high school Aoba Suzukaze immediately got a job with Eaglejump Games, the studio that produced her favorite game. Now she has a lot to learn if she wants to become a game developer."
     },
     {
@@ -1293,6 +1897,16 @@
         "Day": 1,
         "Name": "North American VA Round Table",
         "Category": 6,
+        "Speakers": [
+            "Jill Frappier",
+            "",
+            "Read More &rarr;",
+            "",
+            "Carolina Ravassa",
+            "",
+            "Read More &rarr;"
+        ],
+        "Location": "Main Events",
         "Description": "Otafest's voice acting guests discuss topics and take your questions about the industry!"
     },
     {
@@ -1301,6 +1915,8 @@
         "Day": 1,
         "Name": "ODD… (14P)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 205",
         "Description": "Does watching, let alone liking, this series put me on some kind of list? If not, it should. Who am I kidding, I'm already on it."
     },
     {
@@ -1309,6 +1925,10 @@
         "Day": 1,
         "Name": "On the Mic Voice Over Adventure 1",
         "Category": 3,
+        "Speakers": [
+            "Nathan H."
+        ],
+        "Location": "Glen 208",
         "Description": "Ever wondered what it is like to actually dub an anime? Join seasoned voice over professionals in an interactive panel in which you and room participants will learn the basics of dubbing. Participation of attendees is mandatory!"
     },
     {
@@ -1317,6 +1937,10 @@
         "Day": 1,
         "Name": "One Punch Man",
         "Category": 3,
+        "Speakers": [
+            "Amin S."
+        ],
+        "Location": "Macleod E3",
         "Description": "Come chat about the the popular anime series One-Punch Man and learn about the manga and webcomic!"
     },
     {
@@ -1325,7 +1949,11 @@
         "Day": 1,
         "Name": "Open Gaming + Competitive Video Game Tournament",
         "Category": 5,
-        "Description": "<strong>Open Gaming<br /><"
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod A3 - A4 (Console Gaming)",
+        "Description": "<strong>Open Gaming <"
     },
     {
         "Start": 1000,
@@ -1333,7 +1961,11 @@
         "Day": 0,
         "Name": "Open Gaming + Competitive Video Game Tournament",
         "Category": 5,
-        "Description": "Register for the Smash Tournament by Friday June 30 at https://smash.gg/OtafestAssault2017<br /><br />In conjunction with Super Smash Bros. University and The Fighting Game Community of Calgary, Otafest is pleased to offer four cash-pot gaming tournaments for Smash Brothers Melee, Smash Brothers Wii U! Please check smash.gg/tournament/otafest-assault-2017 for full tournament details, and check out the links below to watch LIVE online! twitch.tv/ssbuniversity twitch.tv/ZyrisTV twitch.tv/otafest"
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod A3 - A4 (Console Gaming)",
+        "Description": "Register for the Smash Tournament by Friday June 30 at https://smash.gg/OtafestAssault2017  In conjunction with Super Smash Bros. University and The Fighting Game Community of Calgary, Otafest is pleased to offer four cash-pot gaming tournaments for Smash Brothers Melee, Smash Brothers Wii U! Please check smash.gg/tournament/otafest-assault-2017 for full tournament details, and check out the links below to watch LIVE online! twitch.tv/ssbuniversity twitch.tv/ZyrisTV twitch.tv/otafest"
     },
     {
         "Start": 1400,
@@ -1341,6 +1973,10 @@
         "Day": 0,
         "Name": "Opening Ceremonies",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Main Events",
         "Description": "Come join us as we kick off Otafest 2017! Come and see what's in store this year, meet our guests, and start the party off with a BANG!"
     },
     {
@@ -1349,6 +1985,10 @@
         "Day": 0,
         "Name": "Otafest Idol",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E2",
         "Description": "It's one thing to sing along with your favourite theme song sitting at home, but it's quite another thing to perform it in front of an entire audience of anime fans! Come and watch as aspiring singers perform a variety of anime, video game, and J-pop songs. Who will be crowned the Otafest Idol champion of 2017?"
     },
     {
@@ -1357,6 +1997,10 @@
         "Day": 0,
         "Name": "Otafest @ Night",
         "Category": 3,
+        "Speakers": [
+            "Aaron S."
+        ],
+        "Location": "Telus 103",
         "Description": "Based on the hit Comedy Central show @Midnight, anime and social media come together for a hilarious show of unsuspected surprises, funny pictures and crazy videos. Laugh and have lots fun @Night."
     },
     {
@@ -1365,6 +2009,10 @@
         "Day": 0,
         "Name": "Otafest Podcast Panel",
         "Category": 7,
+        "Speakers": [
+            "Jei W."
+        ],
+        "Location": "Macleod E3",
         "Description": "It's the return of the Otafest Podcast crew featuring an Otafest special guest. Join us as we record the finale for season 2 with you as part of our live studio audience!"
     },
     {
@@ -1373,6 +2021,10 @@
         "Day": 1,
         "Name": "Otafest Pokemon League - Battle Royale",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Glen 206",
         "Description": "Have you ever wondered which of our gym leaders were the strongest? Come watch as our gym leaders duke it out in a four-way, free-for-all tournament! Laud the victors! Humiliate the defeated! Learn their moves so you make take them down in the Pokémon League."
     },
     {
@@ -1381,6 +2033,10 @@
         "Day": 1,
         "Name": "Otafest Pokemon League - Berry Picking",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Glen 206",
         "Description": "Gotta collect 'em all! Race against other trainers to gather more berries then the rest! Your Pokémon will change their minds of what berry they're craving - how fast can you react!? Biggest berry feast wins!"
     },
     {
@@ -1389,6 +2045,10 @@
         "Day": 1,
         "Name": "Otafest Pokemon League - Conquest",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Glen 206",
         "Description": "In far away lands, Pokémon are used for war and conquest. Form a grand alliance that can wage war against other armies of Pokémon! advance and conquer the battle field to assume dominance!"
     },
     {
@@ -1397,6 +2057,10 @@
         "Day": 0,
         "Name": "Otafest Pokemon League - Pokemon Snap",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Telus 107",
         "Description": "Want to make National Pokégraphic? Think you're the best Poképhotographer out there? Come challenge other snappers with Pokémon Snap for the N64! take your best shot and the highest score wins!"
     },
     {
@@ -1405,6 +2069,10 @@
         "Day": 0,
         "Name": "Otafest Pokemon League - Runway Madness",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Telus 107",
         "Description": "Our smash hit returns! Come put your fashion skills to the test, pick your Pokémon partner, give them the greatest fashion designs you can come up with, and walk the runway in front of judgmental, well, judges!"
     },
     {
@@ -1413,6 +2081,10 @@
         "Day": 1,
         "Name": "Otafest Pokemon League - Smash Bros. Tournament",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Glen 206",
         "Description": "Come check out our special version of Super Smash Bros. Brawl, retrofitted with all Pokémon (and a few other surprises!) Choose your Pokémon and brawl it out over several matches, and prove you're the best trainer on a brand-new battleground!"
     },
     {
@@ -1421,6 +2093,10 @@
         "Day": 0,
         "Name": "Otafest Pokemon League - VGC Tournament",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Telus 107",
         "Description": "As a separate event from the Pokémon League (but in the same room!), we are happy to present you with a Pokémon Video Game Championship event! Following the official 2017 Pokémon Video Game Championships rules and regulations, this tournament will truly put your trainer skills to the test!"
     },
     {
@@ -1429,6 +2105,10 @@
         "Day": 0,
         "Name": "Otafest Pokemon League - Z Move Dance Off",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Telus 107",
         "Description": "It's time to get down and show your moves! Challenge our gym leaders, your friends, or new trainers to a dance off! Bust out your best Z-Move to get your Pokémon pumped!"
     },
     {
@@ -1437,6 +2117,10 @@
         "Day": 0,
         "Name": "Otafest: The Abridged Series",
         "Category": 3,
+        "Speakers": [
+            "Garrett D."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "Seasoned abridger, DoktorApplejuce, a top ten finalist in Team Four Star's 2016 abridging competition, is here with a host of other abridgers to guide you into the world of abridged parodies."
     },
     {
@@ -1445,6 +2129,10 @@
         "Day": 1,
         "Name": "Otaku High- Web Series Pilot Screening and Q & A",
         "Category": 3,
+        "Speakers": [
+            "Eric S."
+        ],
+        "Location": "Glen 203 - 204",
         "Description": "This panel is a screening for the locally-produced web series pilot of Otaku High. The screening will be followed by a Q&A with series creator Eric Stroppel."
     },
     {
@@ -1453,6 +2141,10 @@
         "Day": 2,
         "Name": "Overnight AV Showings",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Sun Alta 3",
         "Description": ""
     },
     {
@@ -1461,6 +2153,10 @@
         "Day": 1,
         "Name": "Overnight AV Showings",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Sun Alta 3",
         "Description": ""
     },
     {
@@ -1469,7 +2165,11 @@
         "Day": 0,
         "Name": "Overwatch Training Camp",
         "Category": 3,
-        "Description": "Throughout this panel, we'll be playing different drama/improv games led by your favourite Overwatchinstructors for prizes!_x000D_<br /> Get your fighting face on, we're all soldiers now."
+        "Speakers": [
+            "Felicia O."
+        ],
+        "Location": "Telus 104 - 106",
+        "Description": "Throughout this panel, we'll be playing different drama/improv games led by your favourite Overwatchinstructors for prizes!_x000D_  Get your fighting face on, we're all soldiers now."
     },
     {
         "Start": 1830,
@@ -1477,6 +2177,10 @@
         "Day": 0,
         "Name": "Pokemon Clinic: Learn how to Play / Free Play",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": ""
     },
     {
@@ -1485,6 +2189,10 @@
         "Day": 1,
         "Name": "Pokemon League - Gym Leader Battles",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Glen 206",
         "Description": ""
     },
     {
@@ -1493,6 +2201,10 @@
         "Day": 0,
         "Name": "Pre-registration for Friday Card Gaming Events",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": "We'll be playing Yu-Gi-Oh!, Card fight!! Vanguard, Weiss Schwarz, Force of Will, and Dragon Ball Z! Come learn to play, or join a tournament if you already do!"
     },
     {
@@ -1501,6 +2213,10 @@
         "Day": 1,
         "Name": "Pre-registration for Saturday Card Gaming Events",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": "We'll be playing Yu-Gi-Oh!, Card fight!! Vanguard, Weiss Schwarz, Force of Will, and Dragon Ball Z! Come learn to play, or join a tournament if you already do!"
     },
     {
@@ -1509,6 +2225,10 @@
         "Day": 1,
         "Name": "Puns and Determination",
         "Category": 3,
+        "Speakers": [
+            "Marcedes D."
+        ],
+        "Location": "Macleod E1",
         "Description": "A Fun,Q & A panel based around Undertale with games and prizes. (and possibly memes)"
     },
     {
@@ -1517,6 +2237,10 @@
         "Day": 0,
         "Name": "Q&A With Carolina Ravassa",
         "Category": 6,
+        "Speakers": [
+            "Carolina Ravassa"
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "What's it like to be the voice of Sombra? Ask away!"
     },
     {
@@ -1525,6 +2249,10 @@
         "Day": 0,
         "Name": "Q&A With Jerry Jewell",
         "Category": 6,
+        "Speakers": [
+            "Jerry Jewell"
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "A question & answer session with Funimation director & actor, Jerry Jewell!"
     },
     {
@@ -1533,6 +2261,10 @@
         "Day": 0,
         "Name": "Q&A With the Runaway Guys",
         "Category": 6,
+        "Speakers": [
+            "The Runaway Guys"
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "Game sensation The Runaway Guys are here to chat with Otafest about all things gaming: speed runs, Let's Plays, YouTube comment horror stories and more! Join Calgary local Proton Jon, alongside Chuggaconroy and NintendoCapriSun."
     },
     {
@@ -1541,6 +2273,8 @@
         "Day": 1,
         "Name": "Re:Zero -Starting Life in Another World From Zero- (14P)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 202",
         "Description": "Subaru is an ordinary high school student who is lost in an alternate world. Rescued by a beautiful, silver-haired girl, he stays near her to return the favor, but the destiny she is burdened with is more than Subaru can imagine."
     },
     {
@@ -1549,6 +2283,10 @@
         "Day": 1,
         "Name": "RFA Party",
         "Category": 3,
+        "Speakers": [
+            "Felicia O."
+        ],
+        "Location": "Telus 103",
         "Description": "Join the Mystic Messenger crew through an interactive improv adventure! Will you get the good or bad ending? It's all up to you."
     },
     {
@@ -1557,7 +2295,11 @@
         "Day": 0,
         "Name": "Rocket League Dropshot Tournament",
         "Category": 7,
-        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Up to 4 (Drop-in) <br /> Number of Rounds: 1<br /> Time Limit per round: 5 Minutes (sudden-death overtime)"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Up to 4 (Drop-in)   Number of Rounds: 1  Time Limit per round: 5 Minutes (sudden-death overtime)"
     },
     {
         "Start": 1600,
@@ -1565,7 +2307,11 @@
         "Day": 0,
         "Name": "Rocket League Dropshot Tournament",
         "Category": 7,
-        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Up to 4 (Drop-in) <br /> Number of Rounds: 1<br /> Time Limit per round: 5 Minutes (sudden-death overtime)"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Up to 4 (Drop-in)   Number of Rounds: 1  Time Limit per round: 5 Minutes (sudden-death overtime)"
     },
     {
         "Start": 1000,
@@ -1573,7 +2319,11 @@
         "Day": 1,
         "Name": "Rocket League Dropshot Tournament",
         "Category": 7,
-        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Up to 4 (Drop-in) <br /> Number of Rounds: 1<br /> Time Limit per round: 5 Minutes (sudden-death overtime)"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Up to 4 (Drop-in)   Number of Rounds: 1  Time Limit per round: 5 Minutes (sudden-death overtime)"
     },
     {
         "Start": 1300,
@@ -1581,7 +2331,11 @@
         "Day": 1,
         "Name": "Rocket League Dropshot Tournament",
         "Category": 7,
-        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Up to 4 (Drop-in) <br /> Number of Rounds: 1<br /> Time Limit per round: 5 Minutes (sudden-death overtime)"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Up to 4 (Drop-in)   Number of Rounds: 1  Time Limit per round: 5 Minutes (sudden-death overtime)"
     },
     {
         "Start": 1600,
@@ -1589,7 +2343,11 @@
         "Day": 1,
         "Name": "Rocket League Dropshot Tournament",
         "Category": 7,
-        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Up to 4 (Drop-in) <br /> Number of Rounds: 1<br /> Time Limit per round: 5 Minutes (sudden-death overtime)"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Up to 4 (Drop-in)   Number of Rounds: 1  Time Limit per round: 5 Minutes (sudden-death overtime)"
     },
     {
         "Start": 1000,
@@ -1597,7 +2355,11 @@
         "Day": 0,
         "Name": "Rocket League Dropshot Tournament",
         "Category": 7,
-        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.<br /> <br /> # of Players: Up to 4 (Drop-in) <br /> Number of Rounds: 1<br /> Time Limit per round: 5 Minutes (sudden-death overtime)"
+        "Speakers": [
+            "Microsoft"
+        ],
+        "Location": "Exhibitor Hall - Microsoft Booth (E9)",
+        "Description": "The floor is lava! Well… sort of. It's actually just falling away. Score your way to some Microsoft swag in the Microsoft Rocket League Dropshot Tournament! Prize for the winner of each round! Drop in whenever you'd like, you don't need to have played in previous rounds to compete.    # of Players: Up to 4 (Drop-in)   Number of Rounds: 1  Time Limit per round: 5 Minutes (sudden-death overtime)"
     },
     {
         "Start": 1930,
@@ -1605,6 +2367,10 @@
         "Day": 0,
         "Name": "RWBY world of Remnant trivia white fang take over",
         "Category": 3,
+        "Speakers": [
+            "Brett L."
+        ],
+        "Location": "Macleod E1",
         "Description": "Come enjoy some RWBY trivia with guest characters from the show. You think you know RWBY? Come and prove it !"
     },
     {
@@ -1613,6 +2379,13 @@
         "Day": 0,
         "Name": "Sailor Moon Panel",
         "Category": 6,
+        "Speakers": [
+            "Jill Frappier",
+            "",
+            "Read More &rarr;",
+            ""
+        ],
+        "Location": "Macleod E3",
         "Description": "Join Luna, Artemis & Sailor Moon herself for the Sailor Moon Panel!"
     },
     {
@@ -1621,6 +2394,10 @@
         "Day": 1,
         "Name": "Sailormoon Werewolf",
         "Category": 3,
+        "Speakers": [
+            "Aaron S."
+        ],
+        "Location": "Macleod A1",
         "Description": "Sailor Moon Werewolf is back! Can the Sailor Scouts save the day or will the Negaverse rule all?"
     },
     {
@@ -1629,7 +2406,11 @@
         "Day": 1,
         "Name": "Salty Bet Live (All Ages Welcome!)",
         "Category": 3,
-        "Description": "You've seen Salty Bet online - watched fights, experienced the taste of glorious wins and salty tears of defeat. We do it LIFE with randomized match-ups from over 2000 characters using cold hard Monopoly cash. Who will fight? Who will win? Will you walk out a Monopoly baller or salty loser? Come find out at Salty Bet Live!<br /><strong><br />Correction: Our printed guidebook has this event listed as 18+. &nbsp;It is in fact open to all ages!<"
+        "Speakers": [
+            "Andrew Q."
+        ],
+        "Location": "Macleod E1",
+        "Description": "You've seen Salty Bet online - watched fights, experienced the taste of glorious wins and salty tears of defeat. We do it LIFE with randomized match-ups from over 2000 characters using cold hard Monopoly cash. Who will fight? Who will win? Will you walk out a Monopoly baller or salty loser? Come find out at Salty Bet Live! <strong> Correction: Our printed guidebook has this event listed as 18+. &nbsp;It is in fact open to all ages!<"
     },
     {
         "Start": 1200,
@@ -1637,6 +2418,10 @@
         "Day": 1,
         "Name": "Seika High's Summer Festival",
         "Category": 3,
+        "Speakers": [
+            "Emily T."
+        ],
+        "Location": "Glen 208",
         "Description": "Welcome to Seika High! Join Misaki, Takumi, and others, play fun festival games, win prizes, plus a Q&A and photos! It's going to be a day you won't forget!"
     },
     {
@@ -1645,6 +2430,8 @@
         "Day": 1,
         "Name": "Seiren (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 201",
         "Description": "The series follows the interactions of Shoichi with his female classmates while he struggles with studying for his university entrance exams and doubts about his future."
     },
     {
@@ -1653,6 +2440,8 @@
         "Day": 1,
         "Name": "Shinya Shokudo [Live Action] (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 205",
         "Description": "Open from midnight to six in the morning, with a limited menu and a cook who takes requests, the stories of the Midnight Dinner follow the lives and situations of the people who frequent it while the rest of the city sleeps."
     },
     {
@@ -1661,6 +2450,8 @@
         "Day": 1,
         "Name": "Short Form Anime (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 205",
         "Description": "A selection of ‘Short Form' series from the last year for those with short attention spans and like their anime episodes short and to the point."
     },
     {
@@ -1669,6 +2460,8 @@
         "Day": 1,
         "Name": "Shouwa Genroku Rakugo Shinjuu (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 201",
         "Description": "After seeing a Rakugo performance in prison, Kyoji has decided to dedicate his life to the art of storytelling. On the day of his release he tracks down a rakugo master and begs him to become his student."
     },
     {
@@ -1677,6 +2470,10 @@
         "Day": 1,
         "Name": "Signup & Prep for Cosplay Fashion Show & Skit Contest",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E1",
         "Description": ""
     },
     {
@@ -1685,6 +2482,10 @@
         "Day": 1,
         "Name": "Spotlight on Fullmetal Alchemist AMVs",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Take a journey into the ever popular world of Fullmetal Alchemist as seen through AMV's."
     },
     {
@@ -1693,6 +2494,12 @@
         "Day": 1,
         "Name": "Spotlight on Gaming Guests",
         "Category": 6,
+        "Speakers": [
+            "Drunk Gaming",
+            "",
+            "Read More &rarr;"
+        ],
+        "Location": "Main Events",
         "Description": "Drunk Gaming's siblings Alli & Justin Speed join with The Runaway Guys' Chuggaconroy, Proton Jon, and NintendoCapriSun to bring you all the insight of their shared experiences as they talk about the world of presenting videogames as a new genre of entertainment. It's a +1 to knowledge and +5 to fun!"
     },
     {
@@ -1701,6 +2508,10 @@
         "Day": 1,
         "Name": "Spotlight on Pingame",
         "Category": 6,
+        "Speakers": [
+            "Pingame"
+        ],
+        "Location": "Main Events",
         "Description": "Learn just what it takes to become dedicated musicians in Japan and ask all the questions you've been waiting to ask!"
     },
     {
@@ -1709,6 +2520,10 @@
         "Day": 1,
         "Name": "Spotlight on Reika",
         "Category": 6,
+        "Speakers": [
+            "Reika"
+        ],
+        "Location": "Main Events",
         "Description": "Ask Reika all your cosplay questions in the Main Events room!"
     },
     {
@@ -1717,6 +2532,10 @@
         "Day": 1,
         "Name": "Stories from the Other Side",
         "Category": 3,
+        "Speakers": [
+            "Brendan H."
+        ],
+        "Location": "Glen 208",
         "Description": "Join Brendan the Otafest Medic as he tells tales of woe and wonder from his convention adventures in Emergency Management. You'll be dazzled as he regales the audience with tales such as the mysterious zucchini."
     },
     {
@@ -1725,6 +2544,10 @@
         "Day": 1,
         "Name": "Streamer's Lounge",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Pips 24-Hour Lounge (Sun Alta 1 - 3)",
         "Description": ""
     },
     {
@@ -1733,6 +2556,10 @@
         "Day": 0,
         "Name": "Streamer's Lounge",
         "Category": 7,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Pips 24-Hour Lounge (Sun Alta 1 - 3)",
         "Description": ""
     },
     {
@@ -1741,6 +2568,10 @@
         "Day": 1,
         "Name": "Synaptic Chaos Theatre - 18+ Only Late Night Show",
         "Category": 6,
+        "Speakers": [
+            "Synaptic Chaos Theatre"
+        ],
+        "Location": "Main Events",
         "Description": "Synaptic Chaos Theatre goes BLUE! SCT lets loose with no-holds-barred comedy, where good taste is thrown to the curb and no topic is too taboo! Bring ID - you will be carded!"
     },
     {
@@ -1749,6 +2580,10 @@
         "Day": 0,
         "Name": "Synaptic Chaos Theatre - All Ages Improv Show",
         "Category": 6,
+        "Speakers": [
+            "Synaptic Chaos Theatre"
+        ],
+        "Location": "Macleod E2",
         "Description": "Get warmed up for the con with anime improv starring Synaptic Chaos Theatre! SCT presents their unique style of anime-themed comedy where you help create the scenes!"
     },
     {
@@ -1757,6 +2592,10 @@
         "Day": 1,
         "Name": "Synaptic Chaos Theatre - How to Improv",
         "Category": 6,
+        "Speakers": [
+            "Synaptic Chaos Theatre"
+        ],
+        "Location": "Macleod E2",
         "Description": "Join Synaptic Chaos Theatre for lessons on developing your own improv skills. Get a look at how these talented funnymen (and women) have honed their craft for over a decade!"
     },
     {
@@ -1765,6 +2604,10 @@
         "Day": 1,
         "Name": "Synaptic Chaos Theatre - Late Night Dub Fight",
         "Category": 6,
+        "Speakers": [
+            "Synaptic Chaos Theatre"
+        ],
+        "Location": "Main Events",
         "Description": "Relive moments from your favourite cartoons, videogames, movies, TV shows, and anime, in a new and hilarious light. The Late-Night Dub-Fight pits members of Synaptic Chaos Theatre and Guests against each other to find out who can “improve” classic clips by redubbing them live with their imposing improv skills. No one knows what show host Ian Horner has up his sleeves, or what the cast members will say in this all-out assault on your funny bone."
     },
     {
@@ -1773,6 +2616,10 @@
         "Day": 1,
         "Name": "The AMV Gameshow",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "Think you know AMV's? Even if not, everybody's got a shot in this ultimate game of AMV trivia filled with chances to win awesome prizes and the glory of AMV Gameshow Champion. You do NOT want to miss this!"
     },
     {
@@ -1781,6 +2628,10 @@
         "Day": 1,
         "Name": "The Ins and Outs of Visual Novels",
         "Category": 3,
+        "Speakers": [
+            "Amy J."
+        ],
+        "Location": "Macleod E2",
         "Description": "Have any idea what a visual novel is? If not, this panel is perfect for you! Learn everything you need to know about them by test piloting various scenes from popular titles, including naughty ones!"
     },
     {
@@ -1789,6 +2640,10 @@
         "Day": 0,
         "Name": "The 'Joys' of Cosplay",
         "Category": 3,
+        "Speakers": [
+            "Dustin D."
+        ],
+        "Location": "Macleod E1",
         "Description": "Cosplay, it's a wonderful hobby: encouraging creativity, bringing people together, forming positive communities. But sometimes you hate it, and want to complain about it, so lets complain together!"
     },
     {
@@ -1797,6 +2652,10 @@
         "Day": 1,
         "Name": "The Life Cycle of an Idol",
         "Category": 3,
+        "Speakers": [
+            "Selena Z."
+        ],
+        "Location": "Glen 203 - 204",
         "Description": "Have you ever wanted to be an idol or been curious about how the Japanese idol industry works? Come learn about the lifespan of an idol, from the birth of a star to the symbolic death of graduation."
     },
     {
@@ -1805,6 +2664,8 @@
         "Day": 1,
         "Name": "This Art Club Has a Problem! (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 202",
         "Description": "Mizuki Usami is the only person in the club who wants to do art club-like activities, and constantly struggles to do so. The other members are only interested in drawing the perfect waifu, sleeping, and causing trouble."
     },
     {
@@ -1813,6 +2674,10 @@
         "Day": 1,
         "Name": "Thrown Controllers with the Runaway Guys",
         "Category": 6,
+        "Speakers": [
+            "The Runaway Guys"
+        ],
+        "Location": "Glen 203 - 204",
         "Description": "Ready for some gaming tomfoolery? Join us in this travelling game show hosted by YouTube gaming guests The Runaway Guys!"
     },
     {
@@ -1821,6 +2686,10 @@
         "Day": 1,
         "Name": "Top Anime Series!",
         "Category": 3,
+        "Speakers": [
+            "Jeffrey W."
+        ],
+        "Location": "Macleod E3",
         "Description": "Get ready to defend your favourite anime series! Join us as we nominate, argue and discuss the top anime series of all time!"
     },
     {
@@ -1829,6 +2698,10 @@
         "Day": 1,
         "Name": "Truth or Dare with Muse! : Silver Start!",
         "Category": 3,
+        "Speakers": [
+            "Ayra B."
+        ],
+        "Location": "Telus 103",
         "Description": "Come join us for questions and dancing with the idol group Muse from Love Live. Have fun with us playing truth or dare! Hosting will be the new cosplay and dance group Silver Start!"
     },
     {
@@ -1837,6 +2710,10 @@
         "Day": 0,
         "Name": "Two Rooms and a Boom",
         "Category": 3,
+        "Speakers": [
+            "Aaron S."
+        ],
+        "Location": "Macleod A1",
         "Description": "Two Rooms and a Boom is a party game of social interaction and deduction. Can your team win or will it go Boom?"
     },
     {
@@ -1845,6 +2722,10 @@
         "Day": 1,
         "Name": "Um, Actually...",
         "Category": 3,
+        "Speakers": [
+            "David K."
+        ],
+        "Location": "Glen 203 - 204",
         "Description": "Otaku are passionate about a lot of things. But there's one thing that they love more than anything else, and that is correcting people. This is \"Um, Actually\" the competition for nerdy corrections."
     },
     {
@@ -1853,6 +2734,10 @@
         "Day": 1,
         "Name": "Upbeat and Dance Videos",
         "Category": 1,
+        "Speakers": [
+            "Otafest"
+        ],
+        "Location": "Macleod E4",
         "Description": "This AMV block is sure to put a spring in your step and having you dancing in your seats!"
     },
     {
@@ -1861,6 +2746,8 @@
         "Day": 1,
         "Name": "Urara Meirochou (AP)",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 202",
         "Description": "Every girl dreams of becoming a fortune teller in Meirochou and many flock to the city to persue their dreams. Chiya, raised in the woods by a caretaker, has come to the city with a different goal: find her mother."
     },
     {
@@ -1869,6 +2756,10 @@
         "Day": 0,
         "Name": "Video Game Jeopardy",
         "Category": 3,
+        "Speakers": [
+            "Harley J."
+        ],
+        "Location": "Macleod E3",
         "Description": "Test your knowledge of video games with Video Game Jeopardy! Covering favourite franchises like Dragon Age, Overwatch, and Final Fantasy!"
     },
     {
@@ -1877,6 +2768,10 @@
         "Day": 1,
         "Name": "Video Game Scene It!",
         "Category": 3,
+        "Speakers": [
+            "Jeffrey W."
+        ],
+        "Location": "Macleod E3",
         "Description": "Our princess is in another castle! If you think you can recognize classic and modern video game moments then come compete against others for the Video Game Scene It! title."
     },
     {
@@ -1885,6 +2780,10 @@
         "Day": 0,
         "Name": "Viktuuri Hour with YOI (Yuri On Ice)",
         "Category": 3,
+        "Speakers": [
+            "Alexzander C."
+        ],
+        "Location": "Telus 103",
         "Description": "Come spend a fun filled hour with Yurio, Yuri and of course Viktor. Games, Q and A and Truth and Dare, what happens when they leave Asia to do an event in Canada?"
     },
     {
@@ -1893,6 +2792,10 @@
         "Day": 0,
         "Name": "Weiss Schwartz English Tournament",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": ""
     },
     {
@@ -1901,6 +2804,10 @@
         "Day": 1,
         "Name": "Weiss Schwartz Mixed Language Tournament",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": ""
     },
     {
@@ -1909,6 +2816,10 @@
         "Day": 1,
         "Name": "Wheel of Anime",
         "Category": 3,
+        "Speakers": [
+            "Michael I."
+        ],
+        "Location": "Macleod E2",
         "Description": "The wheel is back! This anime-themed Wheel of Fortune has returned with new puzzles and the custom wheel that will have everyone wanting to take it for a spin."
     },
     {
@@ -1917,6 +2828,10 @@
         "Day": 0,
         "Name": "World of Worbla: From Pattern to Paint",
         "Category": 3,
+        "Speakers": [
+            "Andra I."
+        ],
+        "Location": "Macleod E2",
         "Description": "An in-depth guide to using Worbla, from pattern to paint! Come by to learn the ins and outs of one of the most beloved crafting mediums in cosplay."
     },
     {
@@ -1925,6 +2840,8 @@
         "Day": 1,
         "Name": "WTF?!",
         "Category": 2,
+        "Speakers": [],
+        "Location": "Glen 205",
         "Description": "The glorious return of a running favorite! This year with double the fun!"
     },
     {
@@ -1933,6 +2850,10 @@
         "Day": 1,
         "Name": "You Can't Say That on Yuri!!! On Ice with Jerry",
         "Category": 6,
+        "Speakers": [
+            "Jerry Jewell"
+        ],
+        "Location": "Glen 203 - 204",
         "Description": "If Yuri on Ice wasn't constrained to a PG rating, how would Victor's quips change? Let's find out!"
     },
     {
@@ -1941,6 +2862,12 @@
         "Day": 0,
         "Name": "Youtube with the Runaway Guys & Drunk Gaming",
         "Category": 6,
+        "Speakers": [
+            "Drunk Gaming",
+            "",
+            "Read More &rarr;"
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "Ever find yourself still awake at 3 AM wondering what YouTube wormhole you fell into? If you're a gamer, chances are you've found yourself watching a video by these guys! Join us as we chat games and YouTube with special guests The Runaway Guys and Drunk Gaming."
     },
     {
@@ -1949,6 +2876,10 @@
         "Day": 0,
         "Name": "Yugioh Single Elimination Tournament",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": ""
     },
     {
@@ -1957,6 +2888,10 @@
         "Day": 0,
         "Name": "Yugioh Tournament",
         "Category": 5,
+        "Speakers": [
+            "Card Gaming"
+        ],
+        "Location": "Macleod A2",
         "Description": ""
     },
     {
@@ -1965,6 +2900,10 @@
         "Day": 1,
         "Name": "Zapp's Spaceship of Love: Critical Fail!",
         "Category": 3,
+        "Speakers": [
+            "Donald E."
+        ],
+        "Location": "Telus 101 - 102",
         "Description": "Do you like D&D? Do you hate D&D? Do you not care either way and just see a bunch of nerds embarrass themselves? Come join the Spaceship of Love crew as they take you through an interactive adventure!"
     },
     {
@@ -1973,6 +2912,10 @@
         "Day": 0,
         "Name": "Zumba u'sba",
         "Category": 3,
+        "Speakers": [
+            "Kimberly B."
+        ],
+        "Location": "Telus 104 - 106",
         "Description": "Join members of u'sical Rush as we dance along to many different J-Pop songs. A fun way to mix exercise and Japanese music together!"
     }
 ]
