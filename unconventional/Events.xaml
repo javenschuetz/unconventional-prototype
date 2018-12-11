@@ -27,13 +27,14 @@
     </Page.Resources>
 
     <Grid Height="645" VerticalAlignment="Bottom">
-        <ScrollViewer HorizontalAlignment="Left" Height="645" VerticalAlignment="Top" Width="450" VerticalScrollBarVisibility="Hidden">
-            <Grid x:Name="Schedule" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="450" Margin="10,0,0,0"/>
+        <ScrollViewer x:Name="TotalScroll" HorizontalAlignment="Left" Height="645" VerticalAlignment="Top" Width="450" VerticalScrollBarVisibility="Hidden">
+            <Grid x:Name="Total" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="450">
+            </Grid>
         </ScrollViewer>
         <Grid x:Name="Filters" HorizontalAlignment="Left" Height="619" Margin="490,26,-176,0" VerticalAlignment="Top" Width="135" Background="{StaticResource TransparentBackground}" Panel.ZIndex="95">
             <CheckBox x:Name="chckAll" Content="All" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Click="chckAll_Clicked"/>
             <Grid x:Name="grdFilters" HorizontalAlignment="Left" Height="563" Margin="0,56,-1,0" VerticalAlignment="Top" Width="136"/>
-            <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="23" Margin="9,6,0,0" TextWrapping="Wrap" Text="Search by event name" VerticalAlignment="Top" Width="116" FontStyle="Italic" GotFocus="txtSearch_GotFocus" LostFocus="txtSearch_LostFocus"/>
+            <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="23" Margin="9,6,0,0" TextWrapping="Wrap" Text="Search by event name" VerticalAlignment="Top" Width="116" FontStyle="Italic" GotFocus="txtSearch_GotFocus" LostFocus="txtSearch_LostFocus" KeyDown="txtSearch_KeyDown"/>
         </Grid>
         <Button x:Name="btnFilters" Content="" Margin="436,223,-18,0" VerticalAlignment="Top" Background="Cyan" Opacity="0.15" Style="{StaticResource MyTabStyle}" Height="80" Click="btnFilters_Click"/>
 

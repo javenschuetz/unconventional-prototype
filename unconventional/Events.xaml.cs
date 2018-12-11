@@ -27,6 +27,7 @@ namespace unconventional
     public partial class Events : Page
     {
         bool filters = false;
+        bool schedFocus = false;
         public static bool favsFilter = false;
         public string nameFilter = "";
         public static bool needsReload = false;
@@ -133,7 +134,7 @@ namespace unconventional
 
             //AddHandler(Mouse.PreviewMouseDownOutsideCapturedElementEvent, new MouseButtonEventHandler(HandleClickOutsideOfControl));
             AddHandler(Mouse.PreviewMouseDownEvent, new MouseButtonEventHandler(HandleMouseDown));
-            Schedule.ColumnDefinitions.Add(new ColumnDefinition());
+            //Schedule.ColumnDefinitions.Add(new ColumnDefinition());
             //string description = Enumerations.GetEnumDescription((MyEnum)value);
 
             grdFilters.ColumnDefinitions.Add(new ColumnDefinition());
@@ -279,6 +280,11 @@ namespace unconventional
             }*/
         }
 
+        public class PairedScrollViewer : ScrollViewer
+        {
+            public ScrollViewer pair;
+        }
+
         public void CreateDay(string Date, List<Program> programs)
         {
             Label date = new Label();
@@ -286,27 +292,69 @@ namespace unconventional
             date.FontSize = 16;
             date.FontWeight = FontWeights.Bold;
             date.HorizontalAlignment = HorizontalAlignment.Center;
-            Schedule.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(30.0) });
-            Grid.SetColumn(date, 0);
-            Grid.SetRow(date, Schedule.RowDefinitions.Count-1);
+            Total.RowDefinitions.Add(new RowDefinition());
+            Grid.SetRow(date, Total.RowDefinitions.Count - 1);
+            Total.Children.Add(date);
+            //ScrollViewer sc = new ScrollViewer() { Margin = new Thickness(10.0, 0.0, 0.0, 0.0)};
+            //sc.VerticalScrollBarVisibility = ScrollBarVisibility.Hidden;
+            //sc.PreviewMouseWheel += ScheduleScroll_PreviewMouseWheel;
+            //Grid Schedule = new Grid() { Margin = new Thickness(10.0, 0.0, 0.0, 0.0)};
+            //Schedule.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(30.0) });
+            //Grid.SetRow(date, Total.RowDefinitions.Count-1);
+            //Grid holder = new Grid() { Margin = new Thickness(10.0, 0.0, 0.0, 0.0) };
+            //holder.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(625.0) });
             Grid sched = CreateSched(programs);
-            ScrollViewer scroll = new ScrollViewer() { HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden,
-                VerticalScrollBarVisibility = ScrollBarVisibility.Disabled, Height = sched.Height};
+            //sched.Margin = new Thickness(10.0, 0.0, 0.0, 0.0);
+            PairedScrollViewer scroll = new PairedScrollViewer() { HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden, VerticalScrollBarVisibility = ScrollBarVisibility.Disabled,
+                Margin = new Thickness(10.0, 0.0, 0.0, 0.0), pair = (ScrollViewer)Total.Children[Total.RowDefinitions.Count - 1]
+            };
+            scroll.MouseEnter += schedule_MouseEnter;
+            scroll.MouseLeave += schedule_MouseLeave;
             scroll.PreviewMouseWheel += ScrollViewer_PreviewMouseWheel;
             scroll.Content = sched;
-            Schedule.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(scroll.Height) });
-            Grid.SetColumn(scroll, 0);
-            Grid.SetRow(scroll, Schedule.RowDefinitions.Count-1);
+            ScrollViewer vertScroll = new ScrollViewer() {VerticalScrollBarVisibility = ScrollBarVisibility.Hidden }; //{ Margin = new Thickness(10.0, 0.0, 0.0, 0.0) };
+            vertScroll.Content = scroll;
+            //vertScroll.MouseWheel += ScheduleScroll_MouseWheel;
+            vertScroll.PreviewMouseWheel += ScheduleScroll_PreviewMouseWheel;
+            //Schedule.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(scroll.Height) });
+            //Grid.SetColumn(scroll, 0);
+            //Grid.SetRow(scroll, Schedule.RowDefinitions.Count-1);
 
-            Schedule.Children.Add(date);
-            Schedule.Children.Add(scroll);
+
+            //Grid.SetRow(vertScroll, 0);
+            //holder.Children.Add(vertScroll);
+
+            Total.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(600) });
+            Grid.SetRow(vertScroll, Total.RowDefinitions.Count - 1);
+            Total.Children.Add(vertScroll);
+            //Grid.SetRow(holder, Total.RowDefinitions.Count - 1);
+            //Total.Children.Add(holder);
+
+            //Schedule.Children.Add(scroll);
+            //Total.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(625.0) });
+            //Grid.SetRow(Schedule, Total.RowDefinitions.Count - 1);
+            //Total.Children.Add(Schedule)
+            //sc.Content = Schedule;
+            //Grid.SetRow(sc, Total.RowDefinitions.Count - 1);
+            //Total.Children.Add(sc);
+            //Total.Children.Add(date);
 
         }
 
         public Grid CreateSched(List<Program> programs)
         {
             Grid grid = new Grid();
+            //grid.MouseEnter += schedule_MouseEnter;
+            //grid.MouseLeave += schedule_MouseLeave;
+            Grid timeGrid = new Grid() { Margin = new Thickness(10.0, 0.0, 0.0, 0.0) };
+            //timeGrid.PreviewMouseWheel += Time_PreviewMouseWheel;
+            ScrollViewer sc = new ScrollViewer() { VerticalScrollBarVisibility = ScrollBarVisibility.Disabled,
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden,
+                Width = Total.Width
+            };
             //grid.ShowGridLines = true;
+            sc.Content = timeGrid;
+            sc.PreviewMouseWheel += Time_PreviewMouseWheel;
 
             ProgSched[] progSched = new ProgSched[maxCol];
             for (int i = 0; i < programs.Count; i++)
@@ -354,7 +402,7 @@ namespace unconventional
 
             bool[,] filled = new bool[1 + progEnd - progStart, maxRow];
 
-            rowdef.Add(new RowDefinition() { Name = "rowHead", Height = new GridLength(timeHeader) });
+            timeGrid.RowDefinitions.Add(new RowDefinition() { Name = "rowHead", Height = new GridLength(timeHeader) });
 
             int maxDepth = 1;
             int newColMax = progEnd;
@@ -397,21 +445,11 @@ namespace unconventional
                         prog = current.data, Fav = current.data.fav};
                     program.Background.Opacity = eventOpac;
 
-                    // couldn't get this to work in time
-                    /*UIElement uie = new UIElement();
-                    uie.Effect = new DropShadowEffect
-                        {
-                            Color = new Color { A = 255, R = 255, G = 255, B = 0 },
-                            Direction = 320,
-                            ShadowDepth = 1,
-                            Opacity = 1
-                        };
-                        */
                     program.Content = new TextBlock() { Text = current.data.name, TextTrimming = TextTrimming.WordEllipsis,
                         Margin = new Thickness(10.0, 0.0, 10.0, 0.0) };
                     program.Click += Program_Click;
                     Grid.SetColumn(program, index);
-                    Grid.SetRow(program, depth);
+                    Grid.SetRow(program, depth-1);
                     Grid.SetColumnSpan(program, current.data.length);
                     grid.Children.Add(program);
 
@@ -430,10 +468,14 @@ namespace unconventional
                     maxDepth = depth;
                 }
             }
+            Total.RowDefinitions.Add(new RowDefinition());
+            Grid.SetRow(sc, Total.RowDefinitions.Count - 1);
+            Total.Children.Add(sc);
 
             for (int i = progStart; i <= newColMax; i++)
             {
                 coldef.Add(new ColumnDefinition() { Name = "col" + i, Width = new GridLength(timeWidth) });
+                timeGrid.ColumnDefinitions.Add(new ColumnDefinition() { Name = "col" + i, Width = new GridLength(timeWidth) });
                 int index = i - progStart;
                 Button header = new Button();
                 header.IsEnabled = false;
@@ -442,7 +484,7 @@ namespace unconventional
                 header.Content = quotient % 25 + ":" + ((i % (60 / interval)) * interval).ToString().PadLeft(2, '0');
                 Grid.SetColumn(header, index);
                 Grid.SetRow(header, 0);
-                grid.Children.Add(header);
+                timeGrid.Children.Add(header);
             }
 
             grid.Height = (eventHeight * maxDepth) + timeHeader;
@@ -450,13 +492,16 @@ namespace unconventional
         }
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
-            ScrollViewer scrollviewer = sender as ScrollViewer;
-            if (e.Delta > 0)
+            PairedScrollViewer scrollviewer = sender as PairedScrollViewer;
+            scrollviewer.ScrollToHorizontalOffset(scrollviewer.HorizontalOffset - e.Delta);
+            scrollviewer.pair.ScrollToHorizontalOffset(scrollviewer.HorizontalOffset - e.Delta);
+
+            /*if (e.Delta > 0)
                 scrollviewer.ScrollToHorizontalOffset(scrollviewer.HorizontalOffset - e.Delta);
             //scrollviewer.LineLeft();
             else
-                scrollviewer.ScrollToHorizontalOffset(scrollviewer.HorizontalOffset - e.Delta);
-                //scrollviewer.LineRight();
+                scrollviewer.ScrollToHorizontalOffset(scrollviewer.HorizontalOffset - e.Delta);*/
+            //scrollviewer.LineRight();
             e.Handled = true;
         }
 
@@ -472,10 +517,10 @@ namespace unconventional
 
         public void ConstructWithFilters()
         {
-            Schedule.Children.Clear();
-            Schedule.ColumnDefinitions.Clear();
-            Schedule.RowDefinitions.Clear();
-            Schedule.ColumnDefinitions.Add(new ColumnDefinition());
+            Total.Children.Clear();
+            Total.ColumnDefinitions.Clear();
+            Total.RowDefinitions.Clear();
+            Total.ColumnDefinitions.Add(new ColumnDefinition());
             if(swFav.IsChecked == true)
             {
                 if(nameFilter.Length == 0)
@@ -675,6 +720,57 @@ namespace unconventional
                 nameFilter = txtSearch.Text.Trim();
             }
             ConstructWithFilters();
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key.Equals(Key.Enter))
+            {
+                if (txtSearch.Text.Trim().Length == 0)
+                {
+                    txtSearch.Text = "Search event by name";
+                    txtSearch.FontStyle = FontStyles.Italic;
+                    txtSearch.Foreground = new SolidColorBrush(Colors.LightGray);
+                    txtSearch.Foreground.Opacity = 0.5;
+                    nameFilter = "";
+                }
+                else
+                {
+                    nameFilter = txtSearch.Text.Trim();
+                }
+                ConstructWithFilters();
+            }
+        }
+
+        private void ScheduleScroll_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if(!schedFocus)
+            {
+                ScrollViewer scrollviewer = sender as ScrollViewer;
+                //Point relativePoint = Total.Children[0].TransformToAncestor(this).Transform(new Point(0, 0));
+                Point relativePoint = scrollviewer.TransformToAncestor(this).Transform(new Point(0, 0));
+                //if((e.Delta < 0 && scrollviewer.VerticalOffset == scrollviewer.ScrollableHeight) || (e.Delta > 0 && scrollviewer.VerticalOffset == 0))
+                if ((e.Delta < 0 && (scrollviewer.VerticalOffset == scrollviewer.ScrollableHeight || relativePoint.Y > 50)) || (e.Delta > 0 && (scrollviewer.VerticalOffset == 0 || relativePoint.Y < 50)))
+                    TotalScroll.ScrollToVerticalOffset(TotalScroll.VerticalOffset - (e.Delta >> 1));
+                else
+                    scrollviewer.ScrollToVerticalOffset(scrollviewer.VerticalOffset - (e.Delta >> 1));
+                e.Handled = true;
+            }
+        }
+
+        void schedule_MouseLeave(object sender, EventArgs e)
+        {
+            schedFocus = false;
+        }
+
+        void schedule_MouseEnter(object sender, EventArgs e)
+        {
+            schedFocus = true;
+        }
+
+        private void Time_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            TotalScroll.ScrollToVerticalOffset(TotalScroll.VerticalOffset - (e.Delta >> 1));
         }
     }
 }

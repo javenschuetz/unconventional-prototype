@@ -90,13 +90,18 @@ namespace unconventional
         {
             RowDefinition row = grdContent.RowDefinitions[0];
             UpdateLayout();
-            double top = this.ActualHeight - (txtTitle.ActualHeight + grdInfo.ActualHeight);
+            double top = this.ActualHeight - (grdTitle.ActualHeight + grdInfo.ActualHeight);
             double bottom = top * 0.85;
             //txtDesc.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
             //txtDesc.Arrange(new Rect(0, 0, txtDesc.DesiredSize.Width, txtDesc.DesiredSize.Height));
             while (txtDesc.ActualHeight < bottom)
             {
                 txtDesc.FontSize += 4;
+                if (txtDesc.FontSize >= 30)
+                {
+                    txtDesc.FontSize = 30;
+                    break;
+                }
                 UpdateLayout();
                 //txtDesc.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
                 //txtDesc.Arrange(new Rect(0, 0, txtDesc.DesiredSize.Width, txtDesc.DesiredSize.Height));

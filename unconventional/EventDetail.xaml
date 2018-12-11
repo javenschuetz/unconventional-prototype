@@ -40,7 +40,7 @@
                     <ColumnDefinition Width="40"/>
                 </Grid.ColumnDefinitions>
                 <Viewbox Grid.Column="0" Stretch="Uniform">
-                    <TextBox x:Name="txtTitle" BorderThickness="0" HorizontalAlignment="Left" Text="Opening Ceremonies" VerticalAlignment="Top" FontWeight="Bold" TextDecorations="{x:Null}" VerticalContentAlignment="Bottom" Focusable="False"/>
+                    <TextBox x:Name="txtTitle" BorderThickness="0" MaxLines="2" TextWrapping="Wrap" HorizontalAlignment="Left" Text="Opening Ceremonies" VerticalAlignment="Top" FontWeight="Bold" TextDecorations="{x:Null}" VerticalContentAlignment="Bottom" Focusable="False"/>
                 </Viewbox>
                 <CheckBox Grid.Column="1" x:Name="chckFav" Content="CheckBox" HorizontalAlignment="Center" VerticalAlignment="Center" Template="{DynamicResource StarToggleButton}" Height="28" Width="24" RenderTransformOrigin="2.285,-1.212" Click="chckFav_Click"/>
             </Grid>
